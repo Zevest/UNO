@@ -1,16 +1,16 @@
 # UNO
 ##  Combien de cartes dans le Uno ? Pour jouer au Uno, il vous faut les 108 cartes réparties de cette manière :
 
-  * 19 cartes de couleur bleu, numérotées de 0 à 9 (2 pour chaque chiffre sauf pour le 0)
-  *  19 cartes de couleur rouge, numérotées de 0 à 9 (2 pour chaque chiffre sauf pour le 0)
-  *  19 cartes de couleur jaune, numérotées de 0 à 9 (2 pour chaque chiffre sauf pour le 0)
-  *  19 cartes de couleur verte, numérotées de 0 à 9 (2 pour chaque chiffre sauf pour le 0)
+  * 19 cartes de couleur bleu, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
+  *  19 cartes de couleur rouge, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
+  *  19 cartes de couleur jaune, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
+  *  19 cartes de couleur verte, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
 
 ##  et des cartes spéciales:
 
-   * 8 cartes « +2 », (__2 pour chaque couleur__)
-   * 8 cartes « __Inversement de sens__ », (2 pour chaque couleur)
-   * 8 cartes « __Passe ton tour__ », (2 pour chaque couleur)
+   * 8 cartes « __+2__ », (*2 pour chaque couleur*)
+   * 8 cartes « __Inversement de sens__ », (*2 pour chaque couleur*)
+   * 8 cartes « __Passe ton tour__ », (*2 pour chaque couleur*)
    * 4 cartes « __Joker__ »
    * 4 cartes « __+4__ »
 
