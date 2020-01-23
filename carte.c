@@ -14,3 +14,5 @@ carte_t * init_carte(char num, char color){
 	}
 	return NULL;
 }
+
+
