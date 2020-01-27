@@ -12,8 +12,10 @@ struct carte {
 typedef struct carte carte_t;
 
 // initialise une Carte
-carte_t * init_carte(char num, char couleur);
-
+extern carte_t * init_carte(char num, char couleur);
+extern void affiche_carte(carte_t *);
 
 #endif // ! __CARTE_H__
+
+
 
