@@ -16,6 +16,11 @@ extern void push(pile_t *, carte_t *);
 extern carte_t * pop(pile_t *);
 extern int carte_remove(pile_t *, int);
 extern int empty(pile_t *);
+extern carte_t * get_top(pile_t * jeu);
+
+extern void remplir_paquet(pile_t * paquet);
+extern void distribuer(int, pile_t * src, pile_t * dest);
+extern void melange(pile_t * paquet, pile_t * res, int premier);
 
 
 

@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "carte.h"
 
@@ -15,4 +16,6 @@ carte_t * init_carte(char num, char color){
 	return NULL;
 }
 
-
+void affiche_carte(carte_t * c){
+	printf("%s %c\n", c->symbol, c->color);
+}
