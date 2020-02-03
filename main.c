@@ -10,9 +10,6 @@
 #define W 30
 #define H 15
 
-static int sens;
-static int tour;
-
 void affiche_table(pile_t * paquet, joueur_t * joueur){
 	int j,i;
 	for(i = 0; i < W; ++i){
@@ -26,8 +23,7 @@ void affiche_table(pile_t * paquet, joueur_t * joueur){
 }
 int main(){
 	int i, j = 0;
-
-	//srand(time(NULL));
+	srand(time(NULL));
 	pile_t * paquet = init_pile();
 	remplir_paquet(paquet);
 	pile_t * pioche = init_pile();
@@ -46,8 +42,17 @@ int main(){
 		}
 		printf("\n");
 	}*/
-	
-	play(joueurs, paquet, pioche, 0);
+	int tour;
+	tour = getTour();
+	while( tour * tour < 9999999){ 
+		printf("%d joueur : %s\n",tour, noms[tour%5]);
+		play(joueurs, paquet, pioche, getTour());
+		//tour = getTour();
+		//if(tour == -1)
+		//	setTour(5);
+		//next();
+		tour = getTour();
+	}
 	
 	
 	
