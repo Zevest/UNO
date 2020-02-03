@@ -8,6 +8,6 @@
  	pile_t * carte ; 
  };
 typedef struct joueur joueur_t;
-void  init_joueur(joueur_t * joueurs, int nb , char ** noms, pile_t * paquet);
+joueur_t *  init_joueur( int nb , char ** noms, pile_t * paquet);
 
 #endif
