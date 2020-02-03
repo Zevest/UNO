@@ -2,6 +2,12 @@
 #include "pile.h"
 #include "joueur.h"
 
+static int sens;
+static int tour;
+void next();
+void inverse();
+
+
 int can_play_cart(carte_t * carte_A , carte_t * carte_B);
 
 int can_play(pile_t * main , carte_t * carte);

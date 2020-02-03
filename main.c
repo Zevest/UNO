@@ -5,6 +5,7 @@
 #include "joueur.h"
 #include <time.h>
 
+
 #define W 30
 #define H 15
 
@@ -22,20 +23,6 @@ void affiche_table(pile_t * paquet, joueur_t * joueur){
 	}
 	
 }
-
-void next(){
-	if(sens)
-		++tour;
-	else
-		--tour;
-}
-
-void inverse(){
-	return;
-}
-
-
-
 int main(){
 	int i, j = 0;
 
