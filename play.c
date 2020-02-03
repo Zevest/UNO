@@ -3,7 +3,19 @@
 #include"pile.h"
 #include"carte.h"
 #include"joueur.h"
+#include "play.h"
 #define N 13 
+
+void next(){
+	if(sens)
+		++tour;
+	else
+		--tour;
+}
+
+void inverse(){
+	return;
+}
 int can_play_carte(carte_t * carte_A , carte_t * carte_B){
 	
 	return (carte_A->num == carte_B->num || carte_A->color == carte_B->color || carte_A->num > 13) ;
@@ -47,10 +59,10 @@ void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1)
 		carte_remove(joueurs[joueur_1].carte,i);
 	switch(joueurs[joueur_1].carte->_DATA[i]->num){
 		case 12 : 
-			//next();
+			next();
 			break ; 
 		case 11 :
-	 		//inverse();
+	 		inverse();
 	 		break ; 
 	 	case 13 :
 	 		do {
@@ -62,6 +74,6 @@ void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1)
 	}	
 	if (joueurs[joueur_1].carte->_DATA[i]->num == 13)
 	{
-	//	next();
+		next();
 	}
 }
