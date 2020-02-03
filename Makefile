@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=
-SRC= main.c pile.c carte.c
+SRC= main.c pile.c carte.c joueur.c play.c
 OBJ=$(SRC:.c=.o)
 PROGNAME=app
 
