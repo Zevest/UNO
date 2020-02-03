@@ -3,6 +3,7 @@
 #include "carte.h"
 #include "pile.h"
 #include "joueur.h"
+#include "play.h"
 #include <time.h>
 
 
@@ -37,14 +38,19 @@ int main(){
 	joueur_t * joueurs = init_joueur(5, noms, pioche);
 	
 	
-	for(i = 0; i < 5; ++i){
+	/*for(i = 0; i < 5; ++i){
 		printf("%s\n", noms[i]);
 		for(j = 0; j < joueurs[i].carte->_TOP+1;++j){
 		
 			affiche_carte(joueurs[i].carte->_DATA[j]);
 		}
 		printf("\n");
-	}
+	}*/
+	
+	play(joueurs, paquet, pioche, 0);
+	
+	
+	
 	
 	for(i = 0; i < 4; ++i){
 		free(joueurs[i].carte);

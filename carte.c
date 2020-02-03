@@ -17,5 +17,5 @@ carte_t * init_carte(char num, char color){
 }
 
 void affiche_carte(carte_t * c){
-	printf("[%s %c] ", c->symbol, c->color);
+	printf("[%s %c]", c->symbol, c->color);
 }

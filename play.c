@@ -39,19 +39,25 @@ int can_play(pile_t * main , carte_t * carte){
 void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1){
 	int i,a ; 
 	affiche_carte(get_top(paquets));
+	printf("\n");
 	for (int i = 0; i <joueurs[joueur_1].carte->_TOP; ++i){
 		affiche_carte(joueurs[joueur_1].carte->_DATA[i]);
 	}
-	printf("les cartes qu'on peut jouer \n");
+	printf("\nles cartes qu'on peut jouer \n");
 	for (int i = 0; i <joueurs[joueur_1].carte->_TOP; ++i)
 	{
 		if (can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets)) == 1 )
 		{ 
+			printf("(%d:", i);
 			affiche_carte(joueurs[joueur_1].carte->_DATA[i]);	
+			printf(") ");
 		}
+		
 	}
 	do{
-		printf("bug\n");
+		printf("\n");
+		affiche_carte(get_top(paquets));
+		printf("\nQuel carte jouer?\n");
 		scanf("%d",&i);
 
 	}while(!(can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets))));
