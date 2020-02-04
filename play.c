@@ -45,6 +45,13 @@ int can_play(pile_t * main , carte_t * carte){
 }
 
 
+int ask(int * v, char * message, char* message2){
+	printf("%s %s", message, message2);
+	scanf("%d",v);
+	return *v;
+}
+
+
 void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1){
 	int i,a ; 
 	affiche_carte(get_top(paquets));
@@ -63,7 +70,9 @@ void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1)
 		}
 		
 	}
+	//ask(&i, affichecart(affiche_carte(get_top(paquets)),"\nQuel carte jouer?\n"); 
 	do{
+		i = 0;
 		printf("\n");
 		affiche_carte(get_top(paquets));
 		printf("\nQuel carte jouer?\n");
