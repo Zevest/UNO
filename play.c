@@ -8,7 +8,7 @@
 
 static int sens = 1;
 static int tour = 0;
-
+static int compte = 0 ; 
 void next(){
 	printf("\nnext !!! \n");
 	tour += sens;
@@ -24,13 +24,11 @@ void setTour(int n){
 void inverse(){
 	sens *= -1;
 }
-
 int can_play_carte(carte_t * carte_A , carte_t * carte_B){
 	
-	return (carte_A->num == carte_B->num || carte_A->color == carte_B->color || carte_A->num > 13) ;
+	return (carte_A->num == carte_B->num || carte_A->color == carte_B->color || carte_A->num >= 13) ;
 
 }
-
 
 
 int can_play(pile_t * main , carte_t * carte){
@@ -43,44 +41,55 @@ int can_play(pile_t * main , carte_t * carte){
 	}
 	return 0 ;
 }
-
-
-int ask(int * v, char * message, char* message2){
-	printf("%s %s", message, message2);
-	scanf("%d",v);
-	return *v;
-}
-
+ 
 
 void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1){
-	int i,a ; 
+	int i; char a ; 
+	int tmp = 0 ;
+	printf("RIEN\n");
 	affiche_carte(get_top(paquets));
 	printf("\n");
-	for (int i = 0; i <joueurs[joueur_1].carte->_TOP; ++i){
+	printf("%d\n",joueur_1);
+	for (int i = 0; i <joueurs[joueur_1].carte->_TOP+1; ++i){
+
 		affiche_carte(joueurs[joueur_1].carte->_DATA[i]);
 	}
 	printf("\nles cartes qu'on peut jouer \n");
-	for (int i = 0; i <joueurs[joueur_1].carte->_TOP; ++i)
+	for (int i = 0; i <joueurs[joueur_1].carte->_TOP+1; ++i)
 	{
 		if (can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets)) == 1 )
 		{ 
+			tmp++ ;
 			printf("(%d:", i);
 			affiche_carte(joueurs[joueur_1].carte->_DATA[i]);	
 			printf(") ");
 		}
 		
 	}
-	//ask(&i, affichecart(affiche_carte(get_top(paquets)),"\nQuel carte jouer?\n"); 
+
+	if(compte > 0){
+		for (int i = 0; i < joueurs[joueur_1].carte->_TOP+1; ++i)
+		{
+			if (joueurs[joueur_1].carte->_DATA[i]->num == 10 || joueurs[joueur_1].carte->_DATA[i]->num == 14){
+				
+			}
+		}
+	}
+	else if (tmp){
 	do{
-		i = 0;
 		printf("\n");
 		affiche_carte(get_top(paquets));
 		printf("\nQuel carte jouer?\n");
 		scanf("%d",&i);
 
-	}while(!(can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets))));
-		push(paquets, joueurs[joueur_1].carte->_DATA[i]);//push(paquet, joueurs[joueur_1].carte->_DATA[i]);
+	}while(i > joueurs[joueur_1].carte->_TOP || !(can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets))));
+		push(paquets, joueurs[joueur_1].carte->_DATA[i]);
 		carte_remove(joueurs[joueur_1].carte,i);
+	}
+	else{
+		printf("%s a pioché \n",joueurs[joueur_1].nom);
+		distribuer(1,pioches,joueurs[joueur_1].carte);
+	}
 	printf("num : %d %d\n",i, joueurs[joueur_1].carte->_DATA[i]->num);
 	switch(get_top(paquets)->num){
 		
@@ -95,11 +104,12 @@ void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1)
 	 		break ; 
 	 	case 13 :
 	 		do {
-	 			printf("bug\n");
-				scanf("%d",&a);
+	 			a = '\0';
+	 			printf("quelle coleur \n");
+				scanf("%c",&a);
 	 		}
-	 		while(!(a == 'j' || a =='j' || a == 'R'|| a == 'r' || a == 'B'|| a == 'b' || a == 'V'|| a == 'v' ));
-	 			joueurs[joueur_1].carte->_DATA[i]->color = a ;
+	 		while(!(a == 'J' || a == 'R'|| a == 'B'|| a == 'V' ));
+	 			get_top(paquets)->color = a ;
 	 		break; 
 	}	
 	/*if (joueurs[joueur_1].carte->_DATA[i]->num == 13)
