@@ -8,6 +8,11 @@ struct pile{
 	carte_t * _DATA[PILE_MAX];
 };
 
+typedef enum {
+	false,
+	true
+} bool;
+
 typedef struct pile pile_t;
 
 

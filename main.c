@@ -21,49 +21,45 @@ void affiche_table(pile_t * paquet, joueur_t * joueur){
 	}
 	
 }
+
+void reset(){
+
+}
+
 int main(){
 	int i, j = 0;
 	srand(time(NULL));
 	pile_t * paquet = init_pile();
 	remplir_paquet(paquet);
-	pile_t * pioche = init_pile();
+	pile_t * pioche = init_pile();	
 	melange(paquet, pioche, 1);
 	
-	char * noms[] = {"Idir", "Mounir", "Karim", "Steve", "Rachid"};
+	int nb = 3;
+
+
+	char * noms[] = {"Idir", "Mounir", "Karim", "Steve", "Rachid","ridi","rinuom","mirak","Zevest","dichar"};
 	
-	joueur_t * joueurs = init_joueur(5, noms, pioche);
-	
-	
-	/*for(i = 0; i < 5; ++i){
-		printf("%s\n", noms[i]);
-		for(j = 0; j < joueurs[i].carte->_TOP+1;++j){
-		
-			affiche_carte(joueurs[i].carte->_DATA[j]);
-		}
-		printf("\n");
-	}*/
+	joueur_t * joueurs = init_joueur(nb, noms, pioche);
+
 	int tour;
 	tour = getTour();
 	while( tour * tour < 9999999){ 
-		printf("%d joueur : %s\n",tour, noms[tour%5]);
-		play(joueurs, paquet, pioche, getTour());
-		//tour = getTour();
-		//if(tour == -1)
-		//	setTour(5);
-		//next();
+		printf("%d joueur : %s\n",tour, noms[tour%nb]);
+		if(play(joueurs, paquet, pioche, getTour()%nb, nb)){
+			reset();
+		}
 		tour = getTour();
 	}
 	
 	
 	
 	
-	for(i = 0; i < 4; ++i){
+	for(i = 0; i < nb; ++i){
 		free(joueurs[i].carte);
 	}
 	free(joueurs);
 	free(paquet);
 	free(pioche);
-	//free(jeux1);
 	return 0;
 }
 

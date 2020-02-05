@@ -1,14 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "pile.h"
+#include "joueur.h"
 //#include "carte.h"
-#define Nombre_carte 7
- struct joueur
- {
- 	char * nom ;
- 	pile_t * carte ; 
- };
-typedef struct joueur joueur_t;
+#define Nombre_carte 1
+
+
 
 joueur_t *  init_joueur(int nb , char * noms[], pile_t * paquet){
 	int i,j ; 

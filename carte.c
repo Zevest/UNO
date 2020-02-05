@@ -1,4 +1,4 @@
-	#include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include "carte.h"
 
@@ -16,8 +16,7 @@ carte_t * init_carte(char num, char color){
 	return NULL;
 }
 
-char * affiche_carte(carte_t * c){
-	char * text;
-	sprintf(text, "[%s %c]", c->symbol, c->color);
-	return text;
+void affiche_carte(carte_t * c){
+	printf("[%s %c]", c->symbol, c->color);
+	//return text;
 }
