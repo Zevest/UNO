@@ -42,7 +42,26 @@ int can_play(pile_t * main , carte_t * carte){
 	return 0 ;
 }
  
+int G_point(joueur_t *g, int joueur){
+	int i ; 
+	int s =  0; 
 
+	for (i = 0; i < g[joueur].carte->_TOP+1; i++)	{
+		switch(g[joueur].carte->__DATA[i]->num){
+			default : 
+				s += g[joueur].carte->_DATA[i]->num ; 
+			case 10 : 
+				case 11 : 
+					case 12 : 
+						s += 20 ;
+			case 13 :
+				case 14 : 
+					s += 50 ;   
+		}
+
+	}
+	return s ;
+}
 void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1){
 	int i; char a ; 
 	int tmp = 0 ;
@@ -112,6 +131,10 @@ void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1)
 	 			get_top(paquets)->color = a ;
 	 		break; 
 	}	
+	/*switch(empty(joueurs[joueur_1].carte->_TOP)){
+		default : 
+			joueurs[joueur_1].point += joueurs[joueur_1].carte->_DATA
+	//}
 	/*if (joueurs[joueur_1].carte->_DATA[i]->num == 13)
 	{
 		next();
@@ -120,4 +143,21 @@ void play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1)
 	printf("tour %d\n",tour); 
 	if(tour < 0)
 		tour = 4;
+}
+int fin_jeux(joueur_t *g , int joueur){
+	int i, j=-1, s = 0 ; 
+
+	for (i = 0; i <joueur; ++i)
+	{
+		if(empty(joueurs[joueur_1].carte))
+			j = i ;
+	}
+	if(j != -1 ){
+		for (i = 0; i <joueur; ++i){
+			if(j !=i )
+				s += G_point(g,i)
+		}
+	g[j].point = s ; 
+	}
+	return s ; 
 }
