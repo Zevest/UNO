@@ -7,25 +7,26 @@
 #include "play.h"
 #define N 13 
 
-static int sens = 1;
-static int tour = 0;
-static int compte = 0 ; 
-void next(){
-	printf("\nnext !!! \n");
+static int sens = 1; // Sens du deroulement de la partie
+static int tour = 0; // Le nombre de mains passé
+static int compte = 0; // Comptabilise le nombre de cartes a piocher apres le +2 ou/et +4 
+
+void next(){    // passe au tour suivant
 	tour += sens;
 }
-int getTour(){
+
+int getTour(){  // renvoie la valeur des tours jouer
 	return tour;
 }
 
-void setTour(int n){
+void setTour(int n){  // modifie la valeur de tour
 	tour = n;
 }
 
-void inverse(){
+void inverse(){  // change de sens
 	sens *= -1;
 }
-int can_play_carte(carte_t * carte_A , carte_t * carte_B){
+int can_play_carte(carte_t * carte_A , carte_t * carte_B){  // verifie si la carte peut etre jouer
 	
 	bool b1 = (carte_B->num == 10) ; // +2 sur le jeu
 	bool b2 = (b1||(carte_B->num == 14)); // +2 ou +4 sur le jeu
@@ -34,12 +35,12 @@ int can_play_carte(carte_t * carte_A , carte_t * carte_B){
 	bool a = (a1 || a2);
 	bool b = (compte == 0) && (carte_A->num == carte_B->num || carte_A->color == carte_B->color || carte_A->num >= 13);
 	
-	return (a ? a : b); //(a || b) && !(a && b);
+	return (a ? a : b); 
 
 }
 
 
-int can_play(pile_t * main , carte_t * carte){
+int can_play(pile_t * main , carte_t * carte){  // verifie si un joueur peut jouer
 	int i ;
 
 	for (i = 0; i < main->_TOP + 1 ; ++i)
@@ -50,7 +51,7 @@ int can_play(pile_t * main , carte_t * carte){
 	return 0 ;
 }
  
-int G_point(joueur_t *g, int joueur){
+int G_point(joueur_t *g, int joueur){  // compte le nombre de points d'un joueur
 	int i ; 
 	int s =  0; 
 
@@ -69,11 +70,11 @@ int G_point(joueur_t *g, int joueur){
 				s += 50 ; 
 				break;  
 		}
-		printf("s ::::::::::::: %d\n", s);
+	
 	}
 	return s ;
 }
-int fin_jeux(joueur_t *g , int joueur){
+int fin_jeux(joueur_t *g , int joueur){  //additionne les points des perdant pour les atribuer au gagnant 
 	int i, j=-1, s = 0 ; 
 
 	for (i = 0; i <joueur; ++i)
@@ -91,31 +92,31 @@ int fin_jeux(joueur_t *g , int joueur){
 	}
 	return g[j].point; 
 }
-
-int play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1, int nb){
-	// declaration de variable 
+// boucle principale du jeu
+int play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1, int nb){  
 	int i; char a ; 
 	int tmp = 0 ;
 	
-	//debug
-	printf("tour %d\n",tour); 
-	printf("compteur : %d\n", compte);
-	affiche_carte(get_top(paquets));
-	printf("\n");
-	// affichage des cartes du joueur
+	
+	// affiche les cartes du joueur
 	for (i = 0; i <joueurs[joueur_1].carte->_TOP+1; ++i){
 
 		affiche_carte(joueurs[joueur_1].carte->_DATA[i]);
+		printf(" ");
 	}
-	printf("\nles cartes qu'on peut jouer \n");
+	printf("\n\nTable :");
+	affiche_carte(get_top(paquets));
+
 	
-	// affichages des cartes jouables
+	printf("\n\nles cartes qu'on peut jouer => ");
+	
+	// affiche les cartes jouables
 	for (i = 0; i <joueurs[joueur_1].carte->_TOP+1; ++i)
 	{
 		if (can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets)) == 1 )
 		{ 
 			tmp++ ;
-			printf("(%d:", i);
+			printf("(%d: ", i);
 			affiche_carte(joueurs[joueur_1].carte->_DATA[i]);	
 			printf(") ");
 		}
@@ -123,22 +124,19 @@ int play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1, 
 	}
 
 	
-	// cas +N posé,joueur ne peut pas jouer
+    // +2 ou/et +4 et le joueur n'a pas de +2 ni de +4 donc il est obligé de piocher  
 	if(compte > 0 && !tmp){
-		printf("\ncas 1\n");
 		printf("%s pioche %d cartes!!\n", joueurs[joueur_1].nom, compte);
 		distribuer(compte,pioches,joueurs[joueur_1].carte);
 		compte = 0;
 		
 	}
 	
-	// cas +N ou pas, joueur peut jouer
+    // +2 ou/et +4 et le joueur possède +2/+4 donc il peut jouer 
 	else if (tmp && compte >= 0){
-		printf("\ncas 2\n");
 		do{
-			printf("\n");
-			affiche_carte(get_top(paquets));
-			printf("\nQuel carte jouer?\n");
+
+			printf("\n\nQuel carte jouer?\n");
 			scanf("%d",&i);
 
 		}while(i > joueurs[joueur_1].carte->_TOP || !(can_play_carte(joueurs[joueur_1].carte->_DATA[i], get_top(paquets))));
@@ -150,7 +148,6 @@ int play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1, 
 		// applicationdes règles du jeu
 		switch(get_top(paquets)->num){
 			default:
-				printf("normal\n");
 				break;
 			case 10:
 				compte += 2;
@@ -158,22 +155,27 @@ int play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1, 
 				inverse();
 				break ; 
 			case 12 :
+				printf("oups ton tour est passé \n");
 		 		next();
+		 		sleep(1);
 		 		break ; 
 		 	case 14 :
 		 		compte += 4;
+		 		printf("quelle couleur ? (B,J,R,V)\n");
 		 		do {
+		 		
 		 			a = '\0';
-		 			printf("quelle couleur ? (B,J,R,V)\n");
+		 		
 					scanf("%c",&a);
 		 		}
 		 		while(!(a == 'J' || a == 'R'|| a == 'B'|| a == 'V' ));
 		 			get_top(paquets)->color = a ;
 		 		break; 
 		 	case 13 :
+		 		printf("quelle couleur ? (B,J,R,V)\n");
 		 		do {
 		 			a = '\0';
-		 			printf("quelle couleur ? (B,J,R,V)\n");
+		 			
 					scanf("%c",&a);
 		 		}
 		 		while(!(a == 'J' || a == 'R'|| a == 'B'|| a == 'V' ));
@@ -181,22 +183,20 @@ int play(joueur_t *joueurs , pile_t * paquets , pile_t * pioches, int joueur_1, 
 		 		break; 
 		}	
 	} 
-	// joueur ne peut pas jouer, pas de +N carte posé
+	// le joueur n'a pas de cartes a joué, il doit piocher
 	else{
-		printf("\ncas 3\n");
 		printf("%s a pioché \n",joueurs[joueur_1].nom);
 		distribuer(1,pioches,joueurs[joueur_1].carte);
+		sleep(1);
 	}
-	// printf("num : %d %d\n",i, joueurs[joueur_1].carte->_DATA[i]->num);
 
 	// tour suivant
 	if(empty(joueurs[joueur_1].carte)){
 		printf("point %d\n", fin_jeux(joueurs, nb));
-		return 1;
+		return joueurs[joueur_1].point;
 	}
 	
 	next();
-	//sleep(2);
 	
 	if(tour < 0)
 		tour = 4;
