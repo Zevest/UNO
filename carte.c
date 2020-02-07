@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include "carte.h"
 
+
+
+// Initialise une carte
 carte_t * init_carte(char num, char color){	
 	if(num >= 0  && num < 15){
 		carte_t * c = malloc(sizeof (carte_t));
@@ -18,5 +21,5 @@ carte_t * init_carte(char num, char color){
 
 void affiche_carte(carte_t * c){
 	printf("[%s %c]", c->symbol, c->color);
-	//return text;
+
 }
