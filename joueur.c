@@ -3,7 +3,7 @@
 #include "pile.h"
 #include "joueur.h"
 
-#define Nombre_carte 1
+#define Nombre_carte 7
 
 
 
