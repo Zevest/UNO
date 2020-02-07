@@ -21,14 +21,21 @@ void reset(pile_t * pioche, joueur_t * joueurs, int nb){
 }
 
 int main(){
-	int i, stop = 0, nb= 3, tour; 
-	char * noms[] = {"Idir", "Mounir", "Karim", "Steve", "Rachid","ridi","rinuom","mirak","Zevest","dichar"};
+	int i, stop = 0, nb= 0, tour; 
+	char * noms[] = {"Amstrong", "Buzz", "Boomer", "Fury", "Jester","Merlin","Casper","Mountain","Saltie","Samara"};
 	
 	srand(time(NULL));
 	pile_t * paquet = init_pile();
 	remplir_paquet(paquet);
 	pile_t * pioche = init_pile();	
 	melange(paquet, pioche, 1);
+	
+	printf("Saisissez le nombre de joueurs entre [2 , 10] \n");
+	do{
+	scanf("%d",&nb);
+	}while(nb < 2 || nb > 10);
+	
+	
 	
 	joueur_t * joueurs = init_joueur(nb, noms, pioche);
 
