@@ -5,24 +5,10 @@
 #include "joueur.h"
 #include "play.h"
 #include <time.h>
+#define maxPoint 500
 
 
-#define W 30
-#define H 15
-
-
-void affiche_table(pile_t * paquet, joueur_t * joueur){
-	int j,i;
-	for(i = 0; i < W; ++i){
-		printf("#");
-	}
-	printf("\n");
-	for(j = 0; j < H; ++j){
-		printf("\n");
-	}
-	
-}
-
+// Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs 
 void reset(pile_t * pioche, joueur_t * joueurs, int nb){
 	int i;
 	setTour(0);
@@ -44,21 +30,15 @@ int main(){
 	pile_t * pioche = init_pile();	
 	melange(paquet, pioche, 1);
 	
-	
-	
 	joueur_t * joueurs = init_joueur(nb, noms, pioche);
 
-
 	tour = getTour();
-	while( stop < 500){ 
-		//printf("////////////////////////////////////////////////////// \n");
+	while( stop < maxPoint){ 
 		system("clear -x");
 		printf("tour: %d\n\n",tour);
 		printf("joueur%d : %s => mes cartes: \n",tour, noms[tour%nb]);
 		stop= play(joueurs, paquet, pioche, getTour()%nb, nb);
 		if(stop){
-			//reset(paquet,pioche, joueurs, nb);
-			
 			for(i = 0; i < nb; ++i){
 				free(joueurs[i].carte);
 			}
@@ -70,12 +50,14 @@ int main(){
 			melange(paquet, pioche, 1);
 			
 			printf("Fin de la manche.\n");
+			if(stop > maxPoint){
+				printf("Bravo  %s !!\n", noms[tour]);
+			}
 			reset(pioche, joueurs, nb);
 			
 		}
 		tour = getTour();
 	}
-	
 	
 	
 	
