@@ -35,8 +35,6 @@ int main(){
 	scanf("%d",&nb);
 	}while(nb < 2 || nb > 10);
 	
-	
-	
 	joueur_t * joueurs = init_joueur(nb, noms, pioche);
 
 	tour = getTour();
@@ -65,8 +63,6 @@ int main(){
 		}
 		tour = getTour();
 	}
-	
-	
 	
 	for(i = 0; i < nb; ++i){
 		free(joueurs[i].carte);

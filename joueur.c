@@ -5,8 +5,6 @@
 
 #define Nombre_carte 7
 
-
-
 // Initialise les joueurs 
 joueur_t *  init_joueur(int nb , char * noms[], pile_t * paquet){
 	int i,j ; 
@@ -16,9 +14,7 @@ joueur_t *  init_joueur(int nb , char * noms[], pile_t * paquet){
 		joueurs[i].nom = noms[i]; 
 		joueurs[i].carte = init_pile();
 		
-		
 		distribuer(Nombre_carte, paquet, joueurs[i].carte); 
-	
 	}
 	return joueurs;
 }
