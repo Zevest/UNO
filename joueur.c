@@ -1,20 +1,21 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pile.h"
-#include "joueur.h"
+#include "include/pile.h"
+#include "include/joueur.h"
 
 #define Nombre_carte 7
 
-// Initialise les joueurs 
-joueur_t *  init_joueur(int nb , char * noms[], pile_t * paquet){
-	int i,j ; 
-	joueur_t * joueurs = malloc(nb * sizeof *joueurs);
+// Initialise les joueurs
+player_t *player_Init(int nb, char *noms[], pile_t *deck)
+{
+	int i, j;
+	player_t *joueurs = malloc(nb * sizeof *joueurs);
 	for (i = 0; i < nb; ++i)
 	{
-		joueurs[i].nom = noms[i]; 
-		joueurs[i].carte = init_pile();
-		
-		distribuer(Nombre_carte, paquet, joueurs[i].carte); 
+		joueurs[i].name = noms[i];
+		joueurs[i].cards = pile_Init();
+
+		pile_Distribute(Nombre_carte, deck, joueurs[i].cards);
 	}
 	return joueurs;
 }
