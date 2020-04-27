@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include "include/csvloader.h"
 
+/// Charge un fichier csv
 csv_t *initCSV(FILE *f)
 {
 	csv_t *input;
@@ -17,6 +18,7 @@ csv_t *initCSV(FILE *f)
 	input->data = (data_t *)malloc(lines * sizeof(input->data[0]));
 }
 
+/// Libere la memoire
 void deleteCSV(csv_t *csv)
 {
 	free(csv->data);
@@ -24,6 +26,7 @@ void deleteCSV(csv_t *csv)
 	free(csv);
 }
 
+/// Compte le nombre de ligne dans un ficher
 int countLine(FILE *f)
 {
 	if (f == NULL)
@@ -41,7 +44,7 @@ int countLine(FILE *f)
 	rewind(f);
 	return lines;
 }
-
+/// Sépare les données du ficher et les stocke dans un objet
 csv_t *parseCSV(const string_t filename, csv_t *input)
 {
 	csv_t *tmp = NULL;
@@ -74,15 +77,16 @@ csv_t *parseCSV(const string_t filename, csv_t *input)
 	return tmp;
 }
 
+/// Affiche le contenue d'une donnée (ligne d'un fichier csv)
 void printData(data_t *d)
 {
-
 	if (d != NULL)
 		printf("%d:%s", d->index, d->message);
 	else
 		printf("%p", d);
 }
 
+/// Affiche les donnée stocker dans l'objet
 void printCSV(csv_t *csv, dataPrinter printer)
 {
 	if (csv != NULL)
@@ -98,6 +102,7 @@ void printCSV(csv_t *csv, dataPrinter printer)
 	}
 }
 
+/// Affiche n fois le caractere de fin de ligne
 void jumpLine(int n)
 {
 	while (n-- > 0)
@@ -108,8 +113,6 @@ void jumpLine(int n)
 int main()
 {
 	csv_t *csv = parseCSV("Message.csv", NULL);
-	//printCSV(csv, printData);
-	//printData(csv->data + 3);
 	printData(&csv->data[0]);
 	deleteCSV(csv);
 }

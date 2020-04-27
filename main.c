@@ -9,7 +9,7 @@
 
 #define maxPoint 500
 
-// Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs
+/// Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs
 void reset(pile_t *pioche, player_t *joueurs, int nb)
 {
 	int i;
@@ -25,23 +25,25 @@ int main()
 {
 	int i, stop = 0, nb = 0, g_Tour;
 	char *noms[] = {"Amstrong", "Buzz", "Boomer", "Fury", "Jester", "Merlin", "Casper", "Mountain", "Saltie", "Samara"};
-	srand(time(NULL));
-	csv_t *csv = parseCSV("./res/Message.csv", NULL);
-	char buf[100];
 
+	csv_t *csv = parseCSV("./res/Message.csv", NULL);
 	pile_t *paquet = pile_Init();
-	pile_FillDeck(paquet);
+
 	pile_t *pioche = pile_Init();
+	player_t *joueurs;
+	pile_FillDeck(paquet);
 	pile_Shuffle(paquet, pioche, 1);
 
+	srand(time(NULL));
 	printf(csv->data[0].message, NULL);
 	jumpLine(1);
+
 	do
 	{
 		scanf("%d", &nb);
 	} while (nb < 2 || nb > 10);
 
-	player_t *joueurs = player_Init(nb, noms, pioche);
+	joueurs = player_Init(nb, noms, pioche);
 
 	g_Tour = getTour();
 	while (stop < maxPoint)

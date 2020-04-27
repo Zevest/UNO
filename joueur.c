@@ -5,7 +5,7 @@
 
 #define Nombre_carte 7
 
-// Initialise les joueurs
+/// Initialise les joueurs
 player_t *player_Init(int nb, char *noms[], pile_t *deck)
 {
 	int i, j;

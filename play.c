@@ -36,7 +36,7 @@ void inverse()
 	g_Sens *= -1;
 }
 
-/// Verifie si la carte peut etre jouer
+/// Verifie si la carte peut être jouer
 int can_play_carte(card_t *carte_A, card_t *carte_B)
 {
 
@@ -114,17 +114,17 @@ int fin_jeux(player_t *g, int joueur)
 }
 
 /// Boucle principale du jeu
-int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int joueur_1, int nb, csv_t *csv)
+int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int nbj, csv_t *csv)
 {
 	int i;
 	char a;
 	int tmp = 0;
 
-	// affiche les cartes du joueur
-	for (i = 0; i < joueurs[joueur_1].cards->_TOP + 1; ++i)
+	// Affiche les cartes du joueur
+	for (i = 0; i < joueurs[numJoueur].cards->_TOP + 1; ++i)
 	{
 
-		card_Display(joueurs[joueur_1].cards->_DATA[i]);
+		card_Display(joueurs[numJoueur].cards->_DATA[i]);
 		printf(" ");
 	}
 	jumpLine(2);
@@ -133,14 +133,14 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int joueur_1, int 
 	jumpLine(2);
 	printf(csv->data[6].message, NULL);
 
-	// affiche les cartes jouables
-	for (i = 0; i < joueurs[joueur_1].cards->_TOP + 1; ++i)
+	// Affiche les cartes jouables
+	for (i = 0; i < joueurs[numJoueur].cards->_TOP + 1; ++i)
 	{
-		if (can_play_carte(joueurs[joueur_1].cards->_DATA[i], pile_GetTop(paquets)) == 1)
+		if (can_play_carte(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets)) == 1)
 		{
 			tmp++;
 			printf("(%d: ", i);
-			card_Display(joueurs[joueur_1].cards->_DATA[i]);
+			card_Display(joueurs[numJoueur].cards->_DATA[i]);
 			printf(") ");
 		}
 	}
@@ -148,10 +148,10 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int joueur_1, int 
 	// +2 ou/et +4 et le joueur n'a pas de +2 ni de +4 donc il est obligé de piocher
 	if (g_Compte > 0 && !tmp)
 	{
-		//printf("%s pioche %d cartes!!\n", joueurs[joueur_1].name, g_Compte);
-		printf(csv->data[7].message, joueurs[joueur_1].name, g_Compte);
+		//printf("%s pioche %d cartes!!\n", joueurs[numJoueur].name, g_Compte);
+		printf(csv->data[7].message, joueurs[numJoueur].name, g_Compte);
 		jumpLine(1);
-		pile_Distribute(g_Compte, pioches, joueurs[joueur_1].cards);
+		pile_Distribute(g_Compte, pioches, joueurs[numJoueur].cards);
 		g_Compte = 0;
 	}
 
@@ -166,11 +166,11 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int joueur_1, int 
 			printf(csv->data[8].message, NULL);
 			scanf("%d", &i);
 
-		} while (i > joueurs[joueur_1].cards->_TOP || !(can_play_carte(joueurs[joueur_1].cards->_DATA[i], pile_GetTop(paquets))));
+		} while (i > joueurs[numJoueur].cards->_TOP || !(can_play_carte(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets))));
 
 		// pose la carte sur le jeu
-		pile_Push(paquets, joueurs[joueur_1].cards->_DATA[i]);
-		pile_Remove(joueurs[joueur_1].cards, i);
+		pile_Push(paquets, joueurs[numJoueur].cards->_DATA[i]);
+		pile_Remove(joueurs[numJoueur].cards, i);
 
 		// applicationdes règles du jeu
 		switch (pile_GetTop(paquets)->num)
@@ -220,20 +220,20 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int joueur_1, int 
 	// le joueur n'a pas de cartes a joué, il doit piocher
 	else
 	{
-		printf(csv->data[11].message, joueurs[joueur_1].name);
+		printf(csv->data[11].message, joueurs[numJoueur].name);
 		jumpLine(1);
-		//printf("%s a pioché \n", joueurs[joueur_1].name);
-		pile_Distribute(1, pioches, joueurs[joueur_1].cards);
+		//printf("%s a pioché \n", joueurs[numJoueur].name);
+		pile_Distribute(1, pioches, joueurs[numJoueur].cards);
 		sleep(1);
 	}
 
 	// tour suivant
-	if (pile_Empty(joueurs[joueur_1].cards))
+	if (pile_Empty(joueurs[numJoueur].cards))
 	{
-		printf(csv->data[12].message, fin_jeux(joueurs, nb));
+		printf(csv->data[12].message, fin_jeux(joueurs, nbj));
 		jumpLine(1);
 		//printf("point %d\n", fin_jeux(joueurs, nb));
-		return joueurs[joueur_1].score;
+		return joueurs[numJoueur].score;
 	}
 
 	next();

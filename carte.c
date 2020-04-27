@@ -32,7 +32,7 @@ static inline void boldYellow() { printf("\033[1;33m"); }
 static inline void resetColor() { printf("\033[0m"); }
 static inline void bold() { printf("\033[1;0m"); }
 
-// Initialise une carte
+/// Initialise une carte
 card_t *card_Init(char num, char color)
 {
 	if (num >= 0 && num < 15)
@@ -48,7 +48,7 @@ card_t *card_Init(char num, char color)
 	}
 	return NULL;
 }
-
+/// Afficche une carte
 void card_Display(card_t *c)
 {
 	switch (c->color)

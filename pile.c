@@ -4,13 +4,13 @@
 #include "include/carte.h"
 #include "include/pile.h"
 
-// Retroune le max de deux valeurs a et b
+/// Retroune le max de deux valeurs a et b
 int max(int a, int b)
 {
 	return a > b ? a : b;
 }
 
-// Initialise la pile de carte
+/// Initialise la pile de carte
 extern pile_t *pile_Init()
 {
 	pile_t *p = malloc(sizeof(pile_t));
@@ -18,25 +18,25 @@ extern pile_t *pile_Init()
 	return p;
 }
 
-// Renvoie le sommet de la pile
+/// Renvoie le sommet de la pile
 extern card_t *pile_GetTop(pile_t *jeu)
 {
 	return jeu->_DATA[jeu->_TOP];
 }
 
-// Ajoute une carte au sommet de la pile
+/// Ajoute une carte au sommet de la pile
 extern void pile_Push(pile_t *p, card_t *a)
 {
 	p->_DATA[++(p->_TOP)] = a;
 }
 
-// Vérifie si la pile est vide
+/// Vérifie si la pile est vide
 extern int pile_Empty(pile_t *p)
 {
 	return (p->_TOP < 0);
 }
 
-// supprime la carte avec l'indice index de la pile
+/// Supprime la carte avec l'indice index de la pile
 extern int pile_Remove(pile_t *p, int index)
 {
 	int i;
@@ -56,7 +56,7 @@ extern int pile_Remove(pile_t *p, int index)
 	return 0;
 }
 
-// renvoie le premier element de la pile
+/// Renvoie le premier element de la pile
 extern card_t *pile_Pop(pile_t *p)
 {
 	if (!pile_Empty(p))
@@ -64,13 +64,13 @@ extern card_t *pile_Pop(pile_t *p)
 	return 0;
 }
 
-// Mélange les cartes d'un paquets sources vers un paquets destination
+/// Mélange les cartes d'un paquets sources vers un paquets destination
 extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 {
 	int i;
 	if (!pile_Empty(res))
 	{
-		// Vider le paquet res
+		// Vide le paquet res
 		while (!pile_Empty(res))
 		{
 			pile_Pop(res);
@@ -112,7 +112,7 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 	}
 }
 
-// distribue n cartes
+/// distribue n cartes
 extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 {
 	int i;
@@ -126,7 +126,8 @@ extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 		pile_Push(paquet_dest, pile_Pop(paquet_src));
 	}
 }
-// initialiser le paquet
+
+/// initialiser le paquet
 extern void pile_FillDeck(pile_t *paquet)
 {
 	int i;
