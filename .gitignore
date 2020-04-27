@@ -1,1 +1,4 @@
 /app
+/build/*
+/*.o
+.vscode/settings.json

@@ -1,0 +1,13 @@
+0,Saisissez le nombre de joueurs entre [2 , 10]£
+1,tour: %d£
+2,joueur %d : %s => vos cartes: £
+3,Fin de la manche.£
+4,Bravo  %s !!£
+5,Table :£
+6,Cartes que vous pouvez jouer => £
+7,%s pioche %d cartes!!£
+8,Quel carte voulez-vous jouer? £
+9,oups votre tour a été passé£
+10,quelle couleur ? (B,J,R,V)£
+11,%s a pioché£
+12,point %d£
