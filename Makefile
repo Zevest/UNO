@@ -4,7 +4,7 @@ CFLAGS=-Wall#-I $(HEADER)
 OUT= build/
 SRC= main.c pile.c carte.c joueur.c play.c
 OBJ=$(SRC:.c=.o)
-PROGNAME=Uno.exe
+PROGNAME=UNO.exe
 RM=rm
 
 all: $(OUT)$(PROGNAME)

@@ -1,6 +1,6 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdfgijlmnprstu",
+  0: "_abcdfgijlmnprst",
   1: "cdp",
   2: "cjmpr",
   3: "acdfgijmnprs",
@@ -8,8 +8,7 @@ var indexSectionsWithContent =
   5: "cdps",
   6: "b",
   7: "ft",
-  8: "_mnp",
-  9: "u"
+  8: "_mnp"
 };
 
 var indexSectionNames =
@@ -22,8 +21,7 @@ var indexSectionNames =
   5: "typedefs",
   6: "enums",
   7: "enumvalues",
-  8: "defines",
-  9: "pages"
+  8: "defines"
 };
 
 var indexSectionLabels =
@@ -36,7 +34,6 @@ var indexSectionLabels =
   5: "Définitions de type",
   6: "Énumérations",
   7: "Valeurs énumérées",
-  8: "Macros",
-  9: "Pages"
+  8: "Macros"
 };
 

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['parsecsv_49',['parseCSV',['../csv_loader_8c.html#ab5708b9d5ae435667a9acad4e37c3275',1,'parseCSV(const string_t filename, csv_t *input):&#160;csvLoader.c'],['../csvloader_8h.html#a51e881efbd50dd8dbb801f8759079350',1,'parseCSV(string_t filename, csv_t *input):&#160;csvLoader.c']]],
+  ['parsecsv_49',['parseCSV',['../csvloader_8c.html#ab5708b9d5ae435667a9acad4e37c3275',1,'parseCSV(const string_t filename, csv_t *input):&#160;csvloader.c'],['../csvloader_8h.html#a51e881efbd50dd8dbb801f8759079350',1,'parseCSV(string_t filename, csv_t *input):&#160;csvloader.c']]],
   ['pile_50',['pile',['../structpile.html',1,'']]],
   ['pile_2ec_51',['pile.c',['../pile_8c.html',1,'']]],
   ['pile_2eh_52',['pile.h',['../pile_8h.html',1,'']]],
@@ -21,6 +21,6 @@ var searchData=
   ['player_67',['player',['../structplayer.html',1,'']]],
   ['player_5finit_68',['player_Init',['../joueur_8h.html#a5cb54243700f2317069b4771bbc65670',1,'player_Init(int nb, char **noms, pile_t *paquet):&#160;joueur.h'],['../joueur_8c.html#a962115c2104e1a7cb6bd9cfaac0eae19',1,'player_Init(int nb, char *noms[], pile_t *deck):&#160;joueur.c']]],
   ['player_5ft_69',['player_t',['../joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c',1,'joueur.h']]],
-  ['printcsv_70',['printCSV',['../csv_loader_8c.html#a1bc940a29293a64cccd83ab6fff86f9c',1,'printCSV(csv_t *csv, dataPrinter printer):&#160;csvLoader.c'],['../csvloader_8h.html#a1bc940a29293a64cccd83ab6fff86f9c',1,'printCSV(csv_t *csv, dataPrinter printer):&#160;csvLoader.c']]],
-  ['printdata_71',['printData',['../csv_loader_8c.html#a62bb7e81fd7c3c8342199107777c4420',1,'printData(data_t *d):&#160;csvLoader.c'],['../csvloader_8h.html#a62bb7e81fd7c3c8342199107777c4420',1,'printData(data_t *d):&#160;csvLoader.c']]]
+  ['printcsv_70',['printCSV',['../csvloader_8c.html#a1bc940a29293a64cccd83ab6fff86f9c',1,'printCSV(csv_t *csv, dataPrinter printer):&#160;csvloader.c'],['../csvloader_8h.html#a1bc940a29293a64cccd83ab6fff86f9c',1,'printCSV(csv_t *csv, dataPrinter printer):&#160;csvloader.c']]],
+  ['printdata_71',['printData',['../csvloader_8c.html#a62bb7e81fd7c3c8342199107777c4420',1,'printData(data_t *d):&#160;csvloader.c'],['../csvloader_8h.html#a62bb7e81fd7c3c8342199107777c4420',1,'printData(data_t *d):&#160;csvloader.c']]]
 ];

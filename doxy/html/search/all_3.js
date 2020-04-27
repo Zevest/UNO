@@ -11,9 +11,9 @@ var searchData=
   ['carte_2ec_15',['carte.c',['../carte_8c.html',1,'']]],
   ['carte_2eh_16',['carte.h',['../carte_8h.html',1,'']]],
   ['color_17',['color',['../structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777',1,'card']]],
-  ['countline_18',['countLine',['../csv_loader_8c.html#acefedace0492c6634a1372bbef14c15f',1,'countLine(FILE *f):&#160;csvLoader.c'],['../csvloader_8h.html#acefedace0492c6634a1372bbef14c15f',1,'countLine(FILE *f):&#160;csvLoader.c']]],
+  ['countline_18',['countLine',['../csvloader_8c.html#acefedace0492c6634a1372bbef14c15f',1,'countLine(FILE *f):&#160;csvloader.c'],['../csvloader_8h.html#acefedace0492c6634a1372bbef14c15f',1,'countLine(FILE *f):&#160;csvloader.c']]],
   ['csv_19',['csv',['../structcsv.html',1,'']]],
   ['csv_5ft_20',['csv_t',['../csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b',1,'csvloader.h']]],
-  ['csvloader_2ec_21',['csvLoader.c',['../csv_loader_8c.html',1,'']]],
+  ['csvloader_2ec_21',['csvloader.c',['../csvloader_8c.html',1,'']]],
   ['csvloader_2eh_22',['csvloader.h',['../csvloader_8h.html',1,'']]]
 ];

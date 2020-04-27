@@ -21,12 +21,28 @@ void reset(pile_t *pioche, player_t *joueurs, int nb)
 	}
 }
 
-int main()
+int main(int argc, char **argv)
 {
 	int i, stop = 0, nb = 0, g_Tour;
 	char *noms[] = {"Amstrong", "Buzz", "Boomer", "Fury", "Jester", "Merlin", "Casper", "Mountain", "Saltie", "Samara"};
 
-	csv_t *csv = parseCSV("./res/Message.csv", NULL);
+	csv_t *csv;
+	if (argc > 1)
+	{
+		csv = parseCSV(argv[1], NULL);
+	}
+	else
+	{
+		csv = parseCSV("res/Message.csv", NULL);
+	}
+	if (csv == NULL)
+	{
+		printf("Essayez de retourner dans le répertoire parent\npuis d'utiliser la commande 'make run' pour executer le programme.\n");
+		printf("Sinon, essaye ceci:\n");
+		printf("%s %s\n", argv[0], "../res/Message.csv");
+		exit(EXIT_FAILURE);
+	}
+
 	pile_t *paquet = pile_Init();
 
 	pile_t *pioche = pile_Init();

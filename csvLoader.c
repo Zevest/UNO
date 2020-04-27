@@ -52,9 +52,9 @@ csv_t *parseCSV(const string_t filename, csv_t *input)
 	string_t token = "";
 	char buf[__CSV_BUFFER_SIZE__] = "";
 	FILE *stream = fopen(filename, "r");
-	if (!stream)
+	if (stream == NULL)
 	{
-		fclose(stream);
+		fprintf(stderr, "Impossible de trouver le fichier %s.\n", filename);
 		return NULL;
 	}
 
