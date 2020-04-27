@@ -8,7 +8,7 @@
 /// Initialise les joueurs
 player_t *player_Init(int nb, char *noms[], pile_t *deck)
 {
-	int i, j;
+	int i;
 	player_t *joueurs = malloc(nb * sizeof *joueurs);
 	for (i = 0; i < nb; ++i)
 	{

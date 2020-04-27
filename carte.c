@@ -2,24 +2,27 @@
 #include <stdlib.h>
 #include "include/carte.h"
 
-/* 
-Caratere couleur :\033
+/// Liste des symboles des cartes.
+static char *SYMBOL[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "inverse", "passe", "joker", "+4"};
 
-Code couleurs
-[0;31m	Red
-[1;31m	Bold Red
-[0;32m	Green
-[1;32m	Bold Green
-[0;33m	Yellow
-[01;33m	Bold Yellow
-[0;34m	Blue
-[1;34m	Bold Blue
-[0;35m	Magenta
-[1;35m	Bold Magenta
-[0;36m	Cyan
-[1;36m	Bold Cyan
-[0m	Reset
-*/
+/**
+ * Caratere couleur :\033
+ *
+ * Code couleurs
+ * [0;31m	Red
+ * [1;31m	Bold Red
+ * [0;32m	Green
+ * [1;32m	Bold Green
+ * [0;33m	Yellow
+ * [01;33m	Bold Yellow
+ * [0;34m	Blue
+ * [1;34m	Bold Blue
+ * [0;35m	Magenta
+ * [1;35m	Bold Magenta
+ * [0;36m	Cyan
+ * [1;36m	Bold Cyan
+ * [0m	Reset
+ */
 
 static inline void red() { printf("\033[0;31m"); }
 static inline void boldRed() { printf("\033[1;31m"); }
@@ -43,7 +46,7 @@ card_t *card_Init(char num, char color)
 			c->color = 'N';
 		else
 			c->color = color;
-		c->symbol = SYMBOL[num];
+		c->symbol = *(SYMBOL + num);
 		return c;
 	}
 	return NULL;

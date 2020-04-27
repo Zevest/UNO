@@ -16,6 +16,7 @@ csv_t *initCSV(FILE *f)
 	input = (csv_t *)malloc(sizeof(*input));
 	input->length = lines;
 	input->data = (data_t *)malloc(lines * sizeof(input->data[0]));
+	return input;
 }
 
 /// Libere la memoire

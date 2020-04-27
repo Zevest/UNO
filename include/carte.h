@@ -1,9 +1,6 @@
 #ifndef __CARTE_H__
 #define __CARTE_H__
 
-/// Liste des symboles des cartes.
-static char *SYMBOL[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "inverse", "passe", "joker", "+4"};
-
 /**
  * Structure d'une carte
  * Une carte contient un numero, une couleur et un symbole. 
