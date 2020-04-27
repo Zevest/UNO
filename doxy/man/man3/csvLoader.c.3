@@ -1,0 +1,140 @@
+.TH "UNO/csvLoader.c" 3 "Lundi 27 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/csvLoader.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include 'include/csvloader\&.h'\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBcsv_t\fP * \fBinitCSV\fP (FILE *f)"
+.br
+.RI "Charge un fichier csv\&. "
+.ti -1c
+.RI "void \fBdeleteCSV\fP (\fBcsv_t\fP *\fBcsv\fP)"
+.br
+.RI "Libere la memoire\&. "
+.ti -1c
+.RI "int \fBcountLine\fP (FILE *f)"
+.br
+.RI "Compte le nombre de ligne dans un ficher\&. "
+.ti -1c
+.RI "\fBcsv_t\fP * \fBparseCSV\fP (const \fBstring_t\fP filename, \fBcsv_t\fP *input)"
+.br
+.RI "Sépare les données du ficher et les stocke dans un objet\&. "
+.ti -1c
+.RI "void \fBprintData\fP (\fBdata_t\fP *d)"
+.br
+.RI "Affiche le contenue d'une donnée (ligne d'un fichier csv) "
+.ti -1c
+.RI "void \fBprintCSV\fP (\fBcsv_t\fP *\fBcsv\fP, \fBdataPrinter\fP printer)"
+.br
+.RI "Affiche les donnée stocker dans l'objet\&. "
+.ti -1c
+.RI "void \fBjumpLine\fP (int n)"
+.br
+.RI "Affiche n fois le caractere de fin de ligne\&. "
+.in -1c
+.SH "Documentation des fonctions"
+.PP 
+.SS "int countLine (FILE * f)"
+
+.PP
+Compte le nombre de ligne dans un ficher\&. Compte le nombre de ligne d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP Fichier 
+.RE
+.PP
+
+.SS "void deleteCSV (\fBcsv_t\fP * csv)"
+
+.PP
+Libere la memoire\&. Libere la memoire d'un objet csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcsv\fP l'objet a supprimer\&. 
+.RE
+.PP
+
+.SS "\fBcsv_t\fP* initCSV (FILE * f)"
+
+.PP
+Charge un fichier csv\&. Initialise un objet CSV a partire d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP le a charger\&. 
+.RE
+.PP
+
+.SS "void jumpLine (int n)"
+
+.PP
+Affiche n fois le caractere de fin de ligne\&. Permet d'afficher n fois le carater fin de ligne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIn\fP nombre de répétition 
+.RE
+.PP
+
+.SS "\fBcsv_t\fP* parseCSV (\fBstring_t\fP filename, \fBcsv_t\fP * input)"
+
+.PP
+Sépare les données du ficher et les stocke dans un objet\&. Traite les données du fichier csv et les stocke dans la structure\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIfilename\fP nom du fichier\&. 
+.br
+\fIinput\fP object concerner\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+l'objet creer si input est null, sinon input\&. 
+.RE
+.PP
+
+.SS "void printCSV (\fBcsv_t\fP * csv, \fBdataPrinter\fP printer)"
+
+.PP
+Affiche les donnée stocker dans l'objet\&. Affiche le contenu d'un fichier CSV\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcsv\fP l'objet dans le quel sont stocker les données\&. 
+.br
+\fIprinter\fP fonction d'affichage des données\&. 
+.RE
+.PP
+
+.SS "void printData (\fBdata_t\fP * d)"
+
+.PP
+Affiche le contenue d'une donnée (ligne d'un fichier csv) Affiche une ligne de donnée d'un fichier csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fId\fP la ligne de donnée\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

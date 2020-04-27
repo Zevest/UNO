@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO: Référence du fichier UNO/csvLoader.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.2</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier csvLoader.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="csvloader_8h_source.html">include/csvloader.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de csvLoader.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="csv_loader_8c__incl.png" border="0" usemap="#_u_n_o_2csv_loader_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a4aed385d02bc3dac2609bde39f9a9601"><td class="memItemLeft" align="right" valign="top"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#a4aed385d02bc3dac2609bde39f9a9601">initCSV</a> (FILE *f)</td></tr>
+<tr class="memdesc:a4aed385d02bc3dac2609bde39f9a9601"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge un fichier csv.  <a href="csv_loader_8c.html#a4aed385d02bc3dac2609bde39f9a9601">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4aed385d02bc3dac2609bde39f9a9601"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1068f0e77f60f6c6149ab8e0290e2106"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#a1068f0e77f60f6c6149ab8e0290e2106">deleteCSV</a> (<a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *<a class="el" href="structcsv.html">csv</a>)</td></tr>
+<tr class="memdesc:a1068f0e77f60f6c6149ab8e0290e2106"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libere la memoire.  <a href="csv_loader_8c.html#a1068f0e77f60f6c6149ab8e0290e2106">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1068f0e77f60f6c6149ab8e0290e2106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefedace0492c6634a1372bbef14c15f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#acefedace0492c6634a1372bbef14c15f">countLine</a> (FILE *f)</td></tr>
+<tr class="memdesc:acefedace0492c6634a1372bbef14c15f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de ligne dans un ficher.  <a href="csv_loader_8c.html#acefedace0492c6634a1372bbef14c15f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:acefedace0492c6634a1372bbef14c15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5708b9d5ae435667a9acad4e37c3275"><td class="memItemLeft" align="right" valign="top"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#ab5708b9d5ae435667a9acad4e37c3275">parseCSV</a> (const <a class="el" href="csvloader_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> filename, <a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *input)</td></tr>
+<tr class="memdesc:ab5708b9d5ae435667a9acad4e37c3275"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sépare les données du ficher et les stocke dans un objet.  <a href="csv_loader_8c.html#ab5708b9d5ae435667a9acad4e37c3275">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab5708b9d5ae435667a9acad4e37c3275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62bb7e81fd7c3c8342199107777c4420"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#a62bb7e81fd7c3c8342199107777c4420">printData</a> (<a class="el" href="csvloader_8h.html#a1d756f237acef91aa7ef4e6b87f52632">data_t</a> *d)</td></tr>
+<tr class="memdesc:a62bb7e81fd7c3c8342199107777c4420"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le contenue d'une donnée (ligne d'un fichier csv)  <a href="csv_loader_8c.html#a62bb7e81fd7c3c8342199107777c4420">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a62bb7e81fd7c3c8342199107777c4420"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bc940a29293a64cccd83ab6fff86f9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#a1bc940a29293a64cccd83ab6fff86f9c">printCSV</a> (<a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *<a class="el" href="structcsv.html">csv</a>, <a class="el" href="csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939">dataPrinter</a> printer)</td></tr>
+<tr class="memdesc:a1bc940a29293a64cccd83ab6fff86f9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les donnée stocker dans l'objet.  <a href="csv_loader_8c.html#a1bc940a29293a64cccd83ab6fff86f9c">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1bc940a29293a64cccd83ab6fff86f9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1394723d502571f9991cde6c38b59837"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="csv_loader_8c.html#a1394723d502571f9991cde6c38b59837">jumpLine</a> (int n)</td></tr>
+<tr class="memdesc:a1394723d502571f9991cde6c38b59837"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche n fois le caractere de fin de ligne.  <a href="csv_loader_8c.html#a1394723d502571f9991cde6c38b59837">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1394723d502571f9991cde6c38b59837"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="acefedace0492c6634a1372bbef14c15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acefedace0492c6634a1372bbef14c15f">&#9670;&nbsp;</a></span>countLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int countLine </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compte le nombre de ligne dans un ficher. </p>
+<p>Compte le nombre de ligne d'un fichier. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1068f0e77f60f6c6149ab8e0290e2106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1068f0e77f60f6c6149ab8e0290e2106">&#9670;&nbsp;</a></span>deleteCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deleteCSV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *&#160;</td>
+          <td class="paramname"><em>csv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libere la memoire. </p>
+<p>Libere la memoire d'un objet csv. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csv</td><td>l'objet a supprimer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4aed385d02bc3dac2609bde39f9a9601"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aed385d02bc3dac2609bde39f9a9601">&#9670;&nbsp;</a></span>initCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a>* initCSV </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Charge un fichier csv. </p>
+<p>Initialise un objet CSV a partire d'un fichier. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>le a charger. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1394723d502571f9991cde6c38b59837"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1394723d502571f9991cde6c38b59837">&#9670;&nbsp;</a></span>jumpLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void jumpLine </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche n fois le caractere de fin de ligne. </p>
+<p>Permet d'afficher n fois le carater fin de ligne. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>nombre de répétition </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab5708b9d5ae435667a9acad4e37c3275"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5708b9d5ae435667a9acad4e37c3275">&#9670;&nbsp;</a></span>parseCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a>* parseCSV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="csvloader_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a>&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *&#160;</td>
+          <td class="paramname"><em>input</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sépare les données du ficher et les stocke dans un objet. </p>
+<p>Traite les données du fichier csv et les stocke dans la structure. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filename</td><td>nom du fichier. </td></tr>
+    <tr><td class="paramname">input</td><td>object concerner. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>l'objet creer si input est null, sinon input. </dd></dl>
+
+</div>
+</div>
+<a id="a1bc940a29293a64cccd83ab6fff86f9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bc940a29293a64cccd83ab6fff86f9c">&#9670;&nbsp;</a></span>printCSV()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printCSV </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *&#160;</td>
+          <td class="paramname"><em>csv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939">dataPrinter</a>&#160;</td>
+          <td class="paramname"><em>printer</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche les donnée stocker dans l'objet. </p>
+<p>Affiche le contenu d'un fichier CSV. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">csv</td><td>l'objet dans le quel sont stocker les données. </td></tr>
+    <tr><td class="paramname">printer</td><td>fonction d'affichage des données. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a62bb7e81fd7c3c8342199107777c4420"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62bb7e81fd7c3c8342199107777c4420">&#9670;&nbsp;</a></span>printData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="csvloader_8h.html#a1d756f237acef91aa7ef4e6b87f52632">data_t</a> *&#160;</td>
+          <td class="paramname"><em>d</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le contenue d'une donnée (ligne d'un fichier csv) </p>
+<p>Affiche une ligne de donnée d'un fichier csv. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">d</td><td>la ligne de donnée. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

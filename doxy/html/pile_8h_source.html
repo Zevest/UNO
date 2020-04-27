@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de UNO/include/pile.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.2</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_2954f25923406911f899a44fc111dfa2.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pile.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pile_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">    1</a></span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="carte_8h.html">carte.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef __PILE_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define __PILE_H__</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define PILE_MAX 256</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="pile_8h.html#a348ec1b28d65a5ccf11661aa33b28606">    5</a></span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structpile.html">   12</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structpile.html">pile</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structpile.html#adc3a560a072f4b610b7f9550c03fee56">   14</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="structpile.html#adc3a560a072f4b610b7f9550c03fee56">_TOP</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="structpile.html#a683a698de2fb5eea97a7ada2f6fff495">   15</a></span>&#160;   <a class="code" href="structcard.html">card_t</a> *<a class="code" href="structpile.html#a683a698de2fb5eea97a7ada2f6fff495">_DATA</a>[<a class="code" href="pile_8h.html#a348ec1b28d65a5ccf11661aa33b28606">PILE_MAX</a>];</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1">   18</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c">   20</a></span>&#160;   <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   <span class="keyword">true</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b">   22</a></span>&#160;} <a class="code" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structpile.html">pile</a> <a class="code" href="structpile.html">pile_t</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">extern</span> <a class="code" href="structpile.html">pile_t</a> *<a class="code" href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pile_8h.html#af6e39ffddac1cbaf3a5865a3455c41a0">pile_Push</a>(<a class="code" href="structpile.html">pile_t</a> *p, <a class="code" href="structcard.html">card_t</a> *c);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">extern</span> <a class="code" href="structcard.html">card_t</a> *<a class="code" href="pile_8h.html#ae33057110b0e1fbff94f39d263253237">pile_Pop</a>(<a class="code" href="structpile.html">pile_t</a> *p);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="pile_8h.html#a53cfd5731f7914026a2a3481a4dc9f9d">pile_Remove</a>(<a class="code" href="structpile.html">pile_t</a> *p, <span class="keywordtype">int</span> i);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="pile_8h.html#ab410339392ec6b44af55d522f4a4b973">pile_Empty</a>(<a class="code" href="structpile.html">pile_t</a> *p);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">extern</span> <a class="code" href="structcard.html">card_t</a> *<a class="code" href="pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee">pile_GetTop</a>(<a class="code" href="structpile.html">pile_t</a> *p);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a>(<a class="code" href="structpile.html">pile_t</a> *p);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pile_8h.html#ae00c4c74f3f1aa7f9b5545120dc84b43">pile_Distribute</a>(<span class="keywordtype">int</span> n, <a class="code" href="structpile.html">pile_t</a> *src, <a class="code" href="structpile.html">pile_t</a> *dest);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a>(<a class="code" href="structpile.html">pile_t</a> *src, <a class="code" href="structpile.html">pile_t</a> *dst, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="apile_8h_html_a5c94337ba816acd0b0ecffcc952c25a6"><div class="ttname"><a href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *p)</div><div class="ttdoc">initialiser le paquet</div><div class="ttdef"><b>Definition:</b> pile.c:131</div></div>
+<div class="ttc" id="apile_8h_html_ab410339392ec6b44af55d522f4a4b973"><div class="ttname"><a href="pile_8h.html#ab410339392ec6b44af55d522f4a4b973">pile_Empty</a></div><div class="ttdeci">int pile_Empty(pile_t *p)</div><div class="ttdoc">Vérifie si la pile est vide.</div><div class="ttdef"><b>Definition:</b> pile.c:34</div></div>
+<div class="ttc" id="apile_8h_html_a53cfd5731f7914026a2a3481a4dc9f9d"><div class="ttname"><a href="pile_8h.html#a53cfd5731f7914026a2a3481a4dc9f9d">pile_Remove</a></div><div class="ttdeci">int pile_Remove(pile_t *p, int i)</div><div class="ttdoc">Supprime la carte avec l'indice index de la pile.</div><div class="ttdef"><b>Definition:</b> pile.c:40</div></div>
+<div class="ttc" id="apile_8h_html_a348ec1b28d65a5ccf11661aa33b28606"><div class="ttname"><a href="pile_8h.html#a348ec1b28d65a5ccf11661aa33b28606">PILE_MAX</a></div><div class="ttdeci">#define PILE_MAX</div><div class="ttdef"><b>Definition:</b> pile.h:4</div></div>
+<div class="ttc" id="apile_8h_html_ae33057110b0e1fbff94f39d263253237"><div class="ttname"><a href="pile_8h.html#ae33057110b0e1fbff94f39d263253237">pile_Pop</a></div><div class="ttdeci">card_t * pile_Pop(pile_t *p)</div><div class="ttdoc">Renvoie le premier element de la pile.</div><div class="ttdef"><b>Definition:</b> pile.c:60</div></div>
+<div class="ttc" id="acarte_8h_html"><div class="ttname"><a href="carte_8h.html">carte.h</a></div></div>
+<div class="ttc" id="astructpile_html_a683a698de2fb5eea97a7ada2f6fff495"><div class="ttname"><a href="structpile.html#a683a698de2fb5eea97a7ada2f6fff495">pile::_DATA</a></div><div class="ttdeci">card_t * _DATA[PILE_MAX]</div><div class="ttdef"><b>Definition:</b> pile.h:15</div></div>
+<div class="ttc" id="astructcard_html"><div class="ttname"><a href="structcard.html">card</a></div><div class="ttdef"><b>Definition:</b> carte.h:12</div></div>
+<div class="ttc" id="apile_8h_html_ace34f2b7089ae33b1877a76c9ec65650"><div class="ttname"><a href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a></div><div class="ttdeci">void pile_Shuffle(pile_t *src, pile_t *dst, int n)</div><div class="ttdoc">Mélange les cartes d'un paquets sources vers un paquets destination.</div><div class="ttdef"><b>Definition:</b> pile.c:68</div></div>
+<div class="ttc" id="apile_8h_html_af6a258d8f3ee5206d682d799316314b1"><div class="ttname"><a href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a></div><div class="ttdeci">bool</div><div class="ttdef"><b>Definition:</b> pile.h:19</div></div>
+<div class="ttc" id="apile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> pile.c:14</div></div>
+<div class="ttc" id="astructpile_html"><div class="ttname"><a href="structpile.html">pile</a></div><div class="ttdef"><b>Definition:</b> pile.h:13</div></div>
+<div class="ttc" id="apile_8h_html_ad3770d800e3e5f480a5b9b1355d615ee"><div class="ttname"><a href="pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee">pile_GetTop</a></div><div class="ttdeci">card_t * pile_GetTop(pile_t *p)</div><div class="ttdoc">Renvoie le sommet de la pile.</div><div class="ttdef"><b>Definition:</b> pile.c:22</div></div>
+<div class="ttc" id="apile_8h_html_af6e39ffddac1cbaf3a5865a3455c41a0"><div class="ttname"><a href="pile_8h.html#af6e39ffddac1cbaf3a5865a3455c41a0">pile_Push</a></div><div class="ttdeci">void pile_Push(pile_t *p, card_t *c)</div><div class="ttdoc">Ajoute une carte au sommet de la pile.</div><div class="ttdef"><b>Definition:</b> pile.c:28</div></div>
+<div class="ttc" id="apile_8h_html_ae00c4c74f3f1aa7f9b5545120dc84b43"><div class="ttname"><a href="pile_8h.html#ae00c4c74f3f1aa7f9b5545120dc84b43">pile_Distribute</a></div><div class="ttdeci">void pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">distribue n cartes</div><div class="ttdef"><b>Definition:</b> pile.c:116</div></div>
+<div class="ttc" id="astructpile_html_adc3a560a072f4b610b7f9550c03fee56"><div class="ttname"><a href="structpile.html#adc3a560a072f4b610b7f9550c03fee56">pile::_TOP</a></div><div class="ttdeci">int _TOP</div><div class="ttdef"><b>Definition:</b> pile.h:14</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

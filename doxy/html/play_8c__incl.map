@@ -1,0 +1,11 @@
+<map id="UNO/play.c" name="UNO/play.c">
+<area shape="rect" id="node1" title=" " alt="" coords="266,5,355,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,67,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,80,155,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="179,80,247,107"/>
+<area shape="rect" id="node5" href="$pile_8h.html" title=" " alt="" coords="381,229,480,256"/>
+<area shape="rect" id="node6" href="$carte_8h.html" title=" " alt="" coords="399,304,462,331"/>
+<area shape="rect" id="node7" href="$joueur_8h.html" title=" " alt="" coords="374,155,487,181"/>
+<area shape="rect" id="node8" href="$csvloader_8h.html" title=" " alt="" coords="614,155,746,181"/>
+<area shape="rect" id="node9" href="$play_8h.html" title=" " alt="" coords="474,80,577,107"/>
+</map>

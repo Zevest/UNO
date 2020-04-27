@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de UNO/include/play.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.2</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_2954f25923406911f899a44fc111dfa2.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">play.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="play_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="carte_8h.html">carte.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pile_8h.html">pile.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="joueur_8h.html">joueur.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="csvloader_8h.html">csvloader.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef __PLAY_H__</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define __PLAY_H__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="play_8h.html#a32b434f4c201807d986369d2827ebd14">    7</a></span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keywordtype">void</span> <a class="code" href="play_8h.html#a041249f802c5bf4c2deae666610e03c4">next</a>();</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> <a class="code" href="play_8h.html#a319dfcab9b15963bc34b2d81160bfe60">inverse</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="play_8h.html#aa3c713212485a54f1bb0f00bceec6cc9">getTour</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="play_8h.html#a3fdcd3e2969ec17c5c5a6329dc6ae4a5">setTour</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="play_8h.html#a979600beff4ac26091fa3bbc59c5c275">   36</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="play_8h.html#a979600beff4ac26091fa3bbc59c5c275">can_play_cart</a>(<a class="code" href="structcard.html">card_t</a> *carte_A, <a class="code" href="structcard.html">card_t</a> *carte_B);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> <a class="code" href="play_8h.html#a693ce308afe486feb31dcbe30671bcc5">can_play</a>(<a class="code" href="structpile.html">pile_t</a> *<a class="code" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>, <a class="code" href="structcard.html">card_t</a> *carte);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">int</span> <a class="code" href="play_8h.html#a20daf10163f04492a6b8d4eb4c7535f4">play</a>(<a class="code" href="structplayer.html">player_t</a> *joueurs, <a class="code" href="structpile.html">pile_t</a> *paquets, <a class="code" href="structpile.html">pile_t</a> *pioches, <span class="keywordtype">int</span> numt, <span class="keywordtype">int</span> nbj, <a class="code" href="structcsv.html">csv_t</a> *<a class="code" href="structcsv.html">csv</a>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="play_8h.html#aeeaa2b48bd6117045b1c505005420bc3">   58</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="play_8h.html#aeeaa2b48bd6117045b1c505005420bc3">ask</a>(<span class="keywordtype">int</span> *v, <span class="keywordtype">char</span> *message, <span class="keywordtype">char</span> *message2);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">#endif // !__PLAY_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="apile_8h_html"><div class="ttname"><a href="pile_8h.html">pile.h</a></div></div>
+<div class="ttc" id="astructcsv_html"><div class="ttname"><a href="structcsv.html">csv</a></div><div class="ttdef"><b>Definition:</b> csvloader.h:22</div></div>
+<div class="ttc" id="astructplayer_html"><div class="ttname"><a href="structplayer.html">player</a></div><div class="ttdef"><b>Definition:</b> joueur.h:10</div></div>
+<div class="ttc" id="aplay_8h_html_a041249f802c5bf4c2deae666610e03c4"><div class="ttname"><a href="play_8h.html#a041249f802c5bf4c2deae666610e03c4">next</a></div><div class="ttdeci">void next()</div><div class="ttdoc">Passe au tour suivant.</div><div class="ttdef"><b>Definition:</b> play.c:17</div></div>
+<div class="ttc" id="acarte_8h_html"><div class="ttname"><a href="carte_8h.html">carte.h</a></div></div>
+<div class="ttc" id="astructcard_html"><div class="ttname"><a href="structcard.html">card</a></div><div class="ttdef"><b>Definition:</b> carte.h:12</div></div>
+<div class="ttc" id="aplay_8h_html_aeeaa2b48bd6117045b1c505005420bc3"><div class="ttname"><a href="play_8h.html#aeeaa2b48bd6117045b1c505005420bc3">ask</a></div><div class="ttdeci">int ask(int *v, char *message, char *message2)</div></div>
+<div class="ttc" id="aplay_8h_html_a20daf10163f04492a6b8d4eb4c7535f4"><div class="ttname"><a href="play_8h.html#a20daf10163f04492a6b8d4eb4c7535f4">play</a></div><div class="ttdeci">int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv)</div><div class="ttdoc">Boucle principale du jeu.</div><div class="ttdef"><b>Definition:</b> play.c:117</div></div>
+<div class="ttc" id="aplay_8h_html_a979600beff4ac26091fa3bbc59c5c275"><div class="ttname"><a href="play_8h.html#a979600beff4ac26091fa3bbc59c5c275">can_play_cart</a></div><div class="ttdeci">int can_play_cart(card_t *carte_A, card_t *carte_B)</div></div>
+<div class="ttc" id="acsvloader_8h_html"><div class="ttname"><a href="csvloader_8h.html">csvloader.h</a></div></div>
+<div class="ttc" id="astructpile_html"><div class="ttname"><a href="structpile.html">pile</a></div><div class="ttdef"><b>Definition:</b> pile.h:13</div></div>
+<div class="ttc" id="ajoueur_8h_html"><div class="ttname"><a href="joueur_8h.html">joueur.h</a></div></div>
+<div class="ttc" id="aplay_8h_html_a693ce308afe486feb31dcbe30671bcc5"><div class="ttname"><a href="play_8h.html#a693ce308afe486feb31dcbe30671bcc5">can_play</a></div><div class="ttdeci">int can_play(pile_t *main, card_t *carte)</div><div class="ttdoc">Verifie si un joueur peut jouer.</div><div class="ttdef"><b>Definition:</b> play.c:54</div></div>
+<div class="ttc" id="amain_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> main.c:24</div></div>
+<div class="ttc" id="aplay_8h_html_a3fdcd3e2969ec17c5c5a6329dc6ae4a5"><div class="ttname"><a href="play_8h.html#a3fdcd3e2969ec17c5c5a6329dc6ae4a5">setTour</a></div><div class="ttdeci">void setTour(int n)</div><div class="ttdoc">Modifie la valeur de tour.</div><div class="ttdef"><b>Definition:</b> play.c:29</div></div>
+<div class="ttc" id="aplay_8h_html_a319dfcab9b15963bc34b2d81160bfe60"><div class="ttname"><a href="play_8h.html#a319dfcab9b15963bc34b2d81160bfe60">inverse</a></div><div class="ttdeci">void inverse()</div><div class="ttdoc">Change de sens.</div><div class="ttdef"><b>Definition:</b> play.c:34</div></div>
+<div class="ttc" id="aplay_8h_html_aa3c713212485a54f1bb0f00bceec6cc9"><div class="ttname"><a href="play_8h.html#aa3c713212485a54f1bb0f00bceec6cc9">getTour</a></div><div class="ttdeci">int getTour()</div><div class="ttdoc">Renvoie la valeur des tours jouer.</div><div class="ttdef"><b>Definition:</b> play.c:23</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

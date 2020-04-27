@@ -1,0 +1,72 @@
+.TH "UNO/include/carte.h" 3 "Lundi 27 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/include/carte.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Structures de données"
+
+.in +1c
+.ti -1c
+.RI "struct \fBcard\fP"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBcard\fP \fBcard_t\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBcard_t\fP * \fBcard_Init\fP (char num, char couleur)"
+.br
+.RI "Initialise une carte\&. "
+.ti -1c
+.RI "void \fBcard_Display\fP (\fBcard_t\fP *carte)"
+.br
+.RI "Afficche une carte\&. "
+.in -1c
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBcard\fP \fBcard_t\fP"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void card_Display (\fBcard_t\fP * carte)"
+
+.PP
+Afficche une carte\&. Affiche une carte 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcarte\fP la carte à afficher 
+.RE
+.PP
+
+.SS "\fBcard_t\fP* card_Init (char num, char couleur)"
+
+.PP
+Initialise une carte\&. Initialise une Carte 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInum\fP symbol de la carte 
+.br
+\fIcouleur\fP couleur de la carte 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+la carte creer 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

@@ -1,0 +1,190 @@
+.TH "UNO/include/csvloader.h" 3 "Lundi 27 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/include/csvloader.h
+.SH SYNOPSIS
+.br
+.PP
+.SS "Structures de données"
+
+.in +1c
+.ti -1c
+.RI "struct \fBdata\fP"
+.br
+.ti -1c
+.RI "struct \fBcsv\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__CSV_BUFFER_SIZE__\fP   256"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef char * \fBstring_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBdata\fP \fBdata_t\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBcsv\fP \fBcsv_t\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBdataPrinter\fP) (\fBdata_t\fP *)"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBcsv_t\fP * \fBparseCSV\fP (\fBstring_t\fP filename, \fBcsv_t\fP *input)"
+.br
+.RI "Sépare les données du ficher et les stocke dans un objet\&. "
+.ti -1c
+.RI "\fBcsv_t\fP * \fBinitCSV\fP (FILE *f)"
+.br
+.RI "Charge un fichier csv\&. "
+.ti -1c
+.RI "void \fBdeleteCSV\fP (\fBcsv_t\fP *\fBcsv\fP)"
+.br
+.RI "Libere la memoire\&. "
+.ti -1c
+.RI "void \fBdeleteData\fP (\fBdata_t\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "void \fBprintData\fP (\fBdata_t\fP *d)"
+.br
+.RI "Affiche le contenue d'une donnée (ligne d'un fichier csv) "
+.ti -1c
+.RI "void \fBprintCSV\fP (\fBcsv_t\fP *\fBcsv\fP, \fBdataPrinter\fP printer)"
+.br
+.RI "Affiche les donnée stocker dans l'objet\&. "
+.ti -1c
+.RI "int \fBcountLine\fP (FILE *f)"
+.br
+.RI "Compte le nombre de ligne dans un ficher\&. "
+.ti -1c
+.RI "void \fBjumpLine\fP (int n)"
+.br
+.RI "Affiche n fois le caractere de fin de ligne\&. "
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define __CSV_BUFFER_SIZE__   256"
+
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBcsv\fP \fBcsv_t\fP"
+Structure d'un fichier csv\&. Il s'agit simplement d'un vecteur de donnée et avec le nombre d'éléments\&. 
+.SS "typedef struct \fBdata\fP \fBdata_t\fP"
+Structure d'une lingne de donnée d'un fichier csv\&. Ici l'index est n'utilisé Le message correspond à l'affichage durant la partie\&. 
+.SS "typedef void(* dataPrinter) (\fBdata_t\fP *)"
+
+.SS "typedef char* \fBstring_t\fP"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "int countLine (FILE * f)"
+
+.PP
+Compte le nombre de ligne dans un ficher\&. Compte le nombre de ligne d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP Fichier 
+.RE
+.PP
+
+.SS "void deleteCSV (\fBcsv_t\fP * csv)"
+
+.PP
+Libere la memoire\&. Libere la memoire d'un objet csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcsv\fP l'objet a supprimer\&. 
+.RE
+.PP
+
+.SS "void deleteData (\fBdata_t\fP * data)"
+Libere la mémoire d'une donnée csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIdata\fP la donnée a suprimmer\&. 
+.RE
+.PP
+
+.SS "\fBcsv_t\fP* initCSV (FILE * f)"
+
+.PP
+Charge un fichier csv\&. Initialise un objet CSV a partire d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP le a charger\&. 
+.RE
+.PP
+
+.SS "void jumpLine (int n)"
+
+.PP
+Affiche n fois le caractere de fin de ligne\&. Permet d'afficher n fois le carater fin de ligne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIn\fP nombre de répétition 
+.RE
+.PP
+
+.SS "\fBcsv_t\fP* parseCSV (\fBstring_t\fP filename, \fBcsv_t\fP * input)"
+
+.PP
+Sépare les données du ficher et les stocke dans un objet\&. Traite les données du fichier csv et les stocke dans la structure\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIfilename\fP nom du fichier\&. 
+.br
+\fIinput\fP object concerner\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+l'objet creer si input est null, sinon input\&. 
+.RE
+.PP
+
+.SS "void printCSV (\fBcsv_t\fP * csv, \fBdataPrinter\fP printer)"
+
+.PP
+Affiche les donnée stocker dans l'objet\&. Affiche le contenu d'un fichier CSV\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcsv\fP l'objet dans le quel sont stocker les données\&. 
+.br
+\fIprinter\fP fonction d'affichage des données\&. 
+.RE
+.PP
+
+.SS "void printData (\fBdata_t\fP * d)"
+
+.PP
+Affiche le contenue d'une donnée (ligne d'un fichier csv) Affiche une ligne de donnée d'un fichier csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fId\fP la ligne de donnée\&. 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

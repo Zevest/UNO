@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de UNO/include/carte.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.2</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_2954f25923406911f899a44fc111dfa2.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">carte.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="carte_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __CARTE_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __CARTE_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">    5</a></span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> *SYMBOL[] = {<span class="stringliteral">&quot;0&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;2&quot;</span>, <span class="stringliteral">&quot;3&quot;</span>, <span class="stringliteral">&quot;4&quot;</span>, <span class="stringliteral">&quot;5&quot;</span>, <span class="stringliteral">&quot;6&quot;</span>, <span class="stringliteral">&quot;7&quot;</span>, <span class="stringliteral">&quot;8&quot;</span>, <span class="stringliteral">&quot;9&quot;</span>, <span class="stringliteral">&quot;+2&quot;</span>, <span class="stringliteral">&quot;inverse&quot;</span>, <span class="stringliteral">&quot;passe&quot;</span>, <span class="stringliteral">&quot;joker&quot;</span>, <span class="stringliteral">&quot;+4&quot;</span>};</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structcard.html">   11</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structcard.html">card</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structcard.html#a9edb1673a8f057dce79fd491a9c98c1d">   14</a></span>&#160;   <span class="keywordtype">char</span> <a class="code" href="structcard.html#a9edb1673a8f057dce79fd491a9c98c1d">num</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">   16</a></span>&#160;   <span class="keywordtype">char</span> <a class="code" href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">color</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="structcard.html#a79969caaacc340106b997aee167015d4">   18</a></span>&#160;   <span class="keywordtype">char</span> *<a class="code" href="structcard.html#a79969caaacc340106b997aee167015d4">symbol</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structcard.html">card</a> <a class="code" href="structcard.html">card_t</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <a class="code" href="structcard.html">card_t</a> *<a class="code" href="carte_8h.html#abdfc50891059b8a6395de8c91d29acea">card_Init</a>(<span class="keywordtype">char</span> <a class="code" href="structcard.html#a9edb1673a8f057dce79fd491a9c98c1d">num</a>, <span class="keywordtype">char</span> couleur);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(<a class="code" href="structcard.html">card_t</a> *carte);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // ! __CARTE_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructcard_html_ae2d77c102b2d2d3f0881c0e2bcdbe777"><div class="ttname"><a href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">card::color</a></div><div class="ttdeci">char color</div><div class="ttdoc">Couleur de la carte.</div><div class="ttdef"><b>Definition:</b> carte.h:16</div></div>
+<div class="ttc" id="astructcard_html_a79969caaacc340106b997aee167015d4"><div class="ttname"><a href="structcard.html#a79969caaacc340106b997aee167015d4">card::symbol</a></div><div class="ttdeci">char * symbol</div><div class="ttdoc">Symbole.</div><div class="ttdef"><b>Definition:</b> carte.h:18</div></div>
+<div class="ttc" id="acarte_8h_html_abdfc50891059b8a6395de8c91d29acea"><div class="ttname"><a href="carte_8h.html#abdfc50891059b8a6395de8c91d29acea">card_Init</a></div><div class="ttdeci">card_t * card_Init(char num, char couleur)</div><div class="ttdoc">Initialise une carte.</div><div class="ttdef"><b>Definition:</b> carte.c:36</div></div>
+<div class="ttc" id="astructcard_html"><div class="ttname"><a href="structcard.html">card</a></div><div class="ttdef"><b>Definition:</b> carte.h:12</div></div>
+<div class="ttc" id="astructcard_html_a9edb1673a8f057dce79fd491a9c98c1d"><div class="ttname"><a href="structcard.html#a9edb1673a8f057dce79fd491a9c98c1d">card::num</a></div><div class="ttdeci">char num</div><div class="ttdoc">Indice du symbole.</div><div class="ttdef"><b>Definition:</b> carte.h:14</div></div>
+<div class="ttc" id="acarte_8h_html_afb98953fb54b5fcb5e334f1adcfdedd3"><div class="ttname"><a href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a></div><div class="ttdeci">void card_Display(card_t *carte)</div><div class="ttdoc">Afficche une carte.</div><div class="ttdef"><b>Definition:</b> carte.c:52</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>
