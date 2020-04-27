@@ -5,6 +5,7 @@ OUT= build/
 SRC= main.c pile.c carte.c joueur.c play.c
 OBJ=$(SRC:.c=.o)
 PROGNAME=app
+RM=rm
 
 
 # \
@@ -32,25 +33,31 @@ all: done clean
 
 all: $(OUT)$(PROGNAME)
 
-$(OUT)$(PROGNAME): main.c $(OUT)play.o $(OUT)pile.o $(OUT)joueur.o $(OUT)carte.o
+$(OUT)$(PROGNAME): main.c $(OUT)csvloader.o $(OUT)play.o $(OUT)pile.o $(OUT)joueur.o $(OUT)carte.o 
 	$(CC) $(CFLAGS) $^ -o $@
 
 $(OUT)carte.o: carte.c $(HEADER)carte.h 
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CC) $(CFLAGS) -c carte.c -o $@
+
 $(OUT)pile.o: pile.c $(OUT)carte.o $(HEADER)pile.h 
-	$(CC) $(CFLAGS) -c pile.c $(OUT)carte.o -o $@
+	$(CC) $(CFLAGS) -c pile.c -o $@
 
 $(OUT)joueur.o: joueur.c $(OUT)pile.o $(HEADER)joueur.h 
-	$(CC) $(CFLAGS) -c joueur.c $(OUT)pile.o -o $@
-$(OUT)play.o: play.c $(OUT)pile.o $(OUT)joueur.o $(OUT)pile.o $(OUT)carte.o $(HEADER)play.h 
-	$(CC) $(CFLAGS) -c play.c $(OUT)pile.o $(OUT)joueur.o $(OUT)pile.o $(OUT)carte.o -o $@
+	$(CC) $(CFLAGS) -c joueur.c -o $@
 
-$(OUT)%.o: %.c %.h
-	$(CC) $(CFLAGS) $< -o $@
+$(OUT)csvloader.o: csvloader.c $(HEADER)csvloader.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
+$(OUT)play.o: play.c $(OUT)joueur.o $(OUT) csvloader.o $(HEADER)play.h 
+	$(CC) $(CFLAGS) -c play.c -o $@
+
+
+#$(OUT)%.o: %.c $(HEADER)%.h
+#	$(CC) $(CFLAGS) $< -o $@
 
 clean:
-	rm $(OUT)*.o
+	$(RM) $(OUT)*.o
 
 cleanexe:
-	rm $(OUT)$(PROGNAME)
+	$(RM) $(OUT)$(PROGNAME)
 

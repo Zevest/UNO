@@ -5,6 +5,7 @@
 #include "include/pile.h"
 #include "include/joueur.h"
 #include "include/play.h"
+#include "include/csvloader.h"
 
 #define maxPoint 500
 
@@ -24,14 +25,17 @@ int main()
 {
 	int i, stop = 0, nb = 0, g_Tour;
 	char *noms[] = {"Amstrong", "Buzz", "Boomer", "Fury", "Jester", "Merlin", "Casper", "Mountain", "Saltie", "Samara"};
-
 	srand(time(NULL));
+	csv_t *csv = parseCSV("./res/Message.csv", NULL);
+	char buf[100];
+
 	pile_t *paquet = pile_Init();
 	pile_FillDeck(paquet);
 	pile_t *pioche = pile_Init();
 	pile_Shuffle(paquet, pioche, 1);
 
-	printf("Saisissez le nombre de joueurs entre [2 , 10] \n");
+	printf(csv->data[0].message, NULL);
+	jumpLine(1);
 	do
 	{
 		scanf("%d", &nb);
@@ -43,9 +47,12 @@ int main()
 	while (stop < maxPoint)
 	{
 		system("clear -x");
-		printf("tour: %d\n\n", g_Tour);
-		printf("joueur%d : %s => mes cartes: \n", g_Tour, noms[g_Tour % nb]);
-		stop = play(joueurs, paquet, pioche, getTour() % nb, nb);
+		printf(csv->data[1].message, g_Tour);
+		jumpLine(2);
+		printf(csv->data[2].message, g_Tour, noms[g_Tour % nb]);
+		jumpLine(1);
+
+		stop = play(joueurs, paquet, pioche, getTour() % nb, nb, csv);
 		if (stop)
 		{
 			for (i = 0; i < nb; ++i)
@@ -59,10 +66,12 @@ int main()
 			pile_FillDeck(paquet);
 			pile_Shuffle(paquet, pioche, 1);
 
-			printf("Fin de la manche.\n");
+			printf(csv->data[3].message, NULL);
+			jumpLine(1);
 			if (stop > maxPoint)
 			{
-				printf("Bravo  %s !!\n", noms[g_Tour]);
+				printf(csv->data[4].message, noms[g_Tour]);
+				//printf("Bravo  %s !!\n", noms[g_Tour]);
 			}
 			reset(pioche, joueurs, nb);
 		}
@@ -76,5 +85,6 @@ int main()
 	free(joueurs);
 	free(paquet);
 	free(pioche);
+	deleteCSV(csv);
 	return 0;
 }
