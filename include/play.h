@@ -8,24 +8,24 @@
 /**
  * Increment la variable global comptant le numero du tour.
  */
-void next();
+void play_Next();
 
 /**
  * Inverse la valeur de la varaiable global d'incémentation du tour.
  */
-void inverse();
+void play_Inverse();
 
 /**
  * Recupere la variable global du numero tour.
  * @return numero du tour
  */
-int getTour();
+int play_GetTour();
 
 /**
  * Definie le numero du tour.
  * @param n nouvelle valeur du numero du tour.
  */
-void setTour(int n);
+void play_SetTour(int n);
 
 /**
  * Vérifie si la carte peut être jouée.
@@ -41,7 +41,7 @@ int can_play_cart(card_t *carte_A, card_t *carte_B);
  * @param carte_b dernière carte poser
  * @return 1 si le joueur peu jouer,  0 sinon.
  */
-int can_play(pile_t *main, card_t *carte);
+int play_CanPlay(pile_t *main, card_t *carte);
 
 /**
  * Fonction principlale du jeu
@@ -53,7 +53,7 @@ int can_play(pile_t *main, card_t *carte);
  * @param nbj nombre de joueur
  * @param csv ensemble des messages a afficher
  */
-int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv);
+int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv);
 
 int ask(int *v, char *message, char *message2);
 

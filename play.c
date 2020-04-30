@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <unistd.h>
 #include "include/pile.h"
 #include "include/carte.h"
@@ -14,30 +15,30 @@ static int g_Tour = 0;	 // Le nombre de mains passé
 static int g_Compte = 0; // Comptabilise le nombre de cartes a piocher apres le +2 ou/et +4
 
 /// Passe au tour suivant
-void next()
+void play_Next()
 {
 	g_Tour += g_Sens;
 }
 
 /// Renvoie la valeur des tours jouer
-int getTour()
+int play_GetTour()
 {
 	return g_Tour;
 }
 
 /// Modifie la valeur de tour
-void setTour(int n)
+void play_SetTour(int n)
 {
 	g_Tour = n;
 }
 /// Change de sens
-void inverse()
+void play_Inverse()
 {
 	g_Sens *= -1;
 }
 
 /// Verifie si la carte peut être jouer
-int can_play_carte(card_t *carte_A, card_t *carte_B)
+int play_IsCardPlayable(card_t *carte_A, card_t *carte_B)
 {
 
 	bool b1 = (carte_B->num == 10);			// +2 sur le jeu
@@ -51,20 +52,20 @@ int can_play_carte(card_t *carte_A, card_t *carte_B)
 }
 
 /// Verifie si un joueur peut jouer
-int can_play(pile_t *main, card_t *carte)
+int play_CanPlay(pile_t *main, card_t *carte)
 {
 	int i;
 
 	for (i = 0; i < main->_TOP + 1; ++i)
 	{
-		if (can_play_carte(main->_DATA[i], carte))
+		if (play_IsCardPlayable(main->_DATA[i], carte))
 			return 1;
 	}
 	return 0;
 }
 
 /// Compte le nombre de points d'un joueur
-int G_point(player_t *g, int joueur)
+int play_CountPoint(player_t *g, int joueur)
 {
 	int i;
 	int s = 0;
@@ -106,7 +107,7 @@ int fin_jeux(player_t *g, int joueur)
 		for (i = 0; i < joueur; ++i)
 		{
 			if (j != i)
-				s += G_point(g, i);
+				s += play_CountPoint(g, i);
 		}
 		g[j].score += s;
 	}
@@ -114,29 +115,29 @@ int fin_jeux(player_t *g, int joueur)
 }
 
 /// Boucle principale du jeu
-int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int nbj, csv_t *csv)
+int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int nbj, csv_t *csv)
 {
 	int i;
 	char a;
+	char buf[64];
 	int tmp = 0;
 
 	// Affiche les cartes du joueur
 	for (i = 0; i < joueurs[numJoueur].cards->_TOP + 1; ++i)
 	{
-
 		card_Display(joueurs[numJoueur].cards->_DATA[i]);
 		printf(" ");
 	}
-	jumpLine(2);
+	util_JumpLine(2);
 	printf(csv->data[5].message, NULL);
 	card_Display(pile_GetTop(paquets));
-	jumpLine(2);
+	util_JumpLine(2);
 	printf(csv->data[6].message, NULL);
 
 	// Affiche les cartes jouables
 	for (i = 0; i < joueurs[numJoueur].cards->_TOP + 1; ++i)
 	{
-		if (can_play_carte(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets)) == 1)
+		if (play_IsCardPlayable(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets)) == 1)
 		{
 			tmp++;
 			printf("(%d: ", i);
@@ -150,7 +151,7 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int
 	{
 		//printf("%s pioche %d cartes!!\n", joueurs[numJoueur].name, g_Compte);
 		printf(csv->data[7].message, joueurs[numJoueur].name, g_Compte);
-		jumpLine(1);
+		util_JumpLine(1);
 		pile_Distribute(g_Compte, pioches, joueurs[numJoueur].cards);
 		g_Compte = 0;
 	}
@@ -162,11 +163,16 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int
 		{
 
 			//printf("\n\nQuel carte jouer?\n");
-			jumpLine(2);
-			printf(csv->data[8].message, NULL);
-			scanf("%d", &i);
+			util_JumpLine(2);
+			do
+			{
+				printf(csv->data[8].message, NULL);
+				fgets(buf, sizeof(buf), stdin);
+				printf("\ngot  %d %d |%s|\n", util_IsNumeric(buf, strlen(buf) - 1), strlen(buf), buf);
+			} while (!util_IsNumeric(buf, strlen(buf) - 1));
+			i = atoi(buf);
 
-		} while (i > joueurs[numJoueur].cards->_TOP || !(can_play_carte(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets))));
+		} while (i > joueurs[numJoueur].cards->_TOP || !(play_IsCardPlayable(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets))));
 
 		// pose la carte sur le jeu
 		pile_Push(paquets, joueurs[numJoueur].cards->_DATA[i]);
@@ -180,38 +186,37 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int
 		case 10:
 			g_Compte += 2;
 		case 11:
-			inverse();
+			play_Inverse();
 			break;
 		case 12:
 			//printf("oups ton tour est passé \n");
 			printf(csv->data[9].message, NULL);
-			jumpLine(1);
-			next();
+			util_JumpLine(1);
+			play_Next();
 			sleep(1);
 			break;
 		case 14:
 			g_Compte += 4;
 			//printf("quelle couleur ? (B,J,R,V)\n");
 			printf(csv->data[10].message, NULL);
-			jumpLine(1);
+			util_JumpLine(1);
 			do
 			{
-
 				a = '\0';
-
 				scanf("%c", &a);
+
 			} while (!(a == 'J' || a == 'R' || a == 'B' || a == 'V'));
 			pile_GetTop(paquets)->color = a;
 			break;
 		case 13:
 			//printf("quelle couleur ? (B,J,R,V)\n");
 			printf(csv->data[10].message, NULL);
-			jumpLine(1);
+			util_JumpLine(1);
 			do
 			{
 				a = '\0';
-
 				scanf("%c", &a);
+
 			} while (!(a == 'J' || a == 'R' || a == 'B' || a == 'V'));
 			pile_GetTop(paquets)->color = a;
 			break;
@@ -221,7 +226,7 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int
 	else
 	{
 		printf(csv->data[11].message, joueurs[numJoueur].name);
-		jumpLine(1);
+		util_JumpLine(1);
 		//printf("%s a pioché \n", joueurs[numJoueur].name);
 		pile_Distribute(1, pioches, joueurs[numJoueur].cards);
 		sleep(1);
@@ -231,12 +236,12 @@ int play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int
 	if (pile_Empty(joueurs[numJoueur].cards))
 	{
 		printf(csv->data[12].message, fin_jeux(joueurs, nbj));
-		jumpLine(1);
+		util_JumpLine(1);
 		//printf("point %d\n", fin_jeux(joueurs, nb));
 		return joueurs[numJoueur].score;
 	}
 
-	next();
+	play_Next();
 
 	if (g_Tour < 0)
 		g_Tour += 4;

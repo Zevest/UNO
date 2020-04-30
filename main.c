@@ -10,10 +10,10 @@
 #define maxPoint 500
 
 /// Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs
-void reset(pile_t *pioche, player_t *joueurs, int nb)
+void g_Reset(pile_t *pioche, player_t *joueurs, int nb)
 {
 	int i;
-	setTour(0);
+	play_SetTour(0);
 	for (i = 0; i < nb; ++i)
 	{
 		joueurs[i].cards = pile_Init();
@@ -29,11 +29,11 @@ int main(int argc, char **argv)
 	csv_t *csv;
 	if (argc > 1)
 	{
-		csv = parseCSV(argv[1], NULL);
+		csv = csv_ParseCSV(argv[1], NULL);
 	}
 	else
 	{
-		csv = parseCSV("res/Message.csv", NULL);
+		csv = csv_ParseCSV("res/Message.csv", NULL);
 	}
 	if (csv == NULL)
 	{
@@ -52,7 +52,7 @@ int main(int argc, char **argv)
 
 	srand(time(NULL));
 	printf(csv->data[0].message, NULL);
-	jumpLine(1);
+	util_JumpLine(1);
 
 	do
 	{
@@ -61,16 +61,16 @@ int main(int argc, char **argv)
 
 	joueurs = player_Init(nb, noms, pioche);
 
-	g_Tour = getTour();
+	g_Tour = play_GetTour();
 	while (stop < maxPoint)
 	{
 		system("clear -x");
 		printf(csv->data[1].message, g_Tour);
-		jumpLine(2);
+		util_JumpLine(2);
 		printf(csv->data[2].message, g_Tour, noms[g_Tour % nb]);
-		jumpLine(1);
+		util_JumpLine(1);
 
-		stop = play(joueurs, paquet, pioche, getTour() % nb, nb, csv);
+		stop = play_Play(joueurs, paquet, pioche, play_GetTour() % nb, nb, csv);
 		if (stop)
 		{
 			for (i = 0; i < nb; ++i)
@@ -85,15 +85,15 @@ int main(int argc, char **argv)
 			pile_Shuffle(paquet, pioche, 1);
 
 			printf(csv->data[3].message, NULL);
-			jumpLine(1);
+			util_JumpLine(1);
 			if (stop > maxPoint)
 			{
 				printf(csv->data[4].message, noms[g_Tour]);
 				//printf("Bravo  %s !!\n", noms[g_Tour]);
 			}
-			reset(pioche, joueurs, nb);
+			g_Reset(pioche, joueurs, nb);
 		}
-		g_Tour = getTour();
+		g_Tour = play_GetTour();
 	}
 
 	for (i = 0; i < nb; ++i)
@@ -103,6 +103,6 @@ int main(int argc, char **argv)
 	free(joueurs);
 	free(paquet);
 	free(pioche);
-	deleteCSV(csv);
+	csv_DeleteCSV(csv);
 	return 0;
 }
