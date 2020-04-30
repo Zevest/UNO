@@ -1,0 +1,186 @@
+.TH "UNO/csvloader.c" 3 "Jeudi 30 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/csvloader.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <string\&.h>\fP
+.br
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <ctype\&.h>\fP
+.br
+\fC#include 'include/csvloader\&.h'\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBcsv_t\fP * \fBcsv_InitCSV\fP (FILE *f)"
+.br
+.RI "Charge un fichier csv\&. "
+.ti -1c
+.RI "void \fBcsv_DeleteCSV\fP (\fBcsv_t\fP *\fBcsv\fP)"
+.br
+.RI "Libere la memoire\&. "
+.ti -1c
+.RI "int \fButil_CountLine\fP (FILE *f)"
+.br
+.RI "Compte le nombre de ligne dans un ficher\&. "
+.ti -1c
+.RI "\fBcsv_t\fP * \fBcsv_ParseCSV\fP (const \fBstring_t\fP filename, \fBcsv_t\fP *input)"
+.br
+.RI "Sépare les données du ficher et les stocke dans un objet\&. "
+.ti -1c
+.RI "void \fBcsv_PrintData\fP (\fBdata_t\fP *d)"
+.br
+.RI "Affiche le contenue d'une donnée (ligne d'un fichier csv) "
+.ti -1c
+.RI "void \fBcsv_PrintCSV\fP (\fBcsv_t\fP *\fBcsv\fP, \fBdataPrinter\fP printer)"
+.br
+.RI "Affiche les donnée stocker dans l'objet\&. "
+.ti -1c
+.RI "void \fButil_JumpLine\fP (int n)"
+.br
+.RI "Affiche n fois le caractere de fin de ligne\&. "
+.ti -1c
+.RI "int \fButil_IsNumeric\fP (const char *line, int l)"
+.br
+.RI "Vérifie si une chaîne de caratère est un nombre\&. "
+.ti -1c
+.RI "int \fButil_IsAlphaWord\fP (const char *line, int l)"
+.br
+.RI "Vérifie si une chaîne de caratère ne contient que des lettres\&. "
+.in -1c
+.SH "Documentation des fonctions"
+.PP 
+.SS "void csv_DeleteCSV (\fBcsv_t\fP * csv)"
+
+.PP
+Libere la memoire\&. Libere la memoire d'un objet csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcsv\fP l'objet a supprimer\&. 
+.RE
+.PP
+
+.SS "\fBcsv_t\fP* csv_InitCSV (FILE * f)"
+
+.PP
+Charge un fichier csv\&. Initialise un objet CSV a partire d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP le a charger\&. 
+.RE
+.PP
+
+.SS "\fBcsv_t\fP* csv_ParseCSV (\fBstring_t\fP filename, \fBcsv_t\fP * input)"
+
+.PP
+Sépare les données du ficher et les stocke dans un objet\&. Traite les données du fichier csv et les stocke dans la structure\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIfilename\fP nom du fichier\&. 
+.br
+\fIinput\fP object concerner\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+l'objet creer si input est null, sinon input\&. 
+.RE
+.PP
+
+.SS "void csv_PrintCSV (\fBcsv_t\fP * csv, \fBdataPrinter\fP printer)"
+
+.PP
+Affiche les donnée stocker dans l'objet\&. Affiche le contenu d'un fichier CSV\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcsv\fP l'objet dans le quel sont stocker les données\&. 
+.br
+\fIprinter\fP fonction d'affichage des données\&. 
+.RE
+.PP
+
+.SS "void csv_PrintData (\fBdata_t\fP * d)"
+
+.PP
+Affiche le contenue d'une donnée (ligne d'un fichier csv) Affiche une ligne de donnée d'un fichier csv\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fId\fP la ligne de donnée\&. 
+.RE
+.PP
+
+.SS "int util_CountLine (FILE * f)"
+
+.PP
+Compte le nombre de ligne dans un ficher\&. Compte le nombre de ligne d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP Fichier 
+.RE
+.PP
+
+.SS "int util_IsAlphaWord (const char * line, int l)"
+
+.PP
+Vérifie si une chaîne de caratère ne contient que des lettres\&. Vérifie que la chaîne de caractère soit un mot ou une phrase 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP Chaîne de caractère 
+.br
+\fIl\fP Longueure de la chaîne de caractère 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 si elle ne contient que des chiffres sinon 0 
+.RE
+.PP
+
+.SS "int util_IsNumeric (const char * line, int l)"
+
+.PP
+Vérifie si une chaîne de caratère est un nombre\&. Vérifie que la chaîne de caractère soit un nombre 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP Chaîne de caractère 
+.br
+\fIl\fP Longueure de la chaîne de caractère 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 si elle ne contient que des chiffres sinon 0 
+.RE
+.PP
+
+.SS "void util_JumpLine (int n)"
+
+.PP
+Affiche n fois le caractere de fin de ligne\&. Permet d'afficher n fois le caratère fin de ligne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIn\fP nombre de répétition 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

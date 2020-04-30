@@ -1,0 +1,201 @@
+.TH "UNO/pile.c" 3 "Jeudi 30 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/pile.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include 'include/carte\&.h'\fP
+.br
+\fC#include 'include/pile\&.h'\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmax\fP (int a, int b)"
+.br
+.RI "Retroune le max de deux valeurs a et b\&. "
+.ti -1c
+.RI "\fBpile_t\fP * \fBpile_Init\fP ()"
+.br
+.RI "Initialise la pile de carte\&. "
+.ti -1c
+.RI "\fBcard_t\fP * \fBpile_GetTop\fP (\fBpile_t\fP *jeu)"
+.br
+.RI "Renvoie le sommet de la pile\&. "
+.ti -1c
+.RI "void \fBpile_Push\fP (\fBpile_t\fP *p, \fBcard_t\fP *a)"
+.br
+.RI "Ajoute une carte au sommet de la pile\&. "
+.ti -1c
+.RI "int \fBpile_Empty\fP (\fBpile_t\fP *p)"
+.br
+.RI "Vérifie si la pile est vide\&. "
+.ti -1c
+.RI "int \fBpile_Remove\fP (\fBpile_t\fP *p, int index)"
+.br
+.RI "Supprime la carte avec l'indice index de la pile\&. "
+.ti -1c
+.RI "\fBcard_t\fP * \fBpile_Pop\fP (\fBpile_t\fP *p)"
+.br
+.RI "Renvoie le premier element de la pile\&. "
+.ti -1c
+.RI "void \fBpile_Shuffle\fP (\fBpile_t\fP *paquet, \fBpile_t\fP *res, int premier)"
+.br
+.RI "Mélange les cartes d'un paquets sources vers un paquets destination\&. "
+.ti -1c
+.RI "void \fBpile_Distribute\fP (int n, \fBpile_t\fP *paquet_src, \fBpile_t\fP *paquet_dest)"
+.br
+.RI "distribue n cartes "
+.ti -1c
+.RI "void \fBpile_FillDeck\fP (\fBpile_t\fP *paquet)"
+.br
+.RI "initialiser le paquet "
+.in -1c
+.SH "Documentation des fonctions"
+.PP 
+.SS "int max (int a, int b)"
+
+.PP
+Retroune le max de deux valeurs a et b\&. 
+.SS "void pile_Distribute (int n, \fBpile_t\fP * src, \fBpile_t\fP * dest)"
+
+.PP
+distribue n cartes Déplace N carte de la pile source vers la pile destination\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIn\fP nombre de carte a déplacer 
+.br
+\fIsrc\fP pile source 
+.br
+\fIdst\fP pile destination 
+.RE
+.PP
+
+.SS "int pile_Empty (\fBpile_t\fP * p)"
+
+.PP
+Vérifie si la pile est vide\&. Verifie si la pile est vide\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIp\fP pile 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 sio la pile est vide, 0 sinon\&. 
+.RE
+.PP
+
+.SS "void pile_FillDeck (\fBpile_t\fP * p)"
+
+.PP
+initialiser le paquet Remplie la pile deu bon nombre de chaque carte\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIp\fP pile 
+.RE
+.PP
+
+.SS "\fBcard_t\fP* pile_GetTop (\fBpile_t\fP * p)"
+
+.PP
+Renvoie le sommet de la pile\&. Recupere la carte au sommet de la pile\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIp\fP pile 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+carte au sommet 
+.RE
+.PP
+
+.SS "\fBpile_t\fP* pile_Init (void)"
+
+.PP
+Initialise la pile de carte\&. Initialise la Pile\&. 
+.PP
+\fBRenvoie\fP
+.RS 4
+Pile crée 
+.RE
+.PP
+
+.SS "\fBcard_t\fP* pile_Pop (\fBpile_t\fP * p)"
+
+.PP
+Renvoie le premier element de la pile\&. Retire une carte du sommet de la pile\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIp\fP pile 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+carte retirer\&. 
+.RE
+.PP
+
+.SS "void pile_Push (\fBpile_t\fP * p, \fBcard_t\fP * c)"
+
+.PP
+Ajoute une carte au sommet de la pile\&. Ajoute un carte ausommet de la pile\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIp\fP pile 
+.br
+\fIc\fP carte à ajouter 
+.RE
+.PP
+
+.SS "int pile_Remove (\fBpile_t\fP * p, int i)"
+
+.PP
+Supprime la carte avec l'indice index de la pile\&. Retire une carte d'indice i de la pile\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIp\fP pile 
+.br
+\fIindice\fP de la carte 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 si la carte a bien été retirer 0 sinon\&. 
+.RE
+.PP
+
+.SS "void pile_Shuffle (\fBpile_t\fP * src, \fBpile_t\fP * dst, int n)"
+
+.PP
+Mélange les cartes d'un paquets sources vers un paquets destination\&. Déplace et mélange les cartes de la pile source vers la pile destination\&. Les cartes dont l'indice est inférieur n sont ignorées\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIsrc\fP pile source 
+.br
+\fIdst\fP pile destination 
+.br
+\fIn\fP nombre de carte à laisser 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

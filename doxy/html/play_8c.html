@@ -77,6 +77,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="pile_8h_source.html">include/pile.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="carte_8h_source.html">include/carte.h</a>&quot;</code><br />
@@ -87,17 +88,7 @@ $(function() {
 Graphe des dépendances par inclusion de play.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="play_8c__incl.png" border="0" usemap="#_u_n_o_2play_8c" alt=""/></div>
-<map name="_u_n_o_2play_8c" id="_u_n_o_2play_8c">
-<area shape="rect" title=" " alt="" coords="266,5,355,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" title=" " alt="" coords="91,80,155,107"/>
-<area shape="rect" title=" " alt="" coords="179,80,247,107"/>
-<area shape="rect" href="pile_8h.html" title=" " alt="" coords="381,229,480,256"/>
-<area shape="rect" href="carte_8h.html" title=" " alt="" coords="399,304,462,331"/>
-<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="374,155,487,181"/>
-<area shape="rect" href="csvloader_8h.html" title=" " alt="" coords="614,155,746,181"/>
-<area shape="rect" href="play_8h.html" title=" " alt="" coords="474,80,577,107"/>
-</map>
+<!-- MAP 0 -->
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -107,33 +98,33 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a041249f802c5bf4c2deae666610e03c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a041249f802c5bf4c2deae666610e03c4">next</a> ()</td></tr>
-<tr class="memdesc:a041249f802c5bf4c2deae666610e03c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passe au tour suivant.  <a href="play_8c.html#a041249f802c5bf4c2deae666610e03c4">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a041249f802c5bf4c2deae666610e03c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3c713212485a54f1bb0f00bceec6cc9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#aa3c713212485a54f1bb0f00bceec6cc9">getTour</a> ()</td></tr>
-<tr class="memdesc:aa3c713212485a54f1bb0f00bceec6cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la valeur des tours jouer.  <a href="play_8c.html#aa3c713212485a54f1bb0f00bceec6cc9">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aa3c713212485a54f1bb0f00bceec6cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fdcd3e2969ec17c5c5a6329dc6ae4a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a3fdcd3e2969ec17c5c5a6329dc6ae4a5">setTour</a> (int n)</td></tr>
-<tr class="memdesc:a3fdcd3e2969ec17c5c5a6329dc6ae4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de tour.  <a href="play_8c.html#a3fdcd3e2969ec17c5c5a6329dc6ae4a5">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3fdcd3e2969ec17c5c5a6329dc6ae4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a319dfcab9b15963bc34b2d81160bfe60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a319dfcab9b15963bc34b2d81160bfe60">inverse</a> ()</td></tr>
-<tr class="memdesc:a319dfcab9b15963bc34b2d81160bfe60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change de sens.  <a href="play_8c.html#a319dfcab9b15963bc34b2d81160bfe60">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a319dfcab9b15963bc34b2d81160bfe60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa34cd3eef8ebc829e44e52e675f0119e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#aa34cd3eef8ebc829e44e52e675f0119e">can_play_carte</a> (<a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_A, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_B)</td></tr>
-<tr class="memdesc:aa34cd3eef8ebc829e44e52e675f0119e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si la carte peut être jouer.  <a href="play_8c.html#aa34cd3eef8ebc829e44e52e675f0119e">Plus de détails...</a><br /></td></tr>
-<tr class="separator:aa34cd3eef8ebc829e44e52e675f0119e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a693ce308afe486feb31dcbe30671bcc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a693ce308afe486feb31dcbe30671bcc5">can_play</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte)</td></tr>
-<tr class="memdesc:a693ce308afe486feb31dcbe30671bcc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si un joueur peut jouer.  <a href="play_8c.html#a693ce308afe486feb31dcbe30671bcc5">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a693ce308afe486feb31dcbe30671bcc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c3dd21ac9e6bdffc60c059373b7ec58"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a3c3dd21ac9e6bdffc60c059373b7ec58">G_point</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *g, int joueur)</td></tr>
-<tr class="memdesc:a3c3dd21ac9e6bdffc60c059373b7ec58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de points d'un joueur.  <a href="play_8c.html#a3c3dd21ac9e6bdffc60c059373b7ec58">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a3c3dd21ac9e6bdffc60c059373b7ec58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a219901e159d9091eef9afc16b869737f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a219901e159d9091eef9afc16b869737f">fin_jeux</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *g, int joueur)</td></tr>
-<tr class="memdesc:a219901e159d9091eef9afc16b869737f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additionne les points des perdants pour les atribuer au gagnant.  <a href="play_8c.html#a219901e159d9091eef9afc16b869737f">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a219901e159d9091eef9afc16b869737f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ceacb9980bd0d12fc237ca06320f47c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a4ceacb9980bd0d12fc237ca06320f47c">play</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *joueurs, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *paquets, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *pioches, int numJoueur, int nbj, <a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *<a class="el" href="structcsv.html">csv</a>)</td></tr>
-<tr class="memdesc:a4ceacb9980bd0d12fc237ca06320f47c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boucle principale du jeu.  <a href="play_8c.html#a4ceacb9980bd0d12fc237ca06320f47c">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a4ceacb9980bd0d12fc237ca06320f47c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a288a4602876961ee27a52e6e39ab77b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a288a4602876961ee27a52e6e39ab77b8">play_Next</a> ()</td></tr>
+<tr class="memdesc:a288a4602876961ee27a52e6e39ab77b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passe au tour suivant.  <a href="play_8c.html#a288a4602876961ee27a52e6e39ab77b8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a288a4602876961ee27a52e6e39ab77b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e1d2370ab20cf2e17f21a8f0256d0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">play_GetTour</a> ()</td></tr>
+<tr class="memdesc:ad4e1d2370ab20cf2e17f21a8f0256d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la valeur des tours jouer.  <a href="play_8c.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad4e1d2370ab20cf2e17f21a8f0256d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8851aa20901a9dc8e9b90e1faa627b84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a8851aa20901a9dc8e9b90e1faa627b84">play_SetTour</a> (int n)</td></tr>
+<tr class="memdesc:a8851aa20901a9dc8e9b90e1faa627b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de tour.  <a href="play_8c.html#a8851aa20901a9dc8e9b90e1faa627b84">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8851aa20901a9dc8e9b90e1faa627b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e921d21507a7fa5bd6a20a3950e55fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a2e921d21507a7fa5bd6a20a3950e55fe">play_Inverse</a> ()</td></tr>
+<tr class="memdesc:a2e921d21507a7fa5bd6a20a3950e55fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change de sens.  <a href="play_8c.html#a2e921d21507a7fa5bd6a20a3950e55fe">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e921d21507a7fa5bd6a20a3950e55fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01695fbda493abec6d2a347dec8cf99d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a01695fbda493abec6d2a347dec8cf99d">play_IsCardPlayable</a> (<a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_A, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_B)</td></tr>
+<tr class="memdesc:a01695fbda493abec6d2a347dec8cf99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si la carte peut être jouer.  <a href="play_8c.html#a01695fbda493abec6d2a347dec8cf99d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a01695fbda493abec6d2a347dec8cf99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb917d0e7b9e8e3a104d187a95134883"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#adb917d0e7b9e8e3a104d187a95134883">play_CanPlay</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte)</td></tr>
+<tr class="memdesc:adb917d0e7b9e8e3a104d187a95134883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si un joueur peut jouer.  <a href="play_8c.html#adb917d0e7b9e8e3a104d187a95134883">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adb917d0e7b9e8e3a104d187a95134883"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57e18bb5e1322e3b252f23b9356e85a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a57e18bb5e1322e3b252f23b9356e85a2">play_CountPoint</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *g, int joueur)</td></tr>
+<tr class="memdesc:a57e18bb5e1322e3b252f23b9356e85a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de points d'un joueur.  <a href="play_8c.html#a57e18bb5e1322e3b252f23b9356e85a2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a57e18bb5e1322e3b252f23b9356e85a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a16bc9341a3f2bc29f320e87027e450"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a0a16bc9341a3f2bc29f320e87027e450">play_EndGame</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *g, int joueur)</td></tr>
+<tr class="memdesc:a0a16bc9341a3f2bc29f320e87027e450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additionne les points des perdants pour les atribuer au gagnant.  <a href="play_8c.html#a0a16bc9341a3f2bc29f320e87027e450">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0a16bc9341a3f2bc29f320e87027e450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac80e9aedc7516b3cdb0fb7e49cfe38b7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#ac80e9aedc7516b3cdb0fb7e49cfe38b7">play_Play</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *joueurs, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *paquets, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *pioches, int numJoueur, int nbj, <a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *<a class="el" href="structcsv.html">csv</a>)</td></tr>
+<tr class="memdesc:ac80e9aedc7516b3cdb0fb7e49cfe38b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boucle principale du jeu.  <a href="play_8c.html#ac80e9aedc7516b3cdb0fb7e49cfe38b7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ac80e9aedc7516b3cdb0fb7e49cfe38b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a id="a0240ac851181b84ac374872dc5434ee4"></a>
@@ -151,14 +142,14 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a693ce308afe486feb31dcbe30671bcc5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a693ce308afe486feb31dcbe30671bcc5">&#9670;&nbsp;</a></span>can_play()</h2>
+<a id="adb917d0e7b9e8e3a104d187a95134883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb917d0e7b9e8e3a104d187a95134883">&#9670;&nbsp;</a></span>play_CanPlay()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int can_play </td>
+          <td class="memname">int play_CanPlay </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
           <td class="paramname"><em>main</em>, </td>
@@ -189,74 +180,14 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa34cd3eef8ebc829e44e52e675f0119e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa34cd3eef8ebc829e44e52e675f0119e">&#9670;&nbsp;</a></span>can_play_carte()</h2>
+<a id="a57e18bb5e1322e3b252f23b9356e85a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e18bb5e1322e3b252f23b9356e85a2">&#9670;&nbsp;</a></span>play_CountPoint()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int can_play_carte </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
-          <td class="paramname"><em>carte_A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
-          <td class="paramname"><em>carte_B</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Verifie si la carte peut être jouer. </p>
-
-</div>
-</div>
-<a id="a219901e159d9091eef9afc16b869737f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a219901e159d9091eef9afc16b869737f">&#9670;&nbsp;</a></span>fin_jeux()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int fin_jeux </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *&#160;</td>
-          <td class="paramname"><em>g</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>joueur</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Additionne les points des perdants pour les atribuer au gagnant. </p>
-
-</div>
-</div>
-<a id="a3c3dd21ac9e6bdffc60c059373b7ec58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c3dd21ac9e6bdffc60c059373b7ec58">&#9670;&nbsp;</a></span>G_point()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int G_point </td>
+          <td class="memname">int play_CountPoint </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *&#160;</td>
           <td class="paramname"><em>g</em>, </td>
@@ -279,14 +210,44 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa3c713212485a54f1bb0f00bceec6cc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3c713212485a54f1bb0f00bceec6cc9">&#9670;&nbsp;</a></span>getTour()</h2>
+<a id="a0a16bc9341a3f2bc29f320e87027e450"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a16bc9341a3f2bc29f320e87027e450">&#9670;&nbsp;</a></span>play_EndGame()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int getTour </td>
+          <td class="memname">int play_EndGame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>joueur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Additionne les points des perdants pour les atribuer au gagnant. </p>
+
+</div>
+</div>
+<a id="ad4e1d2370ab20cf2e17f21a8f0256d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e1d2370ab20cf2e17f21a8f0256d0f">&#9670;&nbsp;</a></span>play_GetTour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int play_GetTour </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -299,14 +260,14 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="a319dfcab9b15963bc34b2d81160bfe60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a319dfcab9b15963bc34b2d81160bfe60">&#9670;&nbsp;</a></span>inverse()</h2>
+<a id="a2e921d21507a7fa5bd6a20a3950e55fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e921d21507a7fa5bd6a20a3950e55fe">&#9670;&nbsp;</a></span>play_Inverse()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void inverse </td>
+          <td class="memname">void play_Inverse </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -319,14 +280,44 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="a041249f802c5bf4c2deae666610e03c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a041249f802c5bf4c2deae666610e03c4">&#9670;&nbsp;</a></span>next()</h2>
+<a id="a01695fbda493abec6d2a347dec8cf99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01695fbda493abec6d2a347dec8cf99d">&#9670;&nbsp;</a></span>play_IsCardPlayable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void next </td>
+          <td class="memname">int play_IsCardPlayable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
+          <td class="paramname"><em>carte_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
+          <td class="paramname"><em>carte_B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifie si la carte peut être jouer. </p>
+
+</div>
+</div>
+<a id="a288a4602876961ee27a52e6e39ab77b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288a4602876961ee27a52e6e39ab77b8">&#9670;&nbsp;</a></span>play_Next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_Next </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -339,14 +330,14 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ceacb9980bd0d12fc237ca06320f47c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ceacb9980bd0d12fc237ca06320f47c">&#9670;&nbsp;</a></span>play()</h2>
+<a id="ac80e9aedc7516b3cdb0fb7e49cfe38b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac80e9aedc7516b3cdb0fb7e49cfe38b7">&#9670;&nbsp;</a></span>play_Play()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int play </td>
+          <td class="memname">int play_Play </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *&#160;</td>
           <td class="paramname"><em>joueurs</em>, </td>
@@ -404,14 +395,14 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="a3fdcd3e2969ec17c5c5a6329dc6ae4a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fdcd3e2969ec17c5c5a6329dc6ae4a5">&#9670;&nbsp;</a></span>setTour()</h2>
+<a id="a8851aa20901a9dc8e9b90e1faa627b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8851aa20901a9dc8e9b90e1faa627b84">&#9670;&nbsp;</a></span>play_SetTour()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void setTour </td>
+          <td class="memname">void play_SetTour </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em></td><td>)</td>

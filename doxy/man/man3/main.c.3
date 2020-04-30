@@ -1,0 +1,60 @@
+.TH "UNO/main.c" 3 "Jeudi 30 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/main.c
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+\fC#include <stdlib\&.h>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include <time\&.h>\fP
+.br
+\fC#include 'include/carte\&.h'\fP
+.br
+\fC#include 'include/pile\&.h'\fP
+.br
+\fC#include 'include/joueur\&.h'\fP
+.br
+\fC#include 'include/play\&.h'\fP
+.br
+\fC#include 'include/csvloader\&.h'\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBmaxPoint\fP   500"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "void \fBg_Reset\fP (\fBpile_t\fP *pioche, \fBplayer_t\fP *joueurs, int nb)"
+.br
+.RI "Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs\&. "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char **argv)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define maxPoint   500"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "void g_Reset (\fBpile_t\fP * pioche, \fBplayer_t\fP * joueurs, int nb)"
+
+.PP
+Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs\&. 
+.SS "int main (int argc, char ** argv)"
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

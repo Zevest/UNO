@@ -1,0 +1,70 @@
+.TH "UNO/include/joueur.h" 3 "Jeudi 30 Avril 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/include/joueur.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'pile\&.h'\fP
+.br
+
+.SS "Structures de données"
+
+.in +1c
+.ti -1c
+.RI "struct \fBplayer\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__JOUEUR_H__\fP"
+.br
+.in -1c
+.SS "Définitions de type"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBplayer\fP \fBplayer_t\fP"
+.br
+.in -1c
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "\fBplayer_t\fP * \fBplayer_Init\fP (int nb, char **noms, \fBpile_t\fP *paquet)"
+.br
+.in -1c
+.SH "Documentation des macros"
+.PP 
+.SS "#define __JOUEUR_H__"
+
+.SH "Documentation des définitions de type"
+.PP 
+.SS "typedef struct \fBplayer\fP \fBplayer_t\fP"
+
+.SH "Documentation des fonctions"
+.PP 
+.SS "\fBplayer_t\fP* player_Init (int nb, char ** noms, \fBpile_t\fP * paquet)"
+Cree et initialise un nombre de joueurs\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fInb\fP nombre de joueur\&. 
+.br
+\fInoms\fP noms des joueurs\&. 
+.br
+\fIpaquet\fP paquet de carte à distribuer\&. 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+un vecteur contenant les joueurs crées 
+.RE
+.PP
+
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

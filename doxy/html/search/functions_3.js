@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['fin_5fjeux_105',['fin_jeux',['../play_8c.html#a219901e159d9091eef9afc16b869737f',1,'play.c']]]
+  ['main_109',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
+  ['max_110',['max',['../pile_8c.html#af082905f7eac6d03e92015146bbc1925',1,'pile.c']]]
 ];

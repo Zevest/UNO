@@ -77,6 +77,7 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="carte_8h_source.html">include/carte.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="pile_8h_source.html">include/pile.h</a>&quot;</code><br />
@@ -87,17 +88,7 @@ $(function() {
 Graphe des dépendances par inclusion de main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#_u_n_o_2main_8c" alt=""/></div>
-<map name="_u_n_o_2main_8c" id="_u_n_o_2main_8c">
-<area shape="rect" title=" " alt="" coords="253,5,347,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" title=" " alt="" coords="91,80,155,107"/>
-<area shape="rect" title=" " alt="" coords="179,80,237,107"/>
-<area shape="rect" href="carte_8h.html" title=" " alt="" coords="367,304,473,331"/>
-<area shape="rect" href="pile_8h.html" title=" " alt="" coords="371,229,469,256"/>
-<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="363,155,477,181"/>
-<area shape="rect" href="play_8h.html" title=" " alt="" coords="463,80,566,107"/>
-<area shape="rect" href="csvloader_8h.html" title=" " alt="" coords="603,155,690,181"/>
-</map>
+<!-- MAP 0 -->
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -107,9 +98,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a968ae985dc526a15d955c7b19a1255cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a968ae985dc526a15d955c7b19a1255cc">reset</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *pioche, <a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *joueurs, int nb)</td></tr>
-<tr class="memdesc:a968ae985dc526a15d955c7b19a1255cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs.  <a href="main_8c.html#a968ae985dc526a15d955c7b19a1255cc">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a968ae985dc526a15d955c7b19a1255cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab336251763359f7fcb437e8d77e74213"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab336251763359f7fcb437e8d77e74213">g_Reset</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *pioche, <a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *joueurs, int nb)</td></tr>
+<tr class="memdesc:ab336251763359f7fcb437e8d77e74213"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs.  <a href="main_8c.html#ab336251763359f7fcb437e8d77e74213">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab336251763359f7fcb437e8d77e74213"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -129,42 +120,14 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+<a id="ab336251763359f7fcb437e8d77e74213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab336251763359f7fcb437e8d77e74213">&#9670;&nbsp;</a></span>g_Reset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>argc</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>argv</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a968ae985dc526a15d955c7b19a1255cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a968ae985dc526a15d955c7b19a1255cc">&#9670;&nbsp;</a></span>reset()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void reset </td>
+          <td class="memname">void g_Reset </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
           <td class="paramname"><em>pioche</em>, </td>
@@ -190,6 +153,34 @@ Fonctions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs. </p>
+
+</div>
+</div>
+<a id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>argc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>argv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
