@@ -92,7 +92,7 @@ int play_CountPoint(player_t *g, int joueur)
 }
 
 /// Additionne les points des perdants pour les atribuer au gagnant
-int fin_jeux(player_t *g, int joueur)
+int play_EndGame(player_t *g, int joueur)
 {
 	int i, j = -1, s = 0;
 
@@ -235,9 +235,9 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 	// tour suivant
 	if (pile_Empty(joueurs[numJoueur].cards))
 	{
-		printf(csv->data[12].message, fin_jeux(joueurs, nbj));
+		printf(csv->data[12].message, play_EndGame(joueurs, nbj));
 		util_JumpLine(1);
-		//printf("point %d\n", fin_jeux(joueurs, nb));
+		//printf("point %d\n", play_EndGame(joueurs, nb));
 		return joueurs[numJoueur].score;
 	}
 

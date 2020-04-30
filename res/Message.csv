@@ -11,3 +11,7 @@
 10,quelle couleur ? (B,J,R,V)£
 11,%s a pioché£
 12,point %d£
+13,%s a remporté cet manche, il obtient %d points£
+14,%s :::: %d£
+15,		|Scoreboard|	 £
+16, EOF£

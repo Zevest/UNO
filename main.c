@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <time.h>
 #include "include/carte.h"
 #include "include/pile.h"
@@ -67,12 +68,25 @@ int main(int argc, char **argv)
 		system("clear -x");
 		printf(csv->data[1].message, g_Tour);
 		util_JumpLine(2);
-		printf(csv->data[2].message, g_Tour, noms[g_Tour % nb]);
+		printf(csv->data[2].message, g_Tour, joueurs[g_Tour % nb].name);
 		util_JumpLine(1);
 
 		stop = play_Play(joueurs, paquet, pioche, play_GetTour() % nb, nb, csv);
 		if (stop)
 		{
+			system("clear -x");
+			printf(csv->data[4].message, noms[g_Tour]);
+			util_JumpLine(1);
+			printf(csv->data[13].message, joueurs[g_Tour % nb].name, stop);
+			util_JumpLine(1);
+			printf(csv->data[15].message, NULL);
+			util_JumpLine(1);
+			for (int i = 0; i < nb; ++i)
+			{
+				printf(csv->data[14].message, joueurs[i].name, joueurs[i].score);
+				util_JumpLine(1);
+			}
+			sleep(5);
 			for (i = 0; i < nb; ++i)
 			{
 				free(joueurs[i].cards);
@@ -84,13 +98,15 @@ int main(int argc, char **argv)
 			pile_FillDeck(paquet);
 			pile_Shuffle(paquet, pioche, 1);
 
-			printf(csv->data[3].message, NULL);
 			util_JumpLine(1);
-			if (stop > maxPoint)
+			if (stop >= maxPoint)
 			{
 				printf(csv->data[4].message, noms[g_Tour]);
+
 				//printf("Bravo  %s !!\n", noms[g_Tour]);
+				sleep(2);
 			}
+
 			g_Reset(pioche, joueurs, nb);
 		}
 		g_Tour = play_GetTour();
