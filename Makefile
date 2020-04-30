@@ -2,15 +2,19 @@ CC=gcc
 HEADER= include/
 CFLAGS=-Wall#-I $(HEADER)
 OUT= build/
-SRC= main.c pile.c carte.c joueur.c play.c
+SRC=  pile.c carte.c joueur.c play.c main.c csvloader.c
 OBJ=$(SRC:.c=.o)
 PROGNAME=UNO.exe
-RM=rm
+RM=rm -rf
 
 all: $(OUT)$(PROGNAME)
 
-$(OUT)$(PROGNAME): main.c $(OUT)csvloader.o $(OUT)play.o $(OUT)pile.o $(OUT)joueur.o $(OUT)carte.o 
+
+$(OUT)$(PROGNAME): $(addprefix $(OUT), $(OBJ))
 	$(CC) $(CFLAGS) $^ -o $@
+
+$(OUT)main.o:	main.c
+	$(CC) $(CFLAGS) -c main.c -o $@
 
 $(OUT)carte.o: carte.c $(HEADER)carte.h 
 	$(CC) $(CFLAGS) -c carte.c -o $@
@@ -24,14 +28,12 @@ $(OUT)joueur.o: joueur.c $(OUT)pile.o $(HEADER)joueur.h
 $(OUT)csvloader.o: csvloader.c $(HEADER)csvloader.h
 	$(CC) $(CFLAGS) -c csvloader.c -o $@
 
-$(OUT)play.o: play.c $(OUT)joueur.o $(OUT)csvloader.o $(HEADER)play.h 
+$(OUT)play.o: play.c $(HEADER)play.h 
 	$(CC) $(CFLAGS) -c play.c -o $@
 
 clean:
-	$(RM) $(OUT)*.o
-
-cleanexe:
-	$(RM) $(OUT)$(PROGNAME)
+	$(RM) $(OUT)*.o $(OUT)$(PROGNAME)
+	
 
 run:	$(OUT)$(PROGNAME)
 	$(OUT)$(PROGNAME)
