@@ -26,7 +26,8 @@ int main(int argc, char **argv)
 {
 	int i, stop = 0, nb = 0, g_Tour;
 	char *noms[] = {"Amstrong", "Buzz", "Boomer", "Fury", "Jester", "Merlin", "Casper", "Mountain", "Saltie", "Samara"};
-
+	pile_t *paquet, *pioche;
+	player_t *joueurs;
 	csv_t *csv;
 	if (argc > 1)
 	{
@@ -44,10 +45,9 @@ int main(int argc, char **argv)
 		exit(EXIT_FAILURE);
 	}
 
-	pile_t *paquet = pile_Init();
+	paquet = pile_Init();
+	pioche = pile_Init();
 
-	pile_t *pioche = pile_Init();
-	player_t *joueurs;
 	pile_FillDeck(paquet);
 	pile_Shuffle(paquet, pioche, 1);
 
@@ -59,7 +59,7 @@ int main(int argc, char **argv)
 	{
 		scanf("%d", &nb);
 	} while (nb < 2 || nb > 10);
-
+	util_ClearInputBuffer();
 	joueurs = player_Init(nb, noms, pioche);
 
 	g_Tour = play_GetTour();
@@ -102,8 +102,6 @@ int main(int argc, char **argv)
 			if (stop >= maxPoint)
 			{
 				printf(csv->data[4].message, noms[g_Tour]);
-
-				//printf("Bravo  %s !!\n", noms[g_Tour]);
 				sleep(2);
 			}
 

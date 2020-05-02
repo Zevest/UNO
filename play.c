@@ -165,6 +165,7 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 			util_JumpLine(2);
 			do
 			{
+
 				printf(csv->data[8].message, NULL);
 				fgets(buf, sizeof(buf), stdin);
 			} while (!util_IsNumeric(buf, strlen(buf) - 1));
@@ -196,23 +197,27 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 			g_Compte += 4;
 			printf(csv->data[10].message, NULL);
 			util_JumpLine(1);
+
 			do
 			{
 				a = '\0';
 				scanf("%c", &a);
-
 			} while (!(a == 'J' || a == 'R' || a == 'B' || a == 'V'));
+
+			util_ClearInputBuffer();
 			pile_GetTop(paquets)->color = a;
 			break;
 		case 13:
 			printf(csv->data[10].message, NULL);
 			util_JumpLine(1);
+
 			do
 			{
 				a = '\0';
 				scanf("%c", &a);
-
 			} while (!(a == 'J' || a == 'R' || a == 'B' || a == 'V'));
+
+			util_ClearInputBuffer();
 			pile_GetTop(paquets)->color = a;
 			break;
 		}

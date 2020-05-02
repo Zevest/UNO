@@ -46,6 +46,7 @@ int util_CountLine(FILE *f)
 	rewind(f);
 	return lines;
 }
+
 /// Sépare les données du ficher et les stocke dans un objet
 csv_t *csv_ParseCSV(const string_t filename, csv_t *input)
 {
@@ -127,6 +128,14 @@ int util_IsAlphaWord(const char *line, int l)
 		if (!isalpha(line[l - 1]))
 			return 0;
 	return 1;
+}
+
+/// Vide le buffer stdin
+void util_ClearInputBuffer()
+{
+	int c;
+	while ((c = getchar()) != '\n' && c != EOF)
+		;
 }
 
 #ifdef DEBUG

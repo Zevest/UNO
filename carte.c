@@ -6,7 +6,7 @@
 static char *SYMBOL[] = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "+2", "inverse", "passe", "joker", "+4"};
 
 /**
- * Caratere couleur :\033
+ * Escape sequence :\033
  *
  * Code couleurs
  * [0;31m	Red
@@ -51,6 +51,7 @@ card_t *card_Init(char num, char color)
 	}
 	return NULL;
 }
+
 /// Afficche une carte
 void card_Display(card_t *c)
 {
