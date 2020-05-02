@@ -162,13 +162,11 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 		do
 		{
 
-			//printf("\n\nQuel carte jouer?\n");
 			util_JumpLine(2);
 			do
 			{
 				printf(csv->data[8].message, NULL);
 				fgets(buf, sizeof(buf), stdin);
-				printf("\ngot  %d %d |%s|\n", util_IsNumeric(buf, strlen(buf) - 1), strlen(buf), buf);
 			} while (!util_IsNumeric(buf, strlen(buf) - 1));
 			i = atoi(buf);
 
@@ -178,7 +176,7 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 		pile_Push(paquets, joueurs[numJoueur].cards->_DATA[i]);
 		pile_Remove(joueurs[numJoueur].cards, i);
 
-		// applicationdes règles du jeu
+		// application des règles du jeu
 		switch (pile_GetTop(paquets)->num)
 		{
 		default:
@@ -189,7 +187,6 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 			play_Inverse();
 			break;
 		case 12:
-			//printf("oups ton tour est passé \n");
 			printf(csv->data[9].message, NULL);
 			util_JumpLine(1);
 			play_Next();
@@ -197,7 +194,6 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 			break;
 		case 14:
 			g_Compte += 4;
-			//printf("quelle couleur ? (B,J,R,V)\n");
 			printf(csv->data[10].message, NULL);
 			util_JumpLine(1);
 			do
@@ -209,7 +205,6 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 			pile_GetTop(paquets)->color = a;
 			break;
 		case 13:
-			//printf("quelle couleur ? (B,J,R,V)\n");
 			printf(csv->data[10].message, NULL);
 			util_JumpLine(1);
 			do
@@ -227,7 +222,6 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 	{
 		printf(csv->data[11].message, joueurs[numJoueur].name);
 		util_JumpLine(1);
-		//printf("%s a pioché \n", joueurs[numJoueur].name);
 		pile_Distribute(1, pioches, joueurs[numJoueur].cards);
 		sleep(1);
 	}
@@ -237,7 +231,6 @@ int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur
 	{
 		printf(csv->data[12].message, play_EndGame(joueurs, nbj));
 		util_JumpLine(1);
-		//printf("point %d\n", play_EndGame(joueurs, nb));
 		return joueurs[numJoueur].score;
 	}
 
