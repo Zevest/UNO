@@ -1,7 +1,7 @@
 
 # [UNO](https://zevest.github.io/UNO)
 
-## ce projet réalisé par : 
+## Ce projet réalisé par : 
 	* Ait el djoudi Karim
 	* Couram steve
 	* Menguelti mounir
