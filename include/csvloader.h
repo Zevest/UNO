@@ -92,4 +92,8 @@ int util_IsNumeric(const char *line, int l);
  */
 int util_IsAlphaWord(const char *line, int l);
 
+/**
+ * Vide le buffer stdin jusqu'à la fin de la ligne ou du buffer
+ */
+void util_ClearInputBuffer();
 #endif // __CSVLOADER_H__

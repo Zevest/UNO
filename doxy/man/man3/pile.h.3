@@ -1,4 +1,4 @@
-.TH "UNO/include/pile.h" 3 "Samedi 2 Mai 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.TH "UNO/include/pile.h" 3 "Samedi 2 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -81,10 +81,14 @@ UNO/include/pile.h
 .PP 
 .SS "#define PILE_MAX   256"
 
+.PP
+Définition à la ligne 5 du fichier pile\&.h\&.
 .SH "Documentation des définitions de type"
 .PP 
 .SS "typedef struct \fBpile\fP \fBpile_t\fP"
 
+.PP
+Définition à la ligne 1 du fichier pile\&.h\&.
 .SH "Documentation du type de l'énumération"
 .PP 
 .SS "enum \fBbool\fP"
@@ -96,6 +100,8 @@ UNO/include/pile.h
 \fB\fIfalse \fP\fP
 .TP
 \fB\fItrue \fP\fP
+.PP
+Définition à la ligne 18 du fichier pile\&.h\&.
 .SH "Documentation des fonctions"
 .PP 
 .SS "void pile_Distribute (int n, \fBpile_t\fP * src, \fBpile_t\fP * dest)"
@@ -113,6 +119,8 @@ distribue n cartes Déplace N carte de la pile source vers la pile destination\&
 .RE
 .PP
 
+.PP
+Définition à la ligne 116 du fichier pile\&.c\&.
 .SS "int pile_Empty (\fBpile_t\fP * p)"
 
 .PP
@@ -129,6 +137,8 @@ Vérifie si la pile est vide\&. Verifie si la pile est vide\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 34 du fichier pile\&.c\&.
 .SS "void pile_FillDeck (\fBpile_t\fP * p)"
 
 .PP
@@ -140,6 +150,8 @@ initialiser le paquet Remplie la pile deu bon nombre de chaque carte\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 131 du fichier pile\&.c\&.
 .SS "\fBcard_t\fP* pile_GetTop (\fBpile_t\fP * p)"
 
 .PP
@@ -156,6 +168,8 @@ carte au sommet
 .RE
 .PP
 
+.PP
+Définition à la ligne 22 du fichier pile\&.c\&.
 .SS "\fBpile_t\fP* pile_Init (void)"
 
 .PP
@@ -167,6 +181,8 @@ Pile crée
 .RE
 .PP
 
+.PP
+Définition à la ligne 14 du fichier pile\&.c\&.
 .SS "\fBcard_t\fP* pile_Pop (\fBpile_t\fP * p)"
 
 .PP
@@ -183,6 +199,8 @@ carte retirer\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 60 du fichier pile\&.c\&.
 .SS "void pile_Push (\fBpile_t\fP * p, \fBcard_t\fP * c)"
 
 .PP
@@ -196,6 +214,8 @@ Ajoute une carte au sommet de la pile\&. Ajoute un carte ausommet de la pile\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 28 du fichier pile\&.c\&.
 .SS "int pile_Remove (\fBpile_t\fP * p, int i)"
 
 .PP
@@ -214,6 +234,8 @@ Supprime la carte avec l'indice index de la pile\&. Retire une carte d'indice i 
 .RE
 .PP
 
+.PP
+Définition à la ligne 40 du fichier pile\&.c\&.
 .SS "void pile_Shuffle (\fBpile_t\fP * src, \fBpile_t\fP * dst, int n)"
 
 .PP
@@ -229,6 +251,8 @@ Mélange les cartes d'un paquets sources vers un paquets destination\&. Déplace
 .RE
 .PP
 
+.PP
+Définition à la ligne 68 du fichier pile\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.

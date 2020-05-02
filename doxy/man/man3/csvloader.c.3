@@ -1,4 +1,4 @@
-.TH "UNO/csvloader.c" 3 "Samedi 2 Mai 2020" "Version 1.2" "UNO" \" -*- nroff -*-
+.TH "UNO/csvloader.c" 3 "Samedi 2 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -56,6 +56,10 @@ UNO/csvloader.c
 .RI "int \fButil_IsAlphaWord\fP (const char *line, int l)"
 .br
 .RI "Vérifie si une chaîne de caratère ne contient que des lettres\&. "
+.ti -1c
+.RI "void \fButil_ClearInputBuffer\fP ()"
+.br
+.RI "Vide le buffer stdin\&. "
 .in -1c
 .SH "Documentation des fonctions"
 .PP 
@@ -70,6 +74,8 @@ Libere la memoire\&. Libere la memoire d'un objet csv\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 24 du fichier csvloader\&.c\&.
 .SS "\fBcsv_t\fP* csv_InitCSV (FILE * f)"
 
 .PP
@@ -81,6 +87,8 @@ Charge un fichier csv\&. Initialise un objet CSV a partire d'un fichier\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 8 du fichier csvloader\&.c\&.
 .SS "\fBcsv_t\fP* csv_ParseCSV (\fBstring_t\fP filename, \fBcsv_t\fP * input)"
 
 .PP
@@ -99,6 +107,8 @@ l'objet creer si input est null, sinon input\&.
 .RE
 .PP
 
+.PP
+Définition à la ligne 51 du fichier csvloader\&.c\&.
 .SS "void csv_PrintCSV (\fBcsv_t\fP * csv, \fBdataPrinter\fP printer)"
 
 .PP
@@ -112,6 +122,8 @@ Affiche les donnée stocker dans l'objet\&. Affiche le contenu d'un fichier CSV\
 .RE
 .PP
 
+.PP
+Définition à la ligne 93 du fichier csvloader\&.c\&.
 .SS "void csv_PrintData (\fBdata_t\fP * d)"
 
 .PP
@@ -123,6 +135,14 @@ Affiche le contenue d'une donnée (ligne d'un fichier csv) Affiche une ligne de 
 .RE
 .PP
 
+.PP
+Définition à la ligne 84 du fichier csvloader\&.c\&.
+.SS "void util_ClearInputBuffer ()"
+
+.PP
+Vide le buffer stdin\&. Vide le buffer stdin jusqu'à la fin de la ligne ou du buffer 
+.PP
+Définition à la ligne 134 du fichier csvloader\&.c\&.
 .SS "int util_CountLine (FILE * f)"
 
 .PP
@@ -134,6 +154,8 @@ Compte le nombre de ligne dans un ficher\&. Compte le nombre de ligne d'un fichi
 .RE
 .PP
 
+.PP
+Définition à la ligne 32 du fichier csvloader\&.c\&.
 .SS "int util_IsAlphaWord (const char * line, int l)"
 
 .PP
@@ -152,6 +174,8 @@ Vérifie si une chaîne de caratère ne contient que des lettres\&. Vérifie que
 .RE
 .PP
 
+.PP
+Définition à la ligne 125 du fichier csvloader\&.c\&.
 .SS "int util_IsNumeric (const char * line, int l)"
 
 .PP
@@ -170,6 +194,8 @@ Vérifie si une chaîne de caratère est un nombre\&. Vérifie que la chaîne de
 .RE
 .PP
 
+.PP
+Définition à la ligne 116 du fichier csvloader\&.c\&.
 .SS "void util_JumpLine (int n)"
 
 .PP
@@ -181,6 +207,8 @@ Affiche n fois le caractere de fin de ligne\&. Permet d'afficher n fois le carat
 .RE
 .PP
 
+.PP
+Définition à la ligne 109 du fichier csvloader\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.
