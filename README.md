@@ -1,5 +1,13 @@
 
 # [UNO](https://zevest.github.io/UNO)
+
+## ce projet réalisé par : 
+	* Ait el djoudi Karim
+	* Couram steve
+	* Menguelti mounir
+	* Akli idir
+	* Nehlil rachid
+ 
 ##  Combien de cartes dans le Uno ? Pour jouer au Uno, il vous faut les 108 cartes réparties de cette manière :
 
   * 19 cartes de couleur bleu, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
