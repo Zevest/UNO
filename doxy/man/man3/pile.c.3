@@ -1,4 +1,4 @@
-.TH "UNO/pile.c" 3 "Samedi 2 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
+.TH "UNO/pile.c" 3 "Mardi 5 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -19,7 +19,7 @@ UNO/pile.c
 
 .in +1c
 .ti -1c
-.RI "int \fBmax\fP (int a, int b)"
+.RI "int \fButil_Max\fP (int a, int b)"
 .br
 .RI "Retroune le max de deux valeurs a et b\&. "
 .ti -1c
@@ -61,12 +61,6 @@ UNO/pile.c
 .in -1c
 .SH "Documentation des fonctions"
 .PP 
-.SS "int max (int a, int b)"
-
-.PP
-Retroune le max de deux valeurs a et b\&. 
-.PP
-Définition à la ligne 8 du fichier pile\&.c\&.
 .SS "void pile_Distribute (int n, \fBpile_t\fP * src, \fBpile_t\fP * dest)"
 
 .PP
@@ -216,6 +210,12 @@ Mélange les cartes d'un paquets sources vers un paquets destination\&. Déplace
 
 .PP
 Définition à la ligne 68 du fichier pile\&.c\&.
+.SS "int util_Max (int a, int b)"
+
+.PP
+Retroune le max de deux valeurs a et b\&. 
+.PP
+Définition à la ligne 8 du fichier pile\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.

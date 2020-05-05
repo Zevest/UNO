@@ -1,4 +1,4 @@
-.TH "UNO/play.c" 3 "Samedi 2 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
+.TH "UNO/play.c" 3 "Mardi 5 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -134,7 +134,21 @@ Définition à la ligne 35 du fichier play\&.c\&.
 .SS "int play_IsCardPlayable (\fBcard_t\fP * carte_A, \fBcard_t\fP * carte_B)"
 
 .PP
-Verifie si la carte peut être jouer\&. 
+Verifie si la carte peut être jouer\&. Vérifie si la carte peut être jouée\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIcarte_A\fP carte a comparer 
+.br
+\fIcarte_b\fP dernière carte poser 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 si la carte peut etre jouer, 0 sinon\&. 
+.RE
+.PP
+
 .PP
 Définition à la ligne 41 du fichier play\&.c\&.
 .SS "void play_Next ()"

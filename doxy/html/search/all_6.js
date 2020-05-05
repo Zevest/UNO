@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_5freset_30',['g_Reset',['../main_8c.html#ab336251763359f7fcb437e8d77e74213',1,'main.c']]]
+  ['index_29',['index',['../structdata.html#a750b5d744c39a06bfb13e6eb010e35d0',1,'data']]]
 ];

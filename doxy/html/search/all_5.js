@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['false_29',['false',['../pile_8h.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c',1,'pile.h']]]
+  ['g_5freset_28',['g_Reset',['../main_8c.html#ab336251763359f7fcb437e8d77e74213',1,'main.c']]]
 ];

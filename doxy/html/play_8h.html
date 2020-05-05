@@ -123,16 +123,15 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a8851aa20901a9dc8e9b90e1faa627b84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8h.html#a8851aa20901a9dc8e9b90e1faa627b84">play_SetTour</a> (int n)</td></tr>
 <tr class="memdesc:a8851aa20901a9dc8e9b90e1faa627b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur de tour.  <a href="play_8h.html#a8851aa20901a9dc8e9b90e1faa627b84">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a8851aa20901a9dc8e9b90e1faa627b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a979600beff4ac26091fa3bbc59c5c275"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8h.html#a979600beff4ac26091fa3bbc59c5c275">can_play_cart</a> (<a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_A, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_B)</td></tr>
-<tr class="separator:a979600beff4ac26091fa3bbc59c5c275"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01695fbda493abec6d2a347dec8cf99d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8h.html#a01695fbda493abec6d2a347dec8cf99d">play_IsCardPlayable</a> (<a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_A, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_B)</td></tr>
+<tr class="memdesc:a01695fbda493abec6d2a347dec8cf99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si la carte peut être jouer.  <a href="play_8h.html#a01695fbda493abec6d2a347dec8cf99d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a01695fbda493abec6d2a347dec8cf99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb917d0e7b9e8e3a104d187a95134883"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8h.html#adb917d0e7b9e8e3a104d187a95134883">play_CanPlay</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte)</td></tr>
 <tr class="memdesc:adb917d0e7b9e8e3a104d187a95134883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si un joueur peut jouer.  <a href="play_8h.html#adb917d0e7b9e8e3a104d187a95134883">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adb917d0e7b9e8e3a104d187a95134883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05b2a7a539cef7a018c26cba1b67ad01"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8h.html#a05b2a7a539cef7a018c26cba1b67ad01">play_Play</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *joueurs, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *paquets, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *pioches, int numt, int nbj, <a class="el" href="csvloader_8h.html#a1319e0adc1a6e822b87133bbbc7c5e6b">csv_t</a> *<a class="el" href="structcsv.html">csv</a>)</td></tr>
 <tr class="memdesc:a05b2a7a539cef7a018c26cba1b67ad01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boucle principale du jeu.  <a href="play_8h.html#a05b2a7a539cef7a018c26cba1b67ad01">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a05b2a7a539cef7a018c26cba1b67ad01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeeaa2b48bd6117045b1c505005420bc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8h.html#aeeaa2b48bd6117045b1c505005420bc3">ask</a> (int *v, char *message, char *message2)</td></tr>
-<tr class="separator:aeeaa2b48bd6117045b1c505005420bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a id="a32b434f4c201807d986369d2827ebd14"></a>
@@ -152,76 +151,6 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="aeeaa2b48bd6117045b1c505005420bc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aeeaa2b48bd6117045b1c505005420bc3">&#9670;&nbsp;</a></span>ask()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ask </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>v</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>message</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>message2</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a979600beff4ac26091fa3bbc59c5c275"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a979600beff4ac26091fa3bbc59c5c275">&#9670;&nbsp;</a></span>can_play_cart()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int can_play_cart </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
-          <td class="paramname"><em>carte_A</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
-          <td class="paramname"><em>carte_B</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Vérifie si la carte peut être jouée. </p><dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">carte_A</td><td>carte a comparer </td></tr>
-    <tr><td class="paramname">carte_b</td><td>dernière carte poser </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Renvoie</dt><dd>1 si la carte peut etre jouer, 0 sinon. </dd></dl>
-
-</div>
-</div>
 <a id="adb917d0e7b9e8e3a104d187a95134883"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adb917d0e7b9e8e3a104d187a95134883">&#9670;&nbsp;</a></span>play_CanPlay()</h2>
 
@@ -303,6 +232,46 @@ Fonctions</h2></td></tr>
 <p>Inverse la valeur de la varaiable global d'incémentation du tour. </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00035">35</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a01695fbda493abec6d2a347dec8cf99d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a01695fbda493abec6d2a347dec8cf99d">&#9670;&nbsp;</a></span>play_IsCardPlayable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int play_IsCardPlayable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
+          <td class="paramname"><em>carte_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
+          <td class="paramname"><em>carte_B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifie si la carte peut être jouer. </p>
+<p>Vérifie si la carte peut être jouée. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carte_A</td><td>carte a comparer </td></tr>
+    <tr><td class="paramname">carte_b</td><td>dernière carte poser </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si la carte peut etre jouer, 0 sinon. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00041">41</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>

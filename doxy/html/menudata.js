@@ -35,7 +35,6 @@ var menudata={children:[
 {text:"Variables globale",url:"globals.html",children:[
 {text:"Tout",url:"globals.html",children:[
 {text:"_",url:"globals.html#index__5F"},
-{text:"a",url:"globals.html#index_a"},
 {text:"b",url:"globals.html#index_b"},
 {text:"c",url:"globals.html#index_c"},
 {text:"d",url:"globals.html#index_d"},
@@ -48,7 +47,6 @@ var menudata={children:[
 {text:"t",url:"globals.html#index_t"},
 {text:"u",url:"globals.html#index_u"}]},
 {text:"Fonctions",url:"globals_func.html",children:[
-{text:"a",url:"globals_func.html#index_a"},
 {text:"c",url:"globals_func.html#index_c"},
 {text:"g",url:"globals_func.html#index_g"},
 {text:"m",url:"globals_func.html#index_m"},

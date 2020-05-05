@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['data_26',['data',['../structdata.html',1,'data'],['../structcsv.html#a61948a3f9fe06500b9295e50b06f07bc',1,'csv::data()']]],
-  ['data_5ft_27',['data_t',['../csvloader_8h.html#a1d756f237acef91aa7ef4e6b87f52632',1,'csvloader.h']]],
-  ['dataprinter_28',['dataPrinter',['../csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939',1,'csvloader.h']]]
+  ['false_27',['false',['../pile_8h.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c',1,'pile.h']]]
 ];
