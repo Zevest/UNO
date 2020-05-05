@@ -5,7 +5,7 @@
 #include "include/pile.h"
 
 /// Retroune le max de deux valeurs a et b
-int max(int a, int b)
+int util_Max(int a, int b)
 {
 	return a > b ? a : b;
 }
@@ -82,7 +82,7 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 		for (i = 0; i <= mx; ++i)
 		{
 
-			int index = rand() % (max(0, (paquet->_TOP) + 1));
+			int index = rand() % (util_Max(0, (paquet->_TOP) + 1));
 
 			pile_Push(res, paquet->_DATA[index]);
 			pile_Remove(paquet, index);

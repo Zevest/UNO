@@ -33,7 +33,7 @@ void play_SetTour(int n);
  * @param carte_b dernière carte poser
  * @return 1 si la carte peut etre jouer,  0 sinon.
  */
-int can_play_cart(card_t *carte_A, card_t *carte_B);
+int play_IsCardPlayable(card_t *carte_A, card_t *carte_B);
 
 /**
  * Vérifie si un joueur possède une carte jouable.
@@ -55,6 +55,6 @@ int play_CanPlay(pile_t *main, card_t *carte);
  */
 int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv);
 
-int ask(int *v, char *message, char *message2);
+//int ask(int *v, char *message, char *message2);
 
 #endif // !__PLAY_H__
