@@ -5,7 +5,7 @@ OUT= build/
 SRCDIR=src/
 SRC=util.c pile.c carte.c joueur.c play.c main.c csvloader.c
 TESTFOLDER=test/
-
+ECHO=echo
 OBJ=$(SRC:.c=.o)
 PROGNAME=UNO.exe
 RM=rm -rf
@@ -38,15 +38,25 @@ $(OUT)play.o:$(addprefix $(SRCDIR), play.c) $(OUT)util.o $(HEADER)play.h
 $(OUT)util.o:$(addprefix $(SRCDIR), util.c) $(HEADER)util.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-testpile: $(TESTFOLDER)pile_test.c $(OUT)pile.o $(OUT)carte.o $(OUT)util.o
-	$(CC) $(CFLAGS) $^ -o $(OUT)$@
+$(OUT)pile.test: $(TESTFOLDER)pile_test.c $(OUT)pile.o $(OUT)carte.o $(OUT)util.o
+	$(CC) $(CFLAGS) $^ -o $@
 
-testplay: $(TESTFOLDER)play_test.c $(OUT)pile.o $(OUT)carte.o $(OUT)play.o $(OUT)util.o
-	$(CC) $(CFLAGS) $^ -o $(OUT)$@
+$(OUT)play.test: $(TESTFOLDER)play_test.c $(OUT)pile.o $(OUT)carte.o $(OUT)play.o $(OUT)util.o
+	$(CC) $(CFLAGS) $^ -o $@
+
+$(OUT)csvloader.test: $(TESTFOLDER)csvloader_test.c $(OUT)csvloader.o $(OUT)util.o
+	$(CC) $(CFLAGS) $^ -o $@
+
+
+test: $(OUT)pile.test $(OUT)play.test $(OUT)csvloader.test
+	$(ECHO) $(PWD)
+	$(OUT)pile.test && $(OUT)play.test && $(OUT)csvloader.test
+	$(ECHO) "TOUS EST OK"
+	
 
 
 clean:
-	$(RM) $(OUT)*.o $(OUT)$(PROGNAME)
+	$(RM) $(OUT)*.o $(OUT)$(PROGNAME) $(OUT)*.test
 	
 
 run:	$(OUT)$(PROGNAME)

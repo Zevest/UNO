@@ -12,7 +12,8 @@ csv_t *csv_InitCSV(FILE *f)
 	if (f == NULL)
 	{
 		fprintf(stderr, "File Not found\n");
-		exit(EXIT_FAILURE);
+		//exit(EXIT_FAILURE);
+		return NULL;
 	}
 	int lines = util_CountLine(f);
 	input = (csv_t *)malloc(sizeof(*input));
@@ -74,17 +75,16 @@ void csv_PrintData(data_t *d)
 /// Affiche les donnée stocker dans l'objet
 void csv_PrintCSV(csv_t *csv, dataPrinter printer)
 {
-	if (csv != NULL)
+	if (csv == NULL)
+		return;
+	printf("{\n");
+	for (int i = 0; i < csv->length; ++i)
 	{
-		printf("{\n");
-		for (int i = 0; i < csv->length; ++i)
-		{
-			printf("	");
-			printer((csv->data + i));
-			printf(",\n");
-		}
-		printf("}\n");
+		printf("	");
+		printer((csv->data + i));
+		printf(",\n");
 	}
+	printf("}\n");
 }
 
 #ifdef DEBUG

@@ -53,7 +53,6 @@ int play_IsCardPlayable(card_t *carte_A, card_t *carte_B)
 	return (a ? a : b);
 }
 
-// Fonction à tester
 /// Verifie si un joueur peut jouer
 int play_CanPlay(pile_t *main, card_t *carte)
 {
@@ -67,7 +66,6 @@ int play_CanPlay(pile_t *main, card_t *carte)
 	return 0;
 }
 
-// Fonction à tester
 /// Compte le nombre de points d'un joueur
 int play_CountPoint(player_t *g, int joueur)
 {
@@ -95,7 +93,6 @@ int play_CountPoint(player_t *g, int joueur)
 	return s;
 }
 
-// Fonction à tester
 /// Additionne les points des perdants pour les atribuer au gagnant
 int play_EndGame(player_t *g, int joueur)
 {
