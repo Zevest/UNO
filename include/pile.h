@@ -53,7 +53,7 @@ extern int pile_Remove(pile_t *p, int i);
 /**
  * Verifie si la pile est vide.
  * @param p pile
- * @return 1 sio la pile est vide, 0 sinon.
+ * @return 1 si la pile est vide, 0 sinon.
  */
 extern int pile_Empty(pile_t *p);
 
@@ -70,7 +70,7 @@ extern card_t *pile_GetTop(pile_t *p);
 extern void pile_FillDeck(pile_t *p);
 
 /**
- * Déplace N carte de la pile source vers la pile destination.
+ * Déplace N carte(s) de la pile source vers la pile destination.
  * @param n nombre de carte a déplacer
  * @param src pile source
  * @param dst pile destination

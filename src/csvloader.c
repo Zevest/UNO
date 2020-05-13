@@ -2,7 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "../include/csvloader.h"
+#include "util.h"
+#include "csvloader.h"
 
 /// Charge un fichier csv
 csv_t *csv_InitCSV(FILE *f)
@@ -26,25 +27,6 @@ void csv_DeleteCSV(csv_t *csv)
 	free(csv->data);
 	csv->data = NULL;
 	free(csv);
-}
-
-/// Compte le nombre de ligne dans un ficher
-int util_CountLine(FILE *f)
-{
-	if (f == NULL)
-		return 0;
-	int lines = 0;
-	char c;
-	while (!feof(f))
-	{
-		c = fgetc(f);
-		if (c == '\n')
-		{
-			++lines;
-		}
-	}
-	rewind(f);
-	return lines;
 }
 
 /// Sépare les données du ficher et les stocke dans un objet
@@ -103,39 +85,6 @@ void csv_PrintCSV(csv_t *csv, dataPrinter printer)
 		}
 		printf("}\n");
 	}
-}
-
-/// Affiche n fois le caractere de fin de ligne
-void util_JumpLine(int n)
-{
-	while (n-- > 0)
-		printf("\n");
-}
-
-/// Vérifie si une chaîne de caratère est un nombre
-int util_IsNumeric(const char *line, int l)
-{
-	while (l-- >= 0)
-		if (isdigit(line[l - 1]))
-			return 0;
-	return 1;
-}
-
-/// Vérifie si une chaîne de caratère ne contient que des lettres
-int util_IsAlphaWord(const char *line, int l)
-{
-	while (l-- >= 0)
-		if (!isalpha(line[l - 1]))
-			return 0;
-	return 1;
-}
-
-/// Vide le buffer stdin
-void util_ClearInputBuffer()
-{
-	int c;
-	while ((c = getchar()) != '\n' && c != EOF)
-		;
 }
 
 #ifdef DEBUG

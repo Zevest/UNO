@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../include/pile.h"
-#include "../include/joueur.h"
+#include "pile.h"
+#include "joueur.h"
 
 #define Nombre_carte 7
 

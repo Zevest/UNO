@@ -1,14 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../include/carte.h"
-#include "../include/pile.h"
-
-/// Retroune le max de deux valeurs a et b
-int util_Max(int a, int b)
-{
-	return a > b ? a : b;
-}
+#include "carte.h"
+#include "pile.h"
+#include "util.h"
 
 /// Initialise la pile de carte
 extern pile_t *pile_Init()

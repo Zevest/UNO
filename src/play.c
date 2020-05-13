@@ -2,11 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "../include/pile.h"
-#include "../include/joueur.h"
-#include "../include/carte.h"
-#include "../include/csvloader.h"
-#include "../include/play.h"
+#include "pile.h"
+#include "joueur.h"
+#include "carte.h"
+#include "csvloader.h"
+#include "play.h"
+#include "util.h"
 
 #define N 13
 
