@@ -5,6 +5,7 @@
 #include "util.h"
 #include "csvloader.h"
 
+/*A TESTER*/
 /// Charge un fichier csv
 csv_t *csv_InitCSV(FILE *f)
 {
@@ -25,11 +26,15 @@ csv_t *csv_InitCSV(FILE *f)
 /// Libere la memoire
 void csv_DeleteCSV(csv_t *csv)
 {
-	free(csv->data);
+	if (csv == NULL)
+		return;
+	if (csv->data != NULL)
+		free(csv->data);
 	csv->data = NULL;
 	free(csv);
 }
 
+/*A TESTER*/
 /// Sépare les données du ficher et les stocke dans un objet
 csv_t *csv_ParseCSV(const string_t filename, csv_t *input)
 {
