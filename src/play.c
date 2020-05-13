@@ -38,7 +38,7 @@ void play_Inverse()
 	g_Sens *= -1;
 }
 
-// Fonction à tester
+/*A TESTER*/
 /// Verifie si la carte peut être jouer
 int play_IsCardPlayable(card_t *carte_A, card_t *carte_B)
 {

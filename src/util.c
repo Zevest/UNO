@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include "util.h"
 
+/*A TESTER*/
 /// Compte le nombre de ligne dans un ficher
 int util_CountLine(FILE *f)
 {

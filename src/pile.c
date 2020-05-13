@@ -107,10 +107,9 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 	}
 }
 
-// Fonction à tester
+/*A TESTER*/
 /// distribue n cartes
-extern void
-pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
+extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 {
 	int i;
 	if (paquet_dest == NULL || paquet_src == NULL || n > paquet_src->_TOP)
