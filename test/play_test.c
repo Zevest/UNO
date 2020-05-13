@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "../include/carte.h"
-#include "../include/play.h"
-#include "../include/pile.h"
+#include "carte.h"
+#include "play.h"
+#include "pile.h"
 
-/*test de la fonction play_IsCardPlayable avec divers configuration*/
-void testIndividualCards()
+int main()
 {
+	// Test de la fonction play_IsCardPlayable avec divers configuration
 	int i;
 	pile_t *deck = pile_Init();
 	card_t *lastCard = card_Init(0, 'R');
@@ -50,10 +50,6 @@ void testIndividualCards()
 	printf("Succès\n");
 
 	pile_Delete(deck);
-}
-
-int main()
-{
-	testIndividualCards();
+	free(lastCard);
 	return 0;
 }

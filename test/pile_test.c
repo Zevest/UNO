@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "../include/carte.h"
-#include "../include/pile.h"
+#include "carte.h"
+#include "pile.h"
 
 /// Copie une carte
 void card_Copy(card_t *dest, card_t *src)
