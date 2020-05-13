@@ -89,10 +89,10 @@ int main(int argc, char **argv)
 			sleep(5);
 			for (i = 0; i < nb; ++i)
 			{
-				free(joueurs[i].cards);
+				pile_Delete(joueurs[i].cards);
 			}
-			free(pioche);
-			free(paquet);
+			pile_Delete(pioche);
+			pile_Delete(paquet);
 			pioche = pile_Init();
 			paquet = pile_Init();
 			pile_FillDeck(paquet);
@@ -112,11 +112,11 @@ int main(int argc, char **argv)
 
 	for (i = 0; i < nb; ++i)
 	{
-		free(joueurs[i].cards);
+		pile_Delete(joueurs[i].cards);
 	}
 	free(joueurs);
-	free(paquet);
-	free(pioche);
+	pile_Delete(paquet);
+	pile_Delete(pioche);
 	csv_DeleteCSV(csv);
 	return 0;
 }

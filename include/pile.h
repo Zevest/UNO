@@ -86,4 +86,9 @@ extern void pile_Distribute(int n, pile_t *src, pile_t *dest);
  */
 extern void pile_Shuffle(pile_t *src, pile_t *dst, int n);
 
+/**
+ * Libère la mémoire allouée pour pour la pile
+ * @param pile la pile a supprimer
+ */
+extern void pile_Delete(pile_t *pile);
 #endif

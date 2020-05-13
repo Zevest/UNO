@@ -157,3 +157,15 @@ extern void pile_FillDeck(pile_t *paquet)
 		pile_Push(paquet, card_Init(i, 'N'));
 	}
 }
+
+/// libère la mémoire
+extern void pile_Delete(pile_t *pile)
+{
+	if (pile == NULL)
+		return;
+	while (!pile_Empty(pile))
+	{
+		free(pile_Pop(pile));
+	}
+	free(pile);
+}
