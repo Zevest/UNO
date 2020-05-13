@@ -1,8 +1,8 @@
-.TH "UNO/csvloader.c" 3 "Mardi 5 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
+.TH "UNO/src/csvloader.c" 3 "Mercredi 13 Mai 2020" "Version 1.4" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-UNO/csvloader.c
+UNO/src/csvloader.c
 .SH SYNOPSIS
 .br
 .PP
@@ -14,7 +14,9 @@ UNO/csvloader.c
 .br
 \fC#include <ctype\&.h>\fP
 .br
-\fC#include 'include/csvloader\&.h'\fP
+\fC#include 'util\&.h'\fP
+.br
+\fC#include 'csvloader\&.h'\fP
 .br
 
 .SS "Fonctions"
@@ -29,10 +31,6 @@ UNO/csvloader.c
 .br
 .RI "Libere la memoire\&. "
 .ti -1c
-.RI "int \fButil_CountLine\fP (FILE *f)"
-.br
-.RI "Compte le nombre de ligne dans un ficher\&. "
-.ti -1c
 .RI "\fBcsv_t\fP * \fBcsv_ParseCSV\fP (const \fBstring_t\fP filename, \fBcsv_t\fP *input)"
 .br
 .RI "Sépare les données du ficher et les stocke dans un objet\&. "
@@ -44,22 +42,6 @@ UNO/csvloader.c
 .RI "void \fBcsv_PrintCSV\fP (\fBcsv_t\fP *\fBcsv\fP, \fBdataPrinter\fP printer)"
 .br
 .RI "Affiche les donnée stocker dans l'objet\&. "
-.ti -1c
-.RI "void \fButil_JumpLine\fP (int n)"
-.br
-.RI "Affiche n fois le caractere de fin de ligne\&. "
-.ti -1c
-.RI "int \fButil_IsNumeric\fP (const char *line, int l)"
-.br
-.RI "Vérifie si une chaîne de caratère est un nombre\&. "
-.ti -1c
-.RI "int \fButil_IsAlphaWord\fP (const char *line, int l)"
-.br
-.RI "Vérifie si une chaîne de caratère ne contient que des lettres\&. "
-.ti -1c
-.RI "void \fButil_ClearInputBuffer\fP ()"
-.br
-.RI "Vide le buffer stdin\&. "
 .in -1c
 .SH "Documentation des fonctions"
 .PP 
@@ -75,7 +57,7 @@ Libere la memoire\&. Libere la memoire d'un objet csv\&.
 .PP
 
 .PP
-Définition à la ligne 24 du fichier csvloader\&.c\&.
+Définition à la ligne 27 du fichier csvloader\&.c\&.
 .SS "\fBcsv_t\fP* csv_InitCSV (FILE * f)"
 
 .PP
@@ -88,7 +70,7 @@ Charge un fichier csv\&. Initialise un objet CSV a partire d'un fichier\&.
 .PP
 
 .PP
-Définition à la ligne 8 du fichier csvloader\&.c\&.
+Définition à la ligne 10 du fichier csvloader\&.c\&.
 .SS "\fBcsv_t\fP* csv_ParseCSV (\fBstring_t\fP filename, \fBcsv_t\fP * input)"
 
 .PP
@@ -108,7 +90,7 @@ l'objet creer si input est null, sinon input\&.
 .PP
 
 .PP
-Définition à la ligne 51 du fichier csvloader\&.c\&.
+Définition à la ligne 39 du fichier csvloader\&.c\&.
 .SS "void csv_PrintCSV (\fBcsv_t\fP * csv, \fBdataPrinter\fP printer)"
 
 .PP
@@ -123,7 +105,7 @@ Affiche les donnée stocker dans l'objet\&. Affiche le contenu d'un fichier CSV\
 .PP
 
 .PP
-Définition à la ligne 93 du fichier csvloader\&.c\&.
+Définition à la ligne 81 du fichier csvloader\&.c\&.
 .SS "void csv_PrintData (\fBdata_t\fP * d)"
 
 .PP
@@ -136,79 +118,7 @@ Affiche le contenue d'une donnée (ligne d'un fichier csv) Affiche une ligne de 
 .PP
 
 .PP
-Définition à la ligne 84 du fichier csvloader\&.c\&.
-.SS "void util_ClearInputBuffer ()"
-
-.PP
-Vide le buffer stdin\&. Vide le buffer stdin jusqu'à la fin de la ligne ou du buffer 
-.PP
-Définition à la ligne 134 du fichier csvloader\&.c\&.
-.SS "int util_CountLine (FILE * f)"
-
-.PP
-Compte le nombre de ligne dans un ficher\&. Compte le nombre de ligne d'un fichier\&. 
-.PP
-\fBParamètres\fP
-.RS 4
-\fIf\fP Fichier 
-.RE
-.PP
-
-.PP
-Définition à la ligne 32 du fichier csvloader\&.c\&.
-.SS "int util_IsAlphaWord (const char * line, int l)"
-
-.PP
-Vérifie si une chaîne de caratère ne contient que des lettres\&. Vérifie que la chaîne de caractère soit un mot ou une phrase 
-.PP
-\fBParamètres\fP
-.RS 4
-\fIline\fP Chaîne de caractère 
-.br
-\fIl\fP Longueure de la chaîne de caractère 
-.RE
-.PP
-\fBRenvoie\fP
-.RS 4
-1 si elle ne contient que des chiffres sinon 0 
-.RE
-.PP
-
-.PP
-Définition à la ligne 125 du fichier csvloader\&.c\&.
-.SS "int util_IsNumeric (const char * line, int l)"
-
-.PP
-Vérifie si une chaîne de caratère est un nombre\&. Vérifie que la chaîne de caractère soit un nombre 
-.PP
-\fBParamètres\fP
-.RS 4
-\fIline\fP Chaîne de caractère 
-.br
-\fIl\fP Longueure de la chaîne de caractère 
-.RE
-.PP
-\fBRenvoie\fP
-.RS 4
-1 si elle ne contient que des chiffres sinon 0 
-.RE
-.PP
-
-.PP
-Définition à la ligne 116 du fichier csvloader\&.c\&.
-.SS "void util_JumpLine (int n)"
-
-.PP
-Affiche n fois le caractere de fin de ligne\&. Permet d'afficher n fois le caratère fin de ligne\&. 
-.PP
-\fBParamètres\fP
-.RS 4
-\fIn\fP nombre de répétition 
-.RE
-.PP
-
-.PP
-Définition à la ligne 109 du fichier csvloader\&.c\&.
+Définition à la ligne 72 du fichier csvloader\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.

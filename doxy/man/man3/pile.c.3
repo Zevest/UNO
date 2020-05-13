@@ -1,8 +1,8 @@
-.TH "UNO/pile.c" 3 "Mardi 5 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
+.TH "UNO/src/pile.c" 3 "Mercredi 13 Mai 2020" "Version 1.4" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-UNO/pile.c
+UNO/src/pile.c
 .SH SYNOPSIS
 .br
 .PP
@@ -10,18 +10,16 @@ UNO/pile.c
 .br
 \fC#include <stdlib\&.h>\fP
 .br
-\fC#include 'include/carte\&.h'\fP
+\fC#include 'carte\&.h'\fP
 .br
-\fC#include 'include/pile\&.h'\fP
+\fC#include 'pile\&.h'\fP
+.br
+\fC#include 'util\&.h'\fP
 .br
 
 .SS "Fonctions"
 
 .in +1c
-.ti -1c
-.RI "int \fButil_Max\fP (int a, int b)"
-.br
-.RI "Retroune le max de deux valeurs a et b\&. "
 .ti -1c
 .RI "\fBpile_t\fP * \fBpile_Init\fP ()"
 .br
@@ -58,13 +56,30 @@ UNO/pile.c
 .RI "void \fBpile_FillDeck\fP (\fBpile_t\fP *paquet)"
 .br
 .RI "initialiser le paquet "
+.ti -1c
+.RI "void \fBpile_Delete\fP (\fBpile_t\fP *\fBpile\fP)"
+.br
+.RI "libère la mémoire "
 .in -1c
 .SH "Documentation des fonctions"
 .PP 
+.SS "void pile_Delete (\fBpile_t\fP * pile)"
+
+.PP
+libère la mémoire Libère la mémoire allouée pour pour la pile 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIpile\fP la pile a supprimer 
+.RE
+.PP
+
+.PP
+Définition à la ligne 156 du fichier pile\&.c\&.
 .SS "void pile_Distribute (int n, \fBpile_t\fP * src, \fBpile_t\fP * dest)"
 
 .PP
-distribue n cartes Déplace N carte de la pile source vers la pile destination\&. 
+distribue n cartes Déplace N carte(s) de la pile source vers la pile destination\&. 
 .PP
 \fBParamètres\fP
 .RS 4
@@ -77,7 +92,7 @@ distribue n cartes Déplace N carte de la pile source vers la pile destination\&
 .PP
 
 .PP
-Définition à la ligne 116 du fichier pile\&.c\&.
+Définition à la ligne 112 du fichier pile\&.c\&.
 .SS "int pile_Empty (\fBpile_t\fP * p)"
 
 .PP
@@ -90,12 +105,12 @@ Vérifie si la pile est vide\&. Verifie si la pile est vide\&.
 .PP
 \fBRenvoie\fP
 .RS 4
-1 sio la pile est vide, 0 sinon\&. 
+1 si la pile est vide, 0 sinon\&. 
 .RE
 .PP
 
 .PP
-Définition à la ligne 34 du fichier pile\&.c\&.
+Définition à la ligne 29 du fichier pile\&.c\&.
 .SS "void pile_FillDeck (\fBpile_t\fP * p)"
 
 .PP
@@ -108,7 +123,7 @@ initialiser le paquet Remplie la pile deu bon nombre de chaque carte\&.
 .PP
 
 .PP
-Définition à la ligne 131 du fichier pile\&.c\&.
+Définition à la ligne 127 du fichier pile\&.c\&.
 .SS "\fBcard_t\fP* pile_GetTop (\fBpile_t\fP * p)"
 
 .PP
@@ -126,7 +141,7 @@ carte au sommet
 .PP
 
 .PP
-Définition à la ligne 22 du fichier pile\&.c\&.
+Définition à la ligne 17 du fichier pile\&.c\&.
 .SS "\fBpile_t\fP* pile_Init (void)"
 
 .PP
@@ -139,7 +154,7 @@ Pile crée
 .PP
 
 .PP
-Définition à la ligne 14 du fichier pile\&.c\&.
+Définition à la ligne 9 du fichier pile\&.c\&.
 .SS "\fBcard_t\fP* pile_Pop (\fBpile_t\fP * p)"
 
 .PP
@@ -157,7 +172,7 @@ carte retirer\&.
 .PP
 
 .PP
-Définition à la ligne 60 du fichier pile\&.c\&.
+Définition à la ligne 55 du fichier pile\&.c\&.
 .SS "void pile_Push (\fBpile_t\fP * p, \fBcard_t\fP * c)"
 
 .PP
@@ -172,7 +187,7 @@ Ajoute une carte au sommet de la pile\&. Ajoute un carte ausommet de la pile\&.
 .PP
 
 .PP
-Définition à la ligne 28 du fichier pile\&.c\&.
+Définition à la ligne 23 du fichier pile\&.c\&.
 .SS "int pile_Remove (\fBpile_t\fP * p, int i)"
 
 .PP
@@ -192,7 +207,7 @@ Supprime la carte avec l'indice index de la pile\&. Retire une carte d'indice i 
 .PP
 
 .PP
-Définition à la ligne 40 du fichier pile\&.c\&.
+Définition à la ligne 35 du fichier pile\&.c\&.
 .SS "void pile_Shuffle (\fBpile_t\fP * src, \fBpile_t\fP * dst, int n)"
 
 .PP
@@ -209,13 +224,7 @@ Mélange les cartes d'un paquets sources vers un paquets destination\&. Déplace
 .PP
 
 .PP
-Définition à la ligne 68 du fichier pile\&.c\&.
-.SS "int util_Max (int a, int b)"
-
-.PP
-Retroune le max de deux valeurs a et b\&. 
-.PP
-Définition à la ligne 8 du fichier pile\&.c\&.
+Définition à la ligne 63 du fichier pile\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.

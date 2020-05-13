@@ -92,15 +92,7 @@ Graphe des dépendances par inclusion de pile.h:</div>
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
 <div class="center"><img src="pile_8h__dep__incl.png" border="0" usemap="#_u_n_o_2include_2pile_8hdep" alt=""/></div>
-<map name="_u_n_o_2include_2pile_8hdep" id="_u_n_o_2include_2pile_8hdep">
-<area shape="rect" title=" " alt="" coords="212,5,342,32"/>
-<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="150,80,295,107"/>
-<area shape="rect" href="play_8h.html" title=" " alt="" coords="22,155,156,181"/>
-<area shape="rect" href="main_8c.html" title=" " alt="" coords="42,229,136,256"/>
-<area shape="rect" href="play_8c.html" title=" " alt="" coords="200,229,290,256"/>
-<area shape="rect" href="joueur_8c.html" title=" " alt="" coords="283,155,383,181"/>
-<area shape="rect" href="pile_8c.html" title=" " alt="" coords="458,80,544,107"/>
-</map>
+<!-- MAP 0 -->
 </div>
 </div>
 <p><a href="pile_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -156,6 +148,9 @@ Fonctions</h2></td></tr>
 <tr class="memitem:ace34f2b7089ae33b1877a76c9ec65650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *src, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *dst, int n)</td></tr>
 <tr class="memdesc:ace34f2b7089ae33b1877a76c9ec65650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange les cartes d'un paquets sources vers un paquets destination.  <a href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ace34f2b7089ae33b1877a76c9ec65650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a460ab6e214f8edafb9932f9f6e4130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="structpile.html">pile</a>)</td></tr>
+<tr class="memdesc:a5a460ab6e214f8edafb9932f9f6e4130"><td class="mdescLeft">&#160;</td><td class="mdescRight">libère la mémoire  <a href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a5a460ab6e214f8edafb9932f9f6e4130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a id="a348ec1b28d65a5ccf11661aa33b28606"></a>
@@ -213,6 +208,34 @@ Fonctions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
+<a id="a5a460ab6e214f8edafb9932f9f6e4130"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a460ab6e214f8edafb9932f9f6e4130">&#9670;&nbsp;</a></span>pile_Delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pile_Delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramname"><em>pile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>libère la mémoire </p>
+<p>Libère la mémoire allouée pour pour la pile </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pile</td><td>la pile a supprimer </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00157">157</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+
+</div>
+</div>
 <a id="ae00c4c74f3f1aa7f9b5545120dc84b43"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae00c4c74f3f1aa7f9b5545120dc84b43">&#9670;&nbsp;</a></span>pile_Distribute()</h2>
 
@@ -246,7 +269,7 @@ Fonctions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>distribue n cartes </p>
-<p>Déplace N carte de la pile source vers la pile destination. </p><dl class="params"><dt>Paramètres</dt><dd>
+<p>Déplace N carte(s) de la pile source vers la pile destination. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>nombre de carte a déplacer </td></tr>
     <tr><td class="paramname">src</td><td>pile source </td></tr>
@@ -255,7 +278,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00116">116</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00113">113</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -282,9 +305,9 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Renvoie</dt><dd>1 sio la pile est vide, 0 sinon. </dd></dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si la pile est vide, 0 sinon. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00034">34</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00029">29</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -312,7 +335,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00131">131</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00128">128</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -341,7 +364,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>carte au sommet </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00022">22</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00017">17</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -364,7 +387,7 @@ Fonctions</h2></td></tr>
 <p>Initialise la pile de carte. </p>
 <p>Initialise la Pile. </p><dl class="section return"><dt>Renvoie</dt><dd>Pile crée </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00014">14</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00009">9</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -393,7 +416,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>carte retirer. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00060">60</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00055">55</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -432,7 +455,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00028">28</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00023">23</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -472,7 +495,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 si la carte a bien été retirer 0 sinon. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00040">40</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00035">35</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
@@ -518,7 +541,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00068">68</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00063">63</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>

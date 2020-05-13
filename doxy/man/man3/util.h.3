@@ -1,0 +1,136 @@
+.TH "UNO/include/util.h" 3 "Mercredi 13 Mai 2020" "Version 1.4" "UNO" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+UNO/include/util.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdio\&.h>\fP
+.br
+
+.SS "Fonctions"
+
+.in +1c
+.ti -1c
+.RI "int \fButil_CountLine\fP (FILE *f)"
+.br
+.RI "Compte le nombre de ligne dans un ficher\&. "
+.ti -1c
+.RI "void \fButil_JumpLine\fP (int n)"
+.br
+.RI "Affiche n fois le caractere de fin de ligne\&. "
+.ti -1c
+.RI "int \fButil_IsNumeric\fP (const char *line, int l)"
+.br
+.RI "Vérifie si une chaîne de caratère est un nombre\&. "
+.ti -1c
+.RI "int \fButil_IsAlphaWord\fP (const char *line, int l)"
+.br
+.RI "Vérifie si une chaîne de caratère ne contient que des lettres\&. "
+.ti -1c
+.RI "void \fButil_ClearInputBuffer\fP ()"
+.br
+.RI "Vide le buffer stdin\&. "
+.ti -1c
+.RI "int \fButil_Max\fP (int a, int b)"
+.br
+.RI "Retroune le max de deux valeurs a et b\&. "
+.in -1c
+.SH "Documentation des fonctions"
+.PP 
+.SS "void util_ClearInputBuffer ()"
+
+.PP
+Vide le buffer stdin\&. Vide le buffer stdin jusqu'à la fin de la ligne ou du buffer 
+.PP
+Définition à la ligne 53 du fichier util\&.c\&.
+.SS "int util_CountLine (FILE * f)"
+
+.PP
+Compte le nombre de ligne dans un ficher\&. Compte le nombre de ligne d'un fichier\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIf\fP Fichier 
+.RE
+.PP
+
+.PP
+Définition à la ligne 9 du fichier util\&.c\&.
+.SS "int util_IsAlphaWord (const char * line, int l)"
+
+.PP
+Vérifie si une chaîne de caratère ne contient que des lettres\&. Vérifie que la chaîne de caractère soit un mot ou une phrase 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP Chaîne de caractère 
+.br
+\fIl\fP Longueure de la chaîne de caractère 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 si elle ne contient que des chiffres sinon 0 
+.RE
+.PP
+
+.PP
+Définition à la ligne 44 du fichier util\&.c\&.
+.SS "int util_IsNumeric (const char * line, int l)"
+
+.PP
+Vérifie si une chaîne de caratère est un nombre\&. Vérifie que la chaîne de caractère soit un nombre 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIline\fP Chaîne de caractère 
+.br
+\fIl\fP Longueure de la chaîne de caractère 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+1 si elle ne contient que des chiffres sinon 0 
+.RE
+.PP
+
+.PP
+Définition à la ligne 35 du fichier util\&.c\&.
+.SS "void util_JumpLine (int n)"
+
+.PP
+Affiche n fois le caractere de fin de ligne\&. Permet d'afficher n fois le caratère fin de ligne\&. 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIn\fP nombre de répétition 
+.RE
+.PP
+
+.PP
+Définition à la ligne 28 du fichier util\&.c\&.
+.SS "int util_Max (int a, int b)"
+
+.PP
+Retroune le max de deux valeurs a et b\&. Cherche le plus grand entier entre les deux valeurs fournies 
+.PP
+\fBParamètres\fP
+.RS 4
+\fIa\fP un entier 
+.br
+\fIb\fP un entier 
+.RE
+.PP
+\fBRenvoie\fP
+.RS 4
+la valeur la plus grande 
+.RE
+.PP
+
+.PP
+Définition à la ligne 61 du fichier util\&.c\&.
+.SH "Auteur"
+.PP 
+Généré automatiquement par Doxygen pour UNO à partir du code source\&.

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO: Référence du fichier UNO/play.c</title>
+<title>UNO: Référence du fichier UNO/src/play.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_36a9b41c2ee7562e737ca2ad0da697cc.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -79,27 +79,17 @@ $(function() {
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;unistd.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="pile_8h_source.html">include/pile.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="carte_8h_source.html">include/carte.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="joueur_8h_source.html">include/joueur.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="csvloader_8h_source.html">include/csvloader.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="play_8h_source.html">include/play.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="pile_8h_source.html">pile.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="joueur_8h_source.html">joueur.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="carte_8h_source.html">carte.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="csvloader_8h_source.html">csvloader.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="play_8h_source.html">play.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de play.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="play_8c__incl.png" border="0" usemap="#_u_n_o_2play_8c" alt=""/></div>
-<map name="_u_n_o_2play_8c" id="_u_n_o_2play_8c">
-<area shape="rect" title=" " alt="" coords="330,5,419,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" title=" " alt="" coords="91,80,155,107"/>
-<area shape="rect" title=" " alt="" coords="179,80,245,107"/>
-<area shape="rect" title=" " alt="" coords="269,80,337,107"/>
-<area shape="rect" href="pile_8h.html" title=" " alt="" coords="471,229,569,256"/>
-<area shape="rect" href="carte_8h.html" title=" " alt="" coords="489,304,551,331"/>
-<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="463,155,577,181"/>
-<area shape="rect" href="csvloader_8h.html" title=" " alt="" coords="703,155,835,181"/>
-<area shape="rect" href="play_8h.html" title=" " alt="" coords="563,80,666,107"/>
-</map>
+<div class="center"><img src="play_8c__incl.png" border="0" usemap="#_u_n_o_2src_2play_8c" alt=""/></div>
+<!-- MAP 0 -->
 </div>
 </div>
 <p><a href="play_8c_source.html">Aller au code source de ce fichier.</a></p>
@@ -126,7 +116,7 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a01695fbda493abec6d2a347dec8cf99d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a01695fbda493abec6d2a347dec8cf99d">play_IsCardPlayable</a> (<a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_A, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte_B)</td></tr>
 <tr class="memdesc:a01695fbda493abec6d2a347dec8cf99d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si la carte peut être jouer.  <a href="play_8c.html#a01695fbda493abec6d2a347dec8cf99d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a01695fbda493abec6d2a347dec8cf99d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb917d0e7b9e8e3a104d187a95134883"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#adb917d0e7b9e8e3a104d187a95134883">play_CanPlay</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte)</td></tr>
+<tr class="memitem:adb917d0e7b9e8e3a104d187a95134883"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#adb917d0e7b9e8e3a104d187a95134883">play_CanPlay</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="play__test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *carte)</td></tr>
 <tr class="memdesc:adb917d0e7b9e8e3a104d187a95134883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifie si un joueur peut jouer.  <a href="play_8c.html#adb917d0e7b9e8e3a104d187a95134883">Plus de détails...</a><br /></td></tr>
 <tr class="separator:adb917d0e7b9e8e3a104d187a95134883"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57e18bb5e1322e3b252f23b9356e85a2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="play_8c.html#a57e18bb5e1322e3b252f23b9356e85a2">play_CountPoint</a> (<a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *g, int joueur)</td></tr>
@@ -152,7 +142,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00012">12</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00013">13</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -193,7 +183,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 si le joueur peu jouer, 0 sinon. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00055">55</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00057">57</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -225,7 +215,7 @@ Fonctions</h2></td></tr>
 
 <p>Compte le nombre de points d'un joueur. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00068">68</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00070">70</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -257,7 +247,7 @@ Fonctions</h2></td></tr>
 
 <p>Additionne les points des perdants pour les atribuer au gagnant. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00095">95</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00097">97</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -279,7 +269,7 @@ Fonctions</h2></td></tr>
 <p>Renvoie la valeur des tours jouer. </p>
 <p>Recupere la variable global du numero tour. </p><dl class="section return"><dt>Renvoie</dt><dd>numero du tour </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00024">24</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00025">25</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -301,7 +291,7 @@ Fonctions</h2></td></tr>
 <p>Change de sens. </p>
 <p>Inverse la valeur de la varaiable global d'incémentation du tour. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00035">35</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00036">36</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -341,7 +331,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 si la carte peut etre jouer, 0 sinon. </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00041">41</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00043">43</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -363,7 +353,7 @@ Fonctions</h2></td></tr>
 <p>Passe au tour suivant. </p>
 <p>Increment la variable global comptant le numero du tour. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00018">18</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00019">19</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -430,7 +420,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00118">118</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00120">120</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>
@@ -458,7 +448,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00030">30</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="play_8c_source.html#l00031">31</a> du fichier <a class="el" href="play_8c_source.html">play.c</a>.</p>
 
 </div>
 </div>

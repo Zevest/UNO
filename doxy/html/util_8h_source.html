@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de UNO/include/util.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.4</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_2954f25923406911f899a44fc111dfa2.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">util.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="util_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef __UTIL_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define __UTIL_H__</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8h.html#aa3c593a68621fa345c3393f98460a09b">util_CountLine</a>(FILE *f);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> <a class="code" href="util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a>(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8h.html#aab8da901e0bd502da64b455f6ef9794e">util_IsNumeric</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *line, <span class="keywordtype">int</span> l);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8h.html#a76eb16e13c7f1ad9ee02fa918d3b73c2">util_IsAlphaWord</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *line, <span class="keywordtype">int</span> l);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">void</span> <a class="code" href="util_8h.html#a68ce209402506a4aa64834d22de9abfc">util_ClearInputBuffer</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // !__UTIL_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="autil_8h_html_aab8da901e0bd502da64b455f6ef9794e"><div class="ttname"><a href="util_8h.html#aab8da901e0bd502da64b455f6ef9794e">util_IsNumeric</a></div><div class="ttdeci">int util_IsNumeric(const char *line, int l)</div><div class="ttdoc">Vérifie si une chaîne de caratère est un nombre.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00035">util.c:35</a></div></div>
+<div class="ttc" id="autil_8h_html_a2482ed161b2cb87100d589824d4645c7"><div class="ttname"><a href="util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a></div><div class="ttdeci">void util_JumpLine(int n)</div><div class="ttdoc">Affiche n fois le caractere de fin de ligne.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00028">util.c:28</a></div></div>
+<div class="ttc" id="autil_8h_html_a68ce209402506a4aa64834d22de9abfc"><div class="ttname"><a href="util_8h.html#a68ce209402506a4aa64834d22de9abfc">util_ClearInputBuffer</a></div><div class="ttdeci">void util_ClearInputBuffer()</div><div class="ttdoc">Vide le buffer stdin.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00053">util.c:53</a></div></div>
+<div class="ttc" id="autil_8h_html_a76eb16e13c7f1ad9ee02fa918d3b73c2"><div class="ttname"><a href="util_8h.html#a76eb16e13c7f1ad9ee02fa918d3b73c2">util_IsAlphaWord</a></div><div class="ttdeci">int util_IsAlphaWord(const char *line, int l)</div><div class="ttdoc">Vérifie si une chaîne de caratère ne contient que des lettres.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00044">util.c:44</a></div></div>
+<div class="ttc" id="autil_8h_html_aa3c593a68621fa345c3393f98460a09b"><div class="ttname"><a href="util_8h.html#aa3c593a68621fa345c3393f98460a09b">util_CountLine</a></div><div class="ttdeci">int util_CountLine(FILE *f)</div><div class="ttdoc">Compte le nombre de ligne dans un ficher.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00009">util.c:9</a></div></div>
+<div class="ttc" id="autil_8h_html_a44130300b0a342e1d46198cf90b6d9ab"><div class="ttname"><a href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a></div><div class="ttdeci">int util_Max(int a, int b)</div><div class="ttdoc">Retroune le max de deux valeurs a et b.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00061">util.c:61</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

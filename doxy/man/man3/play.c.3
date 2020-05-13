@@ -1,8 +1,8 @@
-.TH "UNO/play.c" 3 "Mardi 5 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
+.TH "UNO/src/play.c" 3 "Mercredi 13 Mai 2020" "Version 1.4" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-UNO/play.c
+UNO/src/play.c
 .SH SYNOPSIS
 .br
 .PP
@@ -14,15 +14,17 @@ UNO/play.c
 .br
 \fC#include <unistd\&.h>\fP
 .br
-\fC#include 'include/pile\&.h'\fP
+\fC#include 'pile\&.h'\fP
 .br
-\fC#include 'include/carte\&.h'\fP
+\fC#include 'joueur\&.h'\fP
 .br
-\fC#include 'include/joueur\&.h'\fP
+\fC#include 'carte\&.h'\fP
 .br
-\fC#include 'include/csvloader\&.h'\fP
+\fC#include 'csvloader\&.h'\fP
 .br
-\fC#include 'include/play\&.h'\fP
+\fC#include 'play\&.h'\fP
+.br
+\fC#include 'util\&.h'\fP
 .br
 
 .SS "Macros"
@@ -77,7 +79,7 @@ UNO/play.c
 .SS "#define N   13"
 
 .PP
-Définition à la ligne 12 du fichier play\&.c\&.
+Définition à la ligne 13 du fichier play\&.c\&.
 .SH "Documentation des fonctions"
 .PP 
 .SS "int play_CanPlay (\fBpile_t\fP * main, \fBcard_t\fP * carte)"
@@ -99,19 +101,19 @@ Verifie si un joueur peut jouer\&. Vérifie si un joueur possède une carte joua
 .PP
 
 .PP
-Définition à la ligne 55 du fichier play\&.c\&.
+Définition à la ligne 57 du fichier play\&.c\&.
 .SS "int play_CountPoint (\fBplayer_t\fP * g, int joueur)"
 
 .PP
 Compte le nombre de points d'un joueur\&. 
 .PP
-Définition à la ligne 68 du fichier play\&.c\&.
+Définition à la ligne 70 du fichier play\&.c\&.
 .SS "int play_EndGame (\fBplayer_t\fP * g, int joueur)"
 
 .PP
 Additionne les points des perdants pour les atribuer au gagnant\&. 
 .PP
-Définition à la ligne 95 du fichier play\&.c\&.
+Définition à la ligne 97 du fichier play\&.c\&.
 .SS "int play_GetTour ()"
 
 .PP
@@ -124,13 +126,13 @@ numero du tour
 .PP
 
 .PP
-Définition à la ligne 24 du fichier play\&.c\&.
+Définition à la ligne 25 du fichier play\&.c\&.
 .SS "void play_Inverse ()"
 
 .PP
 Change de sens\&. Inverse la valeur de la varaiable global d'incémentation du tour\&. 
 .PP
-Définition à la ligne 35 du fichier play\&.c\&.
+Définition à la ligne 36 du fichier play\&.c\&.
 .SS "int play_IsCardPlayable (\fBcard_t\fP * carte_A, \fBcard_t\fP * carte_B)"
 
 .PP
@@ -150,13 +152,13 @@ Verifie si la carte peut être jouer\&. Vérifie si la carte peut être jouée\&
 .PP
 
 .PP
-Définition à la ligne 41 du fichier play\&.c\&.
+Définition à la ligne 43 du fichier play\&.c\&.
 .SS "void play_Next ()"
 
 .PP
 Passe au tour suivant\&. Increment la variable global comptant le numero du tour\&. 
 .PP
-Définition à la ligne 18 du fichier play\&.c\&.
+Définition à la ligne 19 du fichier play\&.c\&.
 .SS "int play_Play (\fBplayer_t\fP * joueurs, \fBpile_t\fP * paquets, \fBpile_t\fP * pioches, int numt, int nbj, \fBcsv_t\fP * csv)"
 
 .PP
@@ -179,7 +181,7 @@ Boucle principale du jeu\&. Fonction principlale du jeu Fait jouer un joueur et 
 .PP
 
 .PP
-Définition à la ligne 118 du fichier play\&.c\&.
+Définition à la ligne 120 du fichier play\&.c\&.
 .SS "void play_SetTour (int n)"
 
 .PP
@@ -192,7 +194,7 @@ Modifie la valeur de tour\&. Definie le numero du tour\&.
 .PP
 
 .PP
-Définition à la ligne 30 du fichier play\&.c\&.
+Définition à la ligne 31 du fichier play\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.

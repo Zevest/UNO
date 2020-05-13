@@ -1,8 +1,8 @@
-.TH "UNO/main.c" 3 "Mardi 5 Mai 2020" "Version 1.3" "UNO" \" -*- nroff -*-
+.TH "UNO/src/main.c" 3 "Mercredi 13 Mai 2020" "Version 1.4" "UNO" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-UNO/main.c
+UNO/src/main.c
 .SH SYNOPSIS
 .br
 .PP
@@ -14,15 +14,17 @@ UNO/main.c
 .br
 \fC#include <time\&.h>\fP
 .br
-\fC#include 'include/carte\&.h'\fP
+\fC#include 'carte\&.h'\fP
 .br
-\fC#include 'include/pile\&.h'\fP
+\fC#include 'pile\&.h'\fP
 .br
-\fC#include 'include/joueur\&.h'\fP
+\fC#include 'joueur\&.h'\fP
 .br
-\fC#include 'include/play\&.h'\fP
+\fC#include 'play\&.h'\fP
 .br
-\fC#include 'include/csvloader\&.h'\fP
+\fC#include 'csvloader\&.h'\fP
+.br
+\fC#include 'util\&.h'\fP
 .br
 
 .SS "Macros"
@@ -48,7 +50,7 @@ UNO/main.c
 .SS "#define maxPoint   500"
 
 .PP
-Définition à la ligne 12 du fichier main\&.c\&.
+Définition à la ligne 13 du fichier main\&.c\&.
 .SH "Documentation des fonctions"
 .PP 
 .SS "void g_Reset (\fBpile_t\fP * pioche, \fBplayer_t\fP * joueurs, int nb)"
@@ -56,11 +58,11 @@ Définition à la ligne 12 du fichier main\&.c\&.
 .PP
 Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs\&. 
 .PP
-Définition à la ligne 14 du fichier main\&.c\&.
+Définition à la ligne 15 du fichier main\&.c\&.
 .SS "int main (int argc, char ** argv)"
 
 .PP
-Définition à la ligne 25 du fichier main\&.c\&.
+Définition à la ligne 26 du fichier main\&.c\&.
 .SH "Auteur"
 .PP 
 Généré automatiquement par Doxygen pour UNO à partir du code source\&.

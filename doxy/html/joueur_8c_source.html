@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO:  Fichier source de UNO/joueur.c</title>
+<title>UNO:  Fichier source de UNO/src/joueur.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">UNO
-   &#160;<span id="projectnumber">1.3</span>
+   &#160;<span id="projectnumber">1.4</span>
    </div>
    <div id="projectbrief">UNO dans un terminal</div>
   </td>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_36a9b41c2ee7562e737ca2ad0da697cc.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,8 +74,8 @@ $(function() {
 <div class="contents">
 <a href="joueur_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pile_8h.html">include/pile.h</a>&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="joueur_8h.html">include/joueur.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pile_8h.html">pile.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="joueur_8h.html">joueur.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define Nombre_carte 7</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="joueur_8c.html#ae635521b3d495ee68bed46737d5524fd">    7</a></span>&#160; </div>
@@ -97,10 +97,10 @@ $(function() {
 <div class="ttc" id="apile_8h_html"><div class="ttname"><a href="pile_8h.html">pile.h</a></div></div>
 <div class="ttc" id="astructplayer_html"><div class="ttname"><a href="structplayer.html">player</a></div><div class="ttdef"><b>Definition:</b> <a href="joueur_8h_source.html#l00009">joueur.h:10</a></div></div>
 <div class="ttc" id="ajoueur_8c_html_a962115c2104e1a7cb6bd9cfaac0eae19"><div class="ttname"><a href="joueur_8c.html#a962115c2104e1a7cb6bd9cfaac0eae19">player_Init</a></div><div class="ttdeci">player_t * player_Init(int nb, char *noms[], pile_t *deck)</div><div class="ttdoc">Initialise les joueurs.</div><div class="ttdef"><b>Definition:</b> <a href="joueur_8c_source.html#l00009">joueur.c:9</a></div></div>
-<div class="ttc" id="apile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00014">pile.c:14</a></div></div>
+<div class="ttc" id="apile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00009">pile.c:9</a></div></div>
 <div class="ttc" id="astructpile_html"><div class="ttname"><a href="structpile.html">pile</a></div><div class="ttdef"><b>Definition:</b> <a href="pile_8h_source.html#l00012">pile.h:13</a></div></div>
 <div class="ttc" id="ajoueur_8h_html"><div class="ttname"><a href="joueur_8h.html">joueur.h</a></div></div>
-<div class="ttc" id="apile_8h_html_ae00c4c74f3f1aa7f9b5545120dc84b43"><div class="ttname"><a href="pile_8h.html#ae00c4c74f3f1aa7f9b5545120dc84b43">pile_Distribute</a></div><div class="ttdeci">void pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">distribue n cartes</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00116">pile.c:116</a></div></div>
+<div class="ttc" id="apile_8h_html_ae00c4c74f3f1aa7f9b5545120dc84b43"><div class="ttname"><a href="pile_8h.html#ae00c4c74f3f1aa7f9b5545120dc84b43">pile_Distribute</a></div><div class="ttdeci">void pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">distribue n cartes</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00112">pile.c:112</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">
