@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "include/carte.h"
-#include "include/pile.h"
+#include "../include/carte.h"
+#include "../include/pile.h"
 
 /// Retroune le max de deux valeurs a et b
 int util_Max(int a, int b)
@@ -112,8 +112,10 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 	}
 }
 
+// Fonction à tester
 /// distribue n cartes
-extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
+extern void
+pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 {
 	int i;
 	if (paquet_dest == NULL || paquet_src == NULL || n > paquet_src->_TOP)

@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "include/pile.h"
-#include "include/carte.h"
-#include "include/joueur.h"
-#include "include/csvloader.h"
-#include "include/play.h"
+#include "../include/pile.h"
+#include "../include/joueur.h"
+#include "../include/carte.h"
+#include "../include/csvloader.h"
+#include "../include/play.h"
 
 #define N 13
 
@@ -37,6 +37,7 @@ void play_Inverse()
 	g_Sens *= -1;
 }
 
+// Fonction à tester
 /// Verifie si la carte peut être jouer
 int play_IsCardPlayable(card_t *carte_A, card_t *carte_B)
 {
@@ -51,6 +52,7 @@ int play_IsCardPlayable(card_t *carte_A, card_t *carte_B)
 	return (a ? a : b);
 }
 
+// Fonction à tester
 /// Verifie si un joueur peut jouer
 int play_CanPlay(pile_t *main, card_t *carte)
 {
@@ -64,6 +66,7 @@ int play_CanPlay(pile_t *main, card_t *carte)
 	return 0;
 }
 
+// Fonction à tester
 /// Compte le nombre de points d'un joueur
 int play_CountPoint(player_t *g, int joueur)
 {
@@ -91,6 +94,7 @@ int play_CountPoint(player_t *g, int joueur)
 	return s;
 }
 
+// Fonction à tester
 /// Additionne les points des perdants pour les atribuer au gagnant
 int play_EndGame(player_t *g, int joueur)
 {

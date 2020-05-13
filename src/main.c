@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <time.h>
-#include "include/carte.h"
-#include "include/pile.h"
-#include "include/joueur.h"
-#include "include/play.h"
-#include "include/csvloader.h"
+#include "../include/carte.h"
+#include "../include/pile.h"
+#include "../include/joueur.h"
+#include "../include/play.h"
+#include "../include/csvloader.h"
 
 #define maxPoint 500
 

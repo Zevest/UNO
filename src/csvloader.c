@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <ctype.h>
-#include "include/csvloader.h"
+#include "../include/csvloader.h"
 
 /// Charge un fichier csv
 csv_t *csv_InitCSV(FILE *f)
