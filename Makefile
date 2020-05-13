@@ -5,6 +5,7 @@ OUT= build/
 SRCDIR=src/
 SRC=util.c pile.c carte.c joueur.c play.c main.c csvloader.c
 TESTFOLDER=test/
+TESTCSVFILE=res/test.csv
 ECHO=echo
 OBJ=$(SRC:.c=.o)
 PROGNAME=UNO.exe
@@ -49,9 +50,7 @@ $(OUT)csvloader.test: $(TESTFOLDER)csvloader_test.c $(OUT)csvloader.o $(OUT)util
 
 
 test: $(OUT)pile.test $(OUT)play.test $(OUT)csvloader.test
-	$(ECHO) $(PWD)
-	$(OUT)pile.test && $(OUT)play.test && $(OUT)csvloader.test
-	$(ECHO) "TOUS EST OK"
+	$(OUT)pile.test && $(OUT)play.test && $(OUT)csvloader.test $(TESTCSVFILE) && $(ECHO) "TOUS EST OK"
 	
 
 

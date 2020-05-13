@@ -4,9 +4,11 @@
 #include "csvloader.h"
 #include "util.h"
 
-int main()
+int main(int argc, char **argv)
 {
-	FILE *stream = fopen("res/test.csv", "r");
+
+	FILE *stream;
+
 	csv_t *csv;
 	int index[] = {0, 1, 150, 3, 4}, i;
 	char *messages[] = {
@@ -15,7 +17,10 @@ int main()
 		" test avec grand nombre",
 		"test avec \\n retour a la ligne",
 		"test avec argument 5 + 5 = %d !"};
-
+	if (argc < 2)
+		stream = fopen("res/test.csv", "r");
+	else
+		stream = fopen(argv[1], "r");
 	// Test de chargement de fichier non existant
 	printf("Test de chargement de fichier non existant: ");
 	csv = csv_InitCSV(NULL);
@@ -38,18 +43,18 @@ int main()
 
 	// Test traitement du fichier test.csv
 	printf("Test de traitement du fichier text.csv: ");
-	csv_ParseCSV("res/test.csv", csv);
+	csv = csv_ParseCSV("res/test.csv", NULL);
 	printf("Succès\n");
 
 	// Test de validité des données chargé
-	// Test des indices
+	// Indices
 	printf("Test de validité des indices chargés: ");
 	for (i = 0; i < 5; ++i)
 	{
 		assert(csv->data[i].index == index[i]);
 	}
 	printf("Succès\n");
-	// Test des messages
+	// Messages
 	printf("Test de validité des messages chargés: ");
 	for (i = 0; i < 5; ++i)
 	{
