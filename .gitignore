@@ -2,3 +2,4 @@
 /build/*
 /*.o
 .vscode/settings.json
+test/trace_execution.txt
