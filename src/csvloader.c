@@ -35,7 +35,7 @@ void csv_DeleteCSV(csv_t *csv)
 }
 
 /*A TESTER*/
-/// Sépare les données du ficher et les stocke dans un objet
+/// Sépare les données du fichier et les stocke dans un objet
 csv_t *csv_ParseCSV(const string_t filename, csv_t *input)
 {
 	csv_t *tmp = NULL;
@@ -68,7 +68,7 @@ csv_t *csv_ParseCSV(const string_t filename, csv_t *input)
 	return tmp;
 }
 
-/// Affiche le contenue d'une donnée (ligne d'un fichier csv)
+/// Affiche le contenu d'une donnée (ligne d'un fichier csv)
 void csv_PrintData(data_t *d)
 {
 	if (d != NULL)

@@ -41,12 +41,12 @@ csv_t *csv_ParseCSV(string_t filename, csv_t *input);
 csv_t *csv_InitCSV(FILE *f);
 
 /**
- * Libere la memoire d'un objet csv.
+ * Libère la memoire d'un objet csv.
  * @param csv l'objet a supprimer.
  */
 void csv_DeleteCSV(csv_t *csv);
 /**
- * Libere la mémoire d'une donnée csv.
+ * Libère la mémoire d'une donnée csv.
  * @param data la donnée a suprimmer.
  */
 void csv_DeleteData(data_t *data);
@@ -59,7 +59,7 @@ void csv_PrintData(data_t *d);
 
 /**
  * Affiche le contenu d'un fichier CSV.
- * @param csv l'objet dans le quel sont stocker les données.
+ * @param csv l'objet dans lequel sont stockées les données.
  * @param printer fonction d'affichage des données.
  */
 void csv_PrintCSV(csv_t *csv, dataPrinter printer);

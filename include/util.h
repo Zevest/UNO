@@ -8,6 +8,12 @@ typedef char *string_t;
 
 typedef int (*stringValidator_t)(string_t);
 
+typedef enum
+{
+	false,
+	true
+} bool;
+
 /**
  * Compte le nombre de ligne d'un fichier.
  * @param f Fichier

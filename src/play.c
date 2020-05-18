@@ -21,26 +21,26 @@ void play_Next()
 	g_Tour += g_Sens;
 }
 
-/// Renvoie la valeur des tours jouer
+/// Renvoie la numero du tour
 int play_GetTour()
 {
 	return g_Tour;
 }
 
-/// Modifie la valeur de tour
+/// Modifie la valeur du tour
 void play_SetTour(int n)
 {
 	g_Tour = n;
 }
-/// Change de sens
+/// Change le sens du jeu
 void play_Inverse()
 {
 	g_Sens *= -1;
 }
 
 /*A TESTER*/
-/// Verifie si la carte peut être jouer
-int play_IsCardPlayable(card_t *testedCard, card_t *lastPlayedCard)
+/// Vérifie si la carte peut être jouée
+bool play_IsCardPlayable(card_t *testedCard, card_t *lastPlayedCard)
 {
 
 	bool b1 = (lastPlayedCard->num == 10);		   // +2 sur le jeu
@@ -53,16 +53,16 @@ int play_IsCardPlayable(card_t *testedCard, card_t *lastPlayedCard)
 	return (a ? a : b);
 }
 
-/// Verifie si un joueur peut jouer
-int play_CanPlay(pile_t *playerCards, card_t *lastPlayedCard)
+/// Vérifie qu'un joueur puisse jouer
+bool play_CanPlay(pile_t *playerCards, card_t *lastPlayedCard)
 {
 	int i;
 
 	for (i = 0; i < playerCards->_TOP + 1; ++i)
 		if (play_IsCardPlayable(playerCards->_DATA[i], lastPlayedCard))
-			return 1;
+			return true;
 
-	return 0;
+	return false;
 }
 
 /// Compte le nombre de points d'un joueur
@@ -91,7 +91,7 @@ int play_CountPoint(player_t *players, int playerNumber)
 	return score;
 }
 
-/// Additionne les points des perdants pour les atribuer au gagnant
+/// Additionne les points des perdants pour les attribuer au gagnant
 int play_EndGame(player_t *players, int playerNumber)
 {
 	int i, j = -1, score = 0;
@@ -111,14 +111,14 @@ int play_EndGame(player_t *players, int playerNumber)
 	return players[j].score;
 }
 
-/// Fait jouer le joueur et applique les règles associer à la carte qu'il joue
+/// Fait jouer le joueur et applique les règles associée à la carte qu'il joue
 void gameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *csv)
 {
 	char buf[50];
 	char pickedColor;
 	int i;
 
-	// Selection de la carte à jouer
+	// Sélection de la carte à jouer
 	do
 	{
 		util_JumpLine(2);
@@ -130,7 +130,7 @@ void gameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *c
 	pile_Push(package, players[playerNumber].cards->_DATA[i]);
 	pile_Remove(players[playerNumber].cards, i);
 
-	// Application des règles du jeu
+	// Applique les règles du jeu
 	switch (pile_GetTop(package)->num)
 	{
 	default:
@@ -164,7 +164,7 @@ void gameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *c
 	}
 }
 
-/// Boucle principale du jeu
+/// Fonction Principale du jeu
 int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber, int playerCount, csv_t *csv)
 {
 	int i, playableCardCount = 0;
@@ -209,7 +209,7 @@ int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber
 	else if (playableCardCount && g_Compte >= 0)
 		gameCardRule(players, package, playerNumber, csv);
 
-	// le joueur n'a pas de cartes a joué, il doit piocher
+	// le joueur n'a pas de cartes à jouer, il doit piocher
 	else
 	{
 		printf(csv->data[11].message, players[playerNumber].name);

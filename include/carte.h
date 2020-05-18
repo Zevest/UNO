@@ -18,10 +18,10 @@ struct card
 typedef struct card card_t;
 
 /**
- * Initialise une Carte
+ * Initialise une carte
  * @param num symbol de la carte
  * @param couleur couleur de la carte
- * @return la carte creer
+ * @return la carte crée
  */
 extern card_t *card_Init(char num, char couleur);
 

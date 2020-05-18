@@ -1,4 +1,5 @@
 #include "carte.h"
+#include "util.h"
 #ifndef __PILE_H__
 #define __PILE_H__
 #define PILE_MAX 256
@@ -14,12 +15,6 @@ struct pile
 	int _TOP;
 	card_t *_DATA[PILE_MAX];
 };
-
-typedef enum
-{
-	false,
-	true
-} bool;
 
 typedef struct pile pile_t;
 
@@ -48,14 +43,14 @@ extern card_t *pile_Pop(pile_t *p);
  * @param indice de la carte
  * @return 1 si la carte a bien été retirer 0 sinon.
  */
-extern int pile_Remove(pile_t *p, int i);
+extern bool pile_Remove(pile_t *p, int i);
 
 /**
  * Verifie si la pile est vide.
  * @param p pile
  * @return 1 si la pile est vide, 0 sinon.
  */
-extern int pile_Empty(pile_t *p);
+extern bool pile_Empty(pile_t *p);
 
 /**
  * Recupere la carte au sommet de la pile.
@@ -76,7 +71,7 @@ extern void pile_FillDeck(pile_t *p);
  * @param dst pile destination
  * @return 0 si la distribution se déroule sans encombre, 1 sinon
  */
-extern int pile_Distribute(int n, pile_t *src, pile_t *dest);
+extern bool pile_Distribute(int n, pile_t *src, pile_t *dest);
 
 /**
  * Déplace et mélange les cartes de la pile source vers la pile destination.

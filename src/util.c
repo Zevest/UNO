@@ -24,7 +24,7 @@ int util_CountLine(FILE *f)
 	return lines;
 }
 
-/// Affiche n fois le caractere de fin de ligne
+/// Affiche n fois le caractère de fin de ligne
 void util_JumpLine(int n)
 {
 	while (n-- > 0)
@@ -59,12 +59,13 @@ void util_ClearInputBuffer()
 		;
 }
 
-/// Retroune le max de deux valeurs a et b
+/// Retroune la valeur maximum entre deux valeurs a et b
 int util_Max(int a, int b)
 {
 	return a > b ? a : b;
 }
 
+/// Affiche un message et attend la saisie d'une donnée conforme à une condition
 void util_Ask(const string_t message, string_t buffer, stringValidator_t validator)
 {
 	do

@@ -9,7 +9,7 @@
 #include "csvloader.h"
 #include "util.h"
 
-#define maxPoint 50
+#define maxPoint 250
 
 /// Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs
 void g_Reset(pile_t *pioche, player_t *players, int nb)
@@ -23,17 +23,17 @@ void g_Reset(pile_t *pioche, player_t *players, int nb)
 	}
 }
 
-// Affiche le tour et le noms du joueur
+/// Affiche le tour et le noms du joueur
 void showStatus(csv_t *csv, player_t *players, int turn, int realTurn, int playerCount)
 {
 	system("clear -x");
 	printf(csv->data[1].message, realTurn);
 	util_JumpLine(2);
-	printf(csv->data[2].message, turn % playerCount, players[turn % playerCount].name);
+	printf(csv->data[2].message, (turn % playerCount) + 1, players[turn % playerCount].name);
 	util_JumpLine(1);
 }
 
-// Affiche le scores des joueur et reinitialise la partie
+/// Affiche le score des joueur et réinitialise la partie
 void endRound(int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, string_t names[], csv_t *csv, int score)
 {
 	int i = 0;
@@ -103,6 +103,7 @@ int main(int argc, char **argv)
 	pile_FillDeck(cardPackage);
 	pile_Shuffle(cardPackage, deck, 1);
 
+	// Saisie du nombre de joueur
 	do
 	{
 		util_Ask(csv->data[0].message, buf, util_IsNumeric);

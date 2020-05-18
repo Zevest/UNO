@@ -26,13 +26,13 @@ extern void pile_Push(pile_t *p, card_t *a)
 }
 
 /// Vérifie si la pile est vide
-extern int pile_Empty(pile_t *p)
+extern bool pile_Empty(pile_t *p)
 {
 	return (p->_TOP < 0);
 }
 
 /// Supprime la carte avec l'indice index de la pile
-extern int pile_Remove(pile_t *p, int index)
+extern bool pile_Remove(pile_t *p, int index)
 {
 	int i;
 	if (index >= 0 && index < PILE_MAX)
@@ -46,9 +46,9 @@ extern int pile_Remove(pile_t *p, int index)
 			p->_DATA[i] = p->_DATA[i + 1];
 		}
 		p->_TOP = p->_TOP - 1;
-		return 1;
+		return true;
 	}
-	return 0;
+	return false;
 }
 
 /// Renvoie le premier élement de la pile
@@ -109,19 +109,19 @@ extern void pile_Shuffle(pile_t *package, pile_t *res, int cardToSkip)
 
 /*A TESTER*/
 /// Distribue n cartes
-extern int pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
+extern bool pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 {
 	int i;
 	if (paquet_dest == NULL || paquet_src == NULL || n > paquet_src->_TOP)
 	{
 		printf("Il n'y a pas assez de cartes dans le paquet\n");
-		return 1;
+		return true;
 	}
 	for (i = 0; i < n; ++i)
 	{
 		pile_Push(paquet_dest, pile_Pop(paquet_src));
 	}
-	return 0;
+	return false;
 }
 
 /// Initialise le paquet
