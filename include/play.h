@@ -52,6 +52,7 @@ int play_CanPlay(pile_t *main, card_t *carte);
  * @param numt indice du joueur
  * @param nbj nombre de joueur
  * @param csv ensemble des messages a afficher
+ * @return le nombre de point remporté ou 0 si la manche n'est pas terminée
  */
 int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv);
 
