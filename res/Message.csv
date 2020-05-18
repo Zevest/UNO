@@ -1,4 +1,4 @@
-0,Saisissez le nombre de joueurs entre [2 , 10]£
+0,Saisissez le nombre de joueurs entre [2 , 10]: £
 1,tour: %d£
 2,joueur %d : %s => vos cartes: £
 3,Fin de la manche.£
@@ -14,4 +14,5 @@
 13,%s à remporté cette manche, il obtient %d points£
 14,%s :::: %d£
 15,		|Scoreboard|	 £
+16,%s A Gagner la partie. Félicitation £
 16, EOF£
