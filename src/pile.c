@@ -14,9 +14,9 @@ extern pile_t *pile_Init()
 }
 
 /// Renvoie la carte au sommet de la pile
-extern card_t *pile_GetTop(pile_t *jeu)
+extern card_t *pile_GetTop(pile_t *p)
 {
-	return jeu->_DATA[jeu->_TOP];
+	return p->_DATA[p->_TOP];
 }
 
 /// Ajoute une carte au sommet de la pile
@@ -60,7 +60,7 @@ extern card_t *pile_Pop(pile_t *p)
 }
 
 /// Mélange les cartes d'un paquet source vers un paquet destination
-extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
+extern void pile_Shuffle(pile_t *package, pile_t *res, int cardToSkip)
 {
 	int i;
 	if (!pile_Empty(res))
@@ -68,38 +68,38 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 		// Vide le paquet res
 		while (!pile_Empty(res))
 		{
-			pile_Pop(res);
+			free(pile_Pop(res));
 		}
 	}
 	else
 	{
-		int mx = paquet->_TOP - premier;
+		int mx = package->_TOP - cardToSkip;
 		for (i = 0; i <= mx; ++i)
 		{
 
-			int index = rand() % (util_Max(0, (paquet->_TOP) + 1));
+			int index = rand() % (util_Max(0, (package->_TOP) + 1));
 
-			pile_Push(res, paquet->_DATA[index]);
-			pile_Remove(paquet, index);
+			pile_Push(res, package->_DATA[index]);
+			pile_Remove(package, index);
 		}
 
 		for (i = 0; i < res->_TOP; ++i)
 		{
 			if (res->_DATA[i]->num <= 10)
 			{
-				pile_Push(paquet, res->_DATA[i]);
+				pile_Push(package, res->_DATA[i]);
 				pile_Remove(res, i);
 				break;
 			}
 		}
 	}
-	if (pile_GetTop(paquet)->num > 9)
+	if (pile_GetTop(package)->num > 9)
 	{
 		for (i = 0; i < res->_TOP; ++i)
 		{
 			if (res->_DATA[i]->num < 10)
 			{
-				pile_Push(paquet, res->_DATA[i]);
+				pile_Push(package, res->_DATA[i]);
 				pile_Remove(res, i);
 				break;
 			}
@@ -109,18 +109,19 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 
 /*A TESTER*/
 /// Distribue n cartes
-extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
+extern int pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 {
 	int i;
 	if (paquet_dest == NULL || paquet_src == NULL || n > paquet_src->_TOP)
 	{
 		printf("Il n'y a pas assez de cartes dans le paquet\n");
-		return;
+		return 1;
 	}
 	for (i = 0; i < n; ++i)
 	{
 		pile_Push(paquet_dest, pile_Pop(paquet_src));
 	}
+	return 0;
 }
 
 /// Initialise le paquet

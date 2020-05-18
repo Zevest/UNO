@@ -59,10 +59,9 @@ int play_CanPlay(pile_t *playerCards, card_t *lastPlayedCard)
 	int i;
 
 	for (i = 0; i < playerCards->_TOP + 1; ++i)
-	{
 		if (play_IsCardPlayable(playerCards->_DATA[i], lastPlayedCard))
 			return 1;
-	}
+
 	return 0;
 }
 
@@ -73,7 +72,6 @@ int play_CountPoint(player_t *players, int playerNumber)
 	int score = 0;
 
 	for (i = 0; i < players[playerNumber].cards->_TOP + 1; i++)
-	{
 		switch (players[playerNumber].cards->_DATA[i]->num)
 		{
 		default:
@@ -89,7 +87,7 @@ int play_CountPoint(player_t *players, int playerNumber)
 			score += 50;
 			break;
 		}
-	}
+
 	return score;
 }
 
@@ -99,28 +97,27 @@ int play_EndGame(player_t *players, int playerNumber)
 	int i, j = -1, score = 0;
 
 	for (i = 0; i < playerNumber; ++i)
-	{
 		if (pile_Empty(players[i].cards))
 			j = i;
-	}
+
 	if (j != -1)
 	{
-
 		for (i = 0; i < playerNumber; ++i)
-		{
 			if (j != i)
 				score += play_CountPoint(players, i);
-		}
+
 		players[j].score += score;
 	}
 	return players[j].score;
 }
 
+/// Fait jouer le joueur et applique les règles associer à la carte qu'il joue
 void gameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *csv)
 {
 	char buf[50];
 	char pickedColor;
 	int i;
+
 	// Selection de la carte à jouer
 	do
 	{
@@ -186,7 +183,6 @@ int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber
 
 	// Affiche les cartes jouables
 	for (i = 0; i < players[playerNumber].cards->_TOP + 1; ++i)
-	{
 		if (play_IsCardPlayable(players[playerNumber].cards->_DATA[i], pile_GetTop(package)) == 1)
 		{
 			playableCardCount++;
@@ -194,7 +190,6 @@ int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber
 			card_Display(players[playerNumber].cards->_DATA[i]);
 			printf(") ");
 		}
-	}
 
 	// +2 ou/et +4 et le joueur n'a pas de +2 ni de +4 donc il est obligé de piocher
 	if (g_Compte > 0 && !playableCardCount)
@@ -202,6 +197,10 @@ int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber
 		printf(csv->data[7].message, players[playerNumber].name, g_Compte);
 		util_JumpLine(1);
 		pile_Distribute(g_Compte, deck, players[playerNumber].cards);
+		/*{
+			pile_Shuffle(package, deck, 1);
+			pile_Distribute(g_Compte, deck, players[playerNumber].cards);
+		}*/
 		g_Compte = 0;
 		sleep(1);
 	}
@@ -216,6 +215,11 @@ int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber
 		printf(csv->data[11].message, players[playerNumber].name);
 		util_JumpLine(1);
 		pile_Distribute(1, deck, players[playerNumber].cards);
+		/*	;
+		{
+			pile_Shuffle(package, deck, 10);
+			pile_Distribute(1, deck, players[playerNumber].cards);
+		}*/
 		sleep(1);
 	}
 

@@ -49,5 +49,20 @@ int main()
 		pile_Delete(paquetDest);
 		pile_Delete(paquetSrc);
 	}
+	printf("\nTest: Distribution losque qu'il n'y a plus de carte");
+	paquetSrc = pile_Init();
+	paquetDest = pile_Init();
+	pile_FillDeck(paquetDest);
+
+	if (pile_Distribute(1, paquetSrc, paquetDest))
+	{
+		pile_Shuffle(paquetDest, paquetSrc, 0);
+		pile_Distribute(1, paquetSrc, paquetDest);
+	}
+
+	assert(paquetDest->_TOP == 1);
+	assert(paquetSrc->_TOP == 105);
+	pile_Delete(paquetDest);
+	pile_Delete(paquetSrc);
 	return 0;
 }
