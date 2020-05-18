@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['n_40',['N',['../play_8c.html#a0240ac851181b84ac374872dc5434ee4',1,'play.c']]],
-  ['name_41',['name',['../structplayer.html#a5ac083a645d964373f022d03df4849c8',1,'player']]],
-  ['nombre_5fcarte_42',['Nombre_carte',['../joueur_8c.html#ae635521b3d495ee68bed46737d5524fd',1,'joueur.c']]],
-  ['num_43',['num',['../structcard.html#a9edb1673a8f057dce79fd491a9c98c1d',1,'card']]]
+  ['main_37',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.c'],['../csvloader__test_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;csvloader_test.c'],['../pile__test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;pile_test.c'],['../play__test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;play_test.c']]],
+  ['main_2ec_38',['main.c',['../main_8c.html',1,'']]],
+  ['maxpoint_39',['maxPoint',['../main_8c.html#a7e36dafcf2f87ac272be4ea25631216e',1,'main.c']]],
+  ['message_40',['message',['../structdata__t.html#a036e15dac6aff78ec7c664242b03e997',1,'data_t']]]
 ];

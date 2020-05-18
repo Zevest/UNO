@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">UNO
-   &#160;<span id="projectnumber">1.3</span>
+   &#160;<span id="projectnumber">1.4</span>
    </div>
    <div id="projectbrief">UNO dans un terminal</div>
   </td>
@@ -71,7 +71,6 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Structures de données</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Définitions de type</a> &#124;
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier joueur.h</div>  </div>
@@ -82,24 +81,27 @@ $(function() {
 Graphe des dépendances par inclusion de joueur.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="joueur_8h__incl.png" border="0" usemap="#_u_n_o_2include_2joueur_8h" alt=""/></div>
-<map name="_u_n_o_2include_2joueur_8h" id="_u_n_o_2include_2joueur_8h">
-<area shape="rect" title=" " alt="" coords="5,5,151,32"/>
-<area shape="rect" href="pile_8h.html" title=" " alt="" coords="51,80,105,107"/>
-<area shape="rect" href="carte_8h.html" title=" " alt="" coords="47,155,109,181"/>
-</map>
+<!-- MAP 0 -->
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
 <div class="center"><img src="joueur_8h__dep__incl.png" border="0" usemap="#_u_n_o_2include_2joueur_8hdep" alt=""/></div>
-<!-- MAP 0 -->
+<map name="_u_n_o_2include_2joueur_8hdep" id="_u_n_o_2include_2joueur_8hdep">
+<area shape="rect" title=" " alt="" coords="195,5,341,32"/>
+<area shape="rect" href="play_8h.html" title=" " alt="" coords="149,80,283,107"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="5,155,120,181"/>
+<area shape="rect" href="play_8c.html" title=" " alt="" coords="313,155,423,181"/>
+<area shape="rect" href="joueur_8c.html" title=" " alt="" coords="359,80,481,107"/>
+<area shape="rect" href="play__test_8c.html" title=" " alt="" coords="144,155,288,181"/>
+</map>
 </div>
 </div>
 <p><a href="joueur_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Structures de données</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplayer.html">player</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structplayer.html">player_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -107,14 +109,9 @@ Macros</h2></td></tr>
 <tr class="memitem:a489920547e13e7589118e7584f6c125d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joueur_8h.html#a489920547e13e7589118e7584f6c125d">__JOUEUR_H__</a></td></tr>
 <tr class="separator:a489920547e13e7589118e7584f6c125d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Définitions de type</h2></td></tr>
-<tr class="memitem:a9df65ef34efcf40007091fa0e679ea0c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structplayer.html">player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a></td></tr>
-<tr class="separator:a9df65ef34efcf40007091fa0e679ea0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:a5cb54243700f2317069b4771bbc65670"><td class="memItemLeft" align="right" valign="top"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a> (int nb, char **noms, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *paquet)</td></tr>
+<tr class="memitem:a5cb54243700f2317069b4771bbc65670"><td class="memItemLeft" align="right" valign="top">player_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a> (int nb, char **noms, pile_t *paquet)</td></tr>
 <tr class="separator:a5cb54243700f2317069b4771bbc65670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
@@ -134,23 +131,6 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Documentation des définitions de type</h2>
-<a id="a9df65ef34efcf40007091fa0e679ea0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9df65ef34efcf40007091fa0e679ea0c">&#9670;&nbsp;</a></span>player_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structplayer.html">player</a> <a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="joueur_8h_source.html#l00001">1</a> du fichier <a class="el" href="joueur_8h_source.html">joueur.h</a>.</p>
-
-</div>
-</div>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a5cb54243700f2317069b4771bbc65670"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5cb54243700f2317069b4771bbc65670">&#9670;&nbsp;</a></span>player_Init()</h2>
@@ -159,7 +139,7 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">player_t</a>* player_Init </td>
+          <td class="memname">player_t* player_Init </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>nb</em>, </td>
@@ -173,7 +153,7 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>paquet</em>&#160;</td>
         </tr>
         <tr>

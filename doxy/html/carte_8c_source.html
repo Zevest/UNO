@@ -89,25 +89,25 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> resetColor() { printf(<span class="stringliteral">&quot;\033[0m&quot;</span>); }</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> bold() { printf(<span class="stringliteral">&quot;\033[1;0m&quot;</span>); }</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">   39</a></span>&#160;<a class="code" href="structcard.html">card_t</a> *<a class="code" href="carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">card_Init</a>(<span class="keywordtype">char</span> num, <span class="keywordtype">char</span> color)</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">   39</a></span>&#160;card_t *<a class="code" href="carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">card_Init</a>(<span class="keywordtype">char</span> num, <span class="keywordtype">char</span> color)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keywordflow">if</span> (num &gt;= 0 &amp;&amp; num &lt; 15)</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="structcard.html">card_t</a> *c = malloc(<span class="keyword">sizeof</span>(<a class="code" href="structcard.html">card_t</a>));</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      c-&gt;<a class="code" href="structcard.html#a9edb1673a8f057dce79fd491a9c98c1d">num</a> = num;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      card_t *c = malloc(<span class="keyword">sizeof</span>(card_t));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      c-&gt;num = num;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">if</span> (num &gt; 12)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         c-&gt;<a class="code" href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">color</a> = <span class="charliteral">&#39;N&#39;</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         c-&gt;color = <span class="charliteral">&#39;N&#39;</span>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         c-&gt;<a class="code" href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">color</a> = color;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      c-&gt;<a class="code" href="structcard.html#a79969caaacc340106b997aee167015d4">symbol</a> = *(SYMBOL + num);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         c-&gt;color = color;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      c-&gt;symbol = *(SYMBOL + num);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">return</span> c;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keywordflow">return</span> NULL;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">card_Display</a>(<a class="code" href="structcard.html">card_t</a> *c)</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">card_Display</a>(card_t *c)</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordflow">switch</span> (c-&gt;<a class="code" href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">color</a>)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordflow">switch</span> (c-&gt;color)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>:</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      boldRed();</div>
@@ -124,17 +124,13 @@ $(function() {
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      bold();</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   printf(<span class="stringliteral">&quot;[%s %c]&quot;</span>, c-&gt;<a class="code" href="structcard.html#a79969caaacc340106b997aee167015d4">symbol</a>, c-&gt;<a class="code" href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">color</a>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   printf(<span class="stringliteral">&quot;[%s %c]&quot;</span>, c-&gt;symbol, c-&gt;color);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   resetColor();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructcard_html_ae2d77c102b2d2d3f0881c0e2bcdbe777"><div class="ttname"><a href="structcard.html#ae2d77c102b2d2d3f0881c0e2bcdbe777">card::color</a></div><div class="ttdeci">char color</div><div class="ttdoc">Couleur de la carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8h_source.html#l00013">carte.h:13</a></div></div>
 <div class="ttc" id="acarte_8c_html_a15d02ef85842a30c272b0f98a82f56b5"><div class="ttname"><a href="carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">card_Init</a></div><div class="ttdeci">card_t * card_Init(char num, char color)</div><div class="ttdoc">Initialise une carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00039">carte.c:39</a></div></div>
 <div class="ttc" id="acarte_8c_html_af4d6d1cf5c816dc33c7e0fad86cae945"><div class="ttname"><a href="carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">card_Display</a></div><div class="ttdeci">void card_Display(card_t *c)</div><div class="ttdoc">Afficche une carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00056">carte.c:56</a></div></div>
-<div class="ttc" id="astructcard_html_a79969caaacc340106b997aee167015d4"><div class="ttname"><a href="structcard.html#a79969caaacc340106b997aee167015d4">card::symbol</a></div><div class="ttdeci">char * symbol</div><div class="ttdoc">Symbole.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8h_source.html#l00015">carte.h:15</a></div></div>
 <div class="ttc" id="acarte_8h_html"><div class="ttname"><a href="carte_8h.html">carte.h</a></div></div>
-<div class="ttc" id="astructcard_html"><div class="ttname"><a href="structcard.html">card</a></div><div class="ttdef"><b>Definition:</b> <a href="carte_8h_source.html#l00008">carte.h:9</a></div></div>
-<div class="ttc" id="astructcard_html_a9edb1673a8f057dce79fd491a9c98c1d"><div class="ttname"><a href="structcard.html#a9edb1673a8f057dce79fd491a9c98c1d">card::num</a></div><div class="ttdeci">char num</div><div class="ttdoc">Indice du symbole.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8h_source.html#l00011">carte.h:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

@@ -72,7 +72,7 @@ $(function() {
 <div class="title">joueur.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="joueur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="joueur_8h.html#a9df65ef34efcf40007091fa0e679ea0c">    1</a></span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pile_8h.html">pile.h</a>&quot;</span></div>
+<a href="joueur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pile_8h.html">pile.h</a>&quot;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef __JOUEUR_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define __JOUEUR_H__</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="joueur_8h.html#a489920547e13e7589118e7584f6c125d">    4</a></span>&#160; </div>
@@ -80,12 +80,12 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structplayer.html#aef160b7437d94056f1dc59646cd5b87d">   11</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="structplayer.html#aef160b7437d94056f1dc59646cd5b87d">score</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structplayer.html#a5ac083a645d964373f022d03df4849c8">   12</a></span>&#160;   <span class="keywordtype">char</span> *<a class="code" href="structplayer.html#a5ac083a645d964373f022d03df4849c8">name</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structplayer.html#a40d7ef541fc1938d69a45074db5ee3ec">   13</a></span>&#160;   <a class="code" href="structpile.html">pile_t</a> *<a class="code" href="structplayer.html#a40d7ef541fc1938d69a45074db5ee3ec">cards</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structplayer.html#a40d7ef541fc1938d69a45074db5ee3ec">   13</a></span>&#160;   pile_t *<a class="code" href="structplayer.html#a40d7ef541fc1938d69a45074db5ee3ec">cards</a>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <span class="comment">//int gagner;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structplayer.html">player</a> <a class="code" href="structplayer.html">player_t</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structplayer.html">player</a> player_t;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">   25</a></span>&#160;<a class="code" href="structplayer.html">player_t</a> *<a class="code" href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a>(<span class="keywordtype">int</span> nb, <span class="keywordtype">char</span> **noms, <a class="code" href="structpile.html">pile_t</a> *paquet);</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">   25</a></span>&#160;player_t *<a class="code" href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a>(<span class="keywordtype">int</span> nb, <span class="keywordtype">char</span> **noms, pile_t *paquet);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -94,7 +94,6 @@ $(function() {
 <div class="ttc" id="astructplayer_html_a5ac083a645d964373f022d03df4849c8"><div class="ttname"><a href="structplayer.html#a5ac083a645d964373f022d03df4849c8">player::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="joueur_8h_source.html#l00012">joueur.h:12</a></div></div>
 <div class="ttc" id="ajoueur_8h_html_a5cb54243700f2317069b4771bbc65670"><div class="ttname"><a href="joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a></div><div class="ttdeci">player_t * player_Init(int nb, char **noms, pile_t *paquet)</div></div>
 <div class="ttc" id="astructplayer_html_a40d7ef541fc1938d69a45074db5ee3ec"><div class="ttname"><a href="structplayer.html#a40d7ef541fc1938d69a45074db5ee3ec">player::cards</a></div><div class="ttdeci">pile_t * cards</div><div class="ttdef"><b>Definition:</b> <a href="joueur_8h_source.html#l00013">joueur.h:13</a></div></div>
-<div class="ttc" id="astructpile_html"><div class="ttname"><a href="structpile.html">pile</a></div><div class="ttdef"><b>Definition:</b> <a href="pile_8h_source.html#l00012">pile.h:13</a></div></div>
 <div class="ttc" id="astructplayer_html_aef160b7437d94056f1dc59646cd5b87d"><div class="ttname"><a href="structplayer.html#aef160b7437d94056f1dc59646cd5b87d">player::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="joueur_8h_source.html#l00011">joueur.h:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

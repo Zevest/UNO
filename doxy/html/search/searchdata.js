@@ -1,14 +1,15 @@
 var indexSectionsWithContent =
 {
-  0: "_bcdfgijlmnprstu",
+  0: "_bcdefgijlmnprstu",
   1: "cdp",
-  2: "cjmpru",
-  3: "cgmpu",
+  2: "cjmprtu",
+  3: "cegmpsu",
   4: "_cdilmns",
-  5: "cdps",
+  5: "ds",
   6: "b",
   7: "ft",
-  8: "_mnp"
+  8: "_mnp",
+  9: "u"
 };
 
 var indexSectionNames =
@@ -21,7 +22,8 @@ var indexSectionNames =
   5: "typedefs",
   6: "enums",
   7: "enumvalues",
-  8: "defines"
+  8: "defines",
+  9: "pages"
 };
 
 var indexSectionLabels =
@@ -34,6 +36,7 @@ var indexSectionLabels =
   5: "Définitions de type",
   6: "Énumérations",
   7: "Valeurs énumérées",
-  8: "Macros"
+  8: "Macros",
+  9: "Pages"
 };
 

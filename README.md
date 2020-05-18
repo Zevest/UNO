@@ -1,7 +1,7 @@
 
-# UNO
+# UNO (Jeu)
 
-## Ce projet est réalisé par :
+### Ce projet est réalisé par :
 
   * Ait el djoudi Karim
   * Akli Idir
@@ -11,7 +11,7 @@
 
 [__*Documentation*__](https://zevest.github.io/UNO)
 
-# Règles
+## Règles
   Tout d’abord, un des joueurs distribue à chacun 7 cartes. Le reste des cartes fait office de pioche. Pour commencer, le joueur ayant distribué retourne la première carte de la pioche et le joueur situé à gauche commence la partie. Il doit recouvrir la carte de la pioche par une carte d’une même couleur, du même chiffre ou du même symbole. Si le joueur ne peut pas jouer, il a la possibilité de poser une carte « joker » ou « +4 ». Dans le cas ou le joueur ne possède aucune de ces cartes, il doit en piocher.
 
   __Le premier des joueurs à s’être débarrassé de toutes ses cartes gagne la manche__. Il faut alors compter les points :
@@ -25,7 +25,7 @@
 
   __Pour gagner, il vous faudra marquer 500 points__
 
-##  Combien de cartes dans le Uno ?
+### Combien de cartes dans le Uno ?
 
 Pour jouer au Uno, il vous faut les 108 cartes réparties de cette manière :
 
@@ -34,7 +34,7 @@ Pour jouer au Uno, il vous faut les 108 cartes réparties de cette manière :
   *  19 cartes de couleur jaune, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
   *  19 cartes de couleur verte, numérotées de 0 à 9 (*2 pour chaque chiffre sauf pour le 0*)
 
-##  et des cartes spéciales:
+*__et des cartes spéciales:__*
 
   * 8 cartes « __+2__ », (*2 pour chaque couleur*)
   * 8 cartes « __Inversement de sens__ », (*2 pour chaque couleur*)
@@ -42,7 +42,7 @@ Pour jouer au Uno, il vous faut les 108 cartes réparties de cette manière :
   * 4 cartes « __Joker__ »
   * 4 cartes « __+4__ »
 
-##  Le pouvoir des cartes spéciales Uno :
+###  Le pouvoir des cartes spéciales Uno :
 
 __La carte « *+2* » :__
 Lorsqu’un joueur joue cette carte, le joueur suivant doit piocher 2 cartes et passe son tour et cela même si c’est la première carte retournée en début de partie.

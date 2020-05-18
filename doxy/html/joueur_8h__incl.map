@@ -1,5 +1,7 @@
 <map id="UNO/include/joueur.h" name="UNO/include/joueur.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,151,32"/>
 <area shape="rect" id="node2" href="$pile_8h.html" title=" " alt="" coords="51,80,105,107"/>
-<area shape="rect" id="node3" href="$carte_8h.html" title=" " alt="" coords="47,155,109,181"/>
+<area shape="rect" id="node3" href="$carte_8h.html" title=" " alt="" coords="7,155,69,181"/>
+<area shape="rect" id="node4" href="$util_8h.html" title=" " alt="" coords="94,155,145,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="89,229,150,256"/>
 </map>

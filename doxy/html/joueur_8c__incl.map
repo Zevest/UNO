@@ -1,8 +1,9 @@
 <map id="UNO/src/joueur.c" name="UNO/src/joueur.c">
-<area shape="rect" id="node1" title=" " alt="" coords="96,5,219,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,67,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="91,80,155,107"/>
-<area shape="rect" id="node4" href="$pile_8h.html" title=" " alt="" coords="201,155,255,181"/>
-<area shape="rect" id="node6" href="$joueur_8h.html" title=" " alt="" coords="230,80,298,107"/>
-<area shape="rect" id="node5" href="$carte_8h.html" title=" " alt="" coords="197,229,259,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="46,5,169,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="47,304,109,331"/>
+<area shape="rect" id="node3" title=" " alt="" coords="41,80,105,107"/>
+<area shape="rect" id="node4" href="$pile_8h.html" title=" " alt="" coords="121,155,174,181"/>
+<area shape="rect" id="node7" href="$joueur_8h.html" title=" " alt="" coords="180,80,248,107"/>
+<area shape="rect" id="node5" href="$carte_8h.html" title=" " alt="" coords="41,229,104,256"/>
+<area shape="rect" id="node6" href="$util_8h.html" title=" " alt="" coords="129,229,179,256"/>
 </map>

@@ -1,13 +1,13 @@
 <map id="UNO/src/main.c" name="UNO/src/main.c">
-<area shape="rect" id="node1" title=" " alt="" coords="288,5,403,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="117,155,179,181"/>
-<area shape="rect" id="node3" title=" " alt="" coords="25,80,89,107"/>
-<area shape="rect" id="node4" title=" " alt="" coords="114,80,182,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="207,80,265,107"/>
-<area shape="rect" id="node6" href="$carte_8h.html" title=" " alt="" coords="469,304,531,331"/>
-<area shape="rect" id="node7" href="$pile_8h.html" title=" " alt="" coords="473,229,527,256"/>
-<area shape="rect" id="node8" href="$joueur_8h.html" title=" " alt="" coords="466,155,534,181"/>
-<area shape="rect" id="node9" href="$play_8h.html" title=" " alt="" coords="543,80,601,107"/>
-<area shape="rect" id="node10" href="$csvloader_8h.html" title=" " alt="" coords="661,155,747,181"/>
-<area shape="rect" id="node11" href="$util_8h.html" title=" " alt="" coords="289,80,340,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="364,5,479,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="293,379,355,405"/>
+<area shape="rect" id="node3" title=" " alt="" coords="535,80,599,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="623,80,691,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="716,80,775,107"/>
+<area shape="rect" id="node6" href="$carte_8h.html" title=" " alt="" coords="263,304,326,331"/>
+<area shape="rect" id="node7" href="$pile_8h.html" title=" " alt="" coords="268,229,321,256"/>
+<area shape="rect" id="node8" href="$util_8h.html" title=" " alt="" coords="125,304,176,331"/>
+<area shape="rect" id="node9" href="$joueur_8h.html" title=" " alt="" coords="290,155,358,181"/>
+<area shape="rect" id="node10" href="$play_8h.html" title=" " alt="" coords="198,80,255,107"/>
+<area shape="rect" id="node11" href="$csvloader_8h.html" title=" " alt="" coords="26,155,113,181"/>
 </map>

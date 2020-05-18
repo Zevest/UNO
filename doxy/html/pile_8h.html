@@ -23,7 +23,7 @@
   <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">UNO
-   &#160;<span id="projectnumber">1.3</span>
+   &#160;<span id="projectnumber">1.4</span>
    </div>
    <div id="projectbrief">UNO dans un terminal</div>
   </td>
@@ -71,35 +71,41 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Structures de données</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#typedef-members">Définitions de type</a> &#124;
-<a href="#enum-members">Énumérations</a> &#124;
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier pile.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="carte_8h_source.html">carte.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de pile.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="pile_8h__incl.png" border="0" usemap="#_u_n_o_2include_2pile_8h" alt=""/></div>
-<map name="_u_n_o_2include_2pile_8h" id="_u_n_o_2include_2pile_8h">
-<area shape="rect" title=" " alt="" coords="5,5,136,32"/>
-<area shape="rect" href="carte_8h.html" title=" " alt="" coords="39,80,102,107"/>
-</map>
+<!-- MAP 0 -->
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
 <div class="center"><img src="pile_8h__dep__incl.png" border="0" usemap="#_u_n_o_2include_2pile_8hdep" alt=""/></div>
-<!-- MAP 0 -->
+<map name="_u_n_o_2include_2pile_8hdep" id="_u_n_o_2include_2pile_8hdep">
+<area shape="rect" title=" " alt="" coords="370,5,501,32"/>
+<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="204,80,349,107"/>
+<area shape="rect" href="play_8h.html" title=" " alt="" coords="99,155,233,181"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="214,229,329,256"/>
+<area shape="rect" href="play_8c.html" title=" " alt="" coords="5,229,116,256"/>
+<area shape="rect" href="play__test_8c.html" title=" " alt="" coords="399,229,543,256"/>
+<area shape="rect" href="joueur_8c.html" title=" " alt="" coords="309,155,431,181"/>
+<area shape="rect" href="pile_8c.html" title=" " alt="" coords="557,80,663,107"/>
+<area shape="rect" href="pile__test_8c.html" title=" " alt="" coords="688,80,828,107"/>
+</map>
 </div>
 </div>
 <p><a href="pile_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Structures de données</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpile.html">pile</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpile.html">pile_t</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -107,49 +113,37 @@ Macros</h2></td></tr>
 <tr class="memitem:a348ec1b28d65a5ccf11661aa33b28606"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a348ec1b28d65a5ccf11661aa33b28606">PILE_MAX</a>&#160;&#160;&#160;256</td></tr>
 <tr class="separator:a348ec1b28d65a5ccf11661aa33b28606"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
-Définitions de type</h2></td></tr>
-<tr class="memitem:afd9d18de428357be6d7dfff26b288a73"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structpile.html">pile</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a></td></tr>
-<tr class="separator:afd9d18de428357be6d7dfff26b288a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
-Énumérations</h2></td></tr>
-<tr class="memitem:af6a258d8f3ee5206d682d799316314b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> { <a class="el" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c">false</a>, 
-<a class="el" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b">true</a>
- }</td></tr>
-<tr class="separator:af6a258d8f3ee5206d682d799316314b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:abe61ab613129062cf0c1faddb4d0d377"><td class="memItemLeft" align="right" valign="top"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a> (void)</td></tr>
+<tr class="memitem:abe61ab613129062cf0c1faddb4d0d377"><td class="memItemLeft" align="right" valign="top">pile_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a> (void)</td></tr>
 <tr class="memdesc:abe61ab613129062cf0c1faddb4d0d377"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise la pile de carte.  <a href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">Plus de détails...</a><br /></td></tr>
 <tr class="separator:abe61ab613129062cf0c1faddb4d0d377"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6e39ffddac1cbaf3a5865a3455c41a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#af6e39ffddac1cbaf3a5865a3455c41a0">pile_Push</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *p, <a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *c)</td></tr>
+<tr class="memitem:af6e39ffddac1cbaf3a5865a3455c41a0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#af6e39ffddac1cbaf3a5865a3455c41a0">pile_Push</a> (pile_t *p, card_t *c)</td></tr>
 <tr class="memdesc:af6e39ffddac1cbaf3a5865a3455c41a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajoute une carte au sommet de la pile.  <a href="pile_8h.html#af6e39ffddac1cbaf3a5865a3455c41a0">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af6e39ffddac1cbaf3a5865a3455c41a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae33057110b0e1fbff94f39d263253237"><td class="memItemLeft" align="right" valign="top"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ae33057110b0e1fbff94f39d263253237">pile_Pop</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *p)</td></tr>
-<tr class="memdesc:ae33057110b0e1fbff94f39d263253237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le premier element de la pile.  <a href="pile_8h.html#ae33057110b0e1fbff94f39d263253237">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:ae33057110b0e1fbff94f39d263253237"><td class="memItemLeft" align="right" valign="top">card_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ae33057110b0e1fbff94f39d263253237">pile_Pop</a> (pile_t *p)</td></tr>
+<tr class="memdesc:ae33057110b0e1fbff94f39d263253237"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le premier élement de la pile.  <a href="pile_8h.html#ae33057110b0e1fbff94f39d263253237">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ae33057110b0e1fbff94f39d263253237"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53cfd5731f7914026a2a3481a4dc9f9d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a53cfd5731f7914026a2a3481a4dc9f9d">pile_Remove</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *p, int i)</td></tr>
-<tr class="memdesc:a53cfd5731f7914026a2a3481a4dc9f9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime la carte avec l'indice index de la pile.  <a href="pile_8h.html#a53cfd5731f7914026a2a3481a4dc9f9d">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a53cfd5731f7914026a2a3481a4dc9f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab410339392ec6b44af55d522f4a4b973"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ab410339392ec6b44af55d522f4a4b973">pile_Empty</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *p)</td></tr>
-<tr class="memdesc:ab410339392ec6b44af55d522f4a4b973"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la pile est vide.  <a href="pile_8h.html#ab410339392ec6b44af55d522f4a4b973">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ab410339392ec6b44af55d522f4a4b973"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3770d800e3e5f480a5b9b1355d615ee"><td class="memItemLeft" align="right" valign="top"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee">pile_GetTop</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *p)</td></tr>
-<tr class="memdesc:ad3770d800e3e5f480a5b9b1355d615ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie le sommet de la pile.  <a href="pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:aca84412d7252a3d80f5898d6ba66e16f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#aca84412d7252a3d80f5898d6ba66e16f">pile_Remove</a> (pile_t *p, int i)</td></tr>
+<tr class="memdesc:aca84412d7252a3d80f5898d6ba66e16f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprime la carte avec l'indice index de la pile.  <a href="pile_8h.html#aca84412d7252a3d80f5898d6ba66e16f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aca84412d7252a3d80f5898d6ba66e16f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae56f7502c9ed82161bb18b8ce73749dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ae56f7502c9ed82161bb18b8ce73749dd">pile_Empty</a> (pile_t *p)</td></tr>
+<tr class="memdesc:ae56f7502c9ed82161bb18b8ce73749dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la pile est vide.  <a href="pile_8h.html#ae56f7502c9ed82161bb18b8ce73749dd">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae56f7502c9ed82161bb18b8ce73749dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3770d800e3e5f480a5b9b1355d615ee"><td class="memItemLeft" align="right" valign="top">card_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee">pile_GetTop</a> (pile_t *p)</td></tr>
+<tr class="memdesc:ad3770d800e3e5f480a5b9b1355d615ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la carte au sommet de la pile.  <a href="pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad3770d800e3e5f480a5b9b1355d615ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c94337ba816acd0b0ecffcc952c25a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *p)</td></tr>
-<tr class="memdesc:a5c94337ba816acd0b0ecffcc952c25a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialiser le paquet  <a href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a5c94337ba816acd0b0ecffcc952c25a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a> (pile_t *p)</td></tr>
+<tr class="memdesc:a5c94337ba816acd0b0ecffcc952c25a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialise le paquet.  <a href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5c94337ba816acd0b0ecffcc952c25a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae00c4c74f3f1aa7f9b5545120dc84b43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ae00c4c74f3f1aa7f9b5545120dc84b43">pile_Distribute</a> (int n, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *src, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *dest)</td></tr>
-<tr class="memdesc:ae00c4c74f3f1aa7f9b5545120dc84b43"><td class="mdescLeft">&#160;</td><td class="mdescRight">distribue n cartes  <a href="pile_8h.html#ae00c4c74f3f1aa7f9b5545120dc84b43">Plus de détails...</a><br /></td></tr>
-<tr class="separator:ae00c4c74f3f1aa7f9b5545120dc84b43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace34f2b7089ae33b1877a76c9ec65650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *src, <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *dst, int n)</td></tr>
-<tr class="memdesc:ace34f2b7089ae33b1877a76c9ec65650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange les cartes d'un paquets sources vers un paquets destination.  <a href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a88a50742d0f40c592a23e1c0ab30c299"><td class="memItemLeft" align="right" valign="top"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a> (int n, pile_t *src, pile_t *dest)</td></tr>
+<tr class="memdesc:a88a50742d0f40c592a23e1c0ab30c299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distribue n cartes.  <a href="pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a88a50742d0f40c592a23e1c0ab30c299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace34f2b7089ae33b1877a76c9ec65650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a> (pile_t *src, pile_t *dst, int n)</td></tr>
+<tr class="memdesc:ace34f2b7089ae33b1877a76c9ec65650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mélange les cartes d'un paquet source vers un paquet destination.  <a href="pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ace34f2b7089ae33b1877a76c9ec65650"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a460ab6e214f8edafb9932f9f6e4130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a> (<a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *<a class="el" href="structpile.html">pile</a>)</td></tr>
-<tr class="memdesc:a5a460ab6e214f8edafb9932f9f6e4130"><td class="mdescLeft">&#160;</td><td class="mdescRight">libère la mémoire  <a href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">Plus de détails...</a><br /></td></tr>
+<tr class="memitem:a5a460ab6e214f8edafb9932f9f6e4130"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a> (pile_t *<a class="el" href="structpile.html">pile</a>)</td></tr>
+<tr class="memdesc:a5a460ab6e214f8edafb9932f9f6e4130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère la mémoire.  <a href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a5a460ab6e214f8edafb9932f9f6e4130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
@@ -165,45 +159,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8h_source.html#l00005">5</a> du fichier <a class="el" href="pile_8h_source.html">pile.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Documentation des définitions de type</h2>
-<a id="afd9d18de428357be6d7dfff26b288a73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afd9d18de428357be6d7dfff26b288a73">&#9670;&nbsp;</a></span>pile_t</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef struct <a class="el" href="structpile.html">pile</a> <a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Définition à la ligne <a class="el" href="pile_8h_source.html#l00001">1</a> du fichier <a class="el" href="pile_8h_source.html">pile.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Documentation du type de l'énumération</h2>
-<a id="af6a258d8f3ee5206d682d799316314b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6a258d8f3ee5206d682d799316314b1">&#9670;&nbsp;</a></span>bool</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="pile_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c"></a>false&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b"></a>true&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Définition à la ligne <a class="el" href="pile_8h_source.html#l00018">18</a> du fichier <a class="el" href="pile_8h_source.html">pile.h</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8h_source.html#l00006">6</a> du fichier <a class="el" href="pile_8h_source.html">pile.h</a>.</p>
 
 </div>
 </div>
@@ -217,14 +173,14 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void pile_Delete </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>pile</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>libère la mémoire </p>
+<p>Libère la mémoire. </p>
 <p>Libère la mémoire allouée pour pour la pile </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">pile</td><td>la pile a supprimer </td></tr>
@@ -236,14 +192,14 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae00c4c74f3f1aa7f9b5545120dc84b43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae00c4c74f3f1aa7f9b5545120dc84b43">&#9670;&nbsp;</a></span>pile_Distribute()</h2>
+<a id="a88a50742d0f40c592a23e1c0ab30c299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88a50742d0f40c592a23e1c0ab30c299">&#9670;&nbsp;</a></span>pile_Distribute()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void pile_Distribute </td>
+          <td class="memname"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> pile_Distribute </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>n</em>, </td>
@@ -251,13 +207,13 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>src</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>dest</em>&#160;</td>
         </tr>
         <tr>
@@ -268,7 +224,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>distribue n cartes </p>
+<p>Distribue n cartes. </p>
 <p>Déplace N carte(s) de la pile source vers la pile destination. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>nombre de carte a déplacer </td></tr>
@@ -277,21 +233,22 @@ Fonctions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si la distribution se déroule sans encombre, 1 sinon </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00113">113</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="pile_8c_source.html#l00112">112</a> du fichier <a class="el" href="pile_8c_source.html">pile.c</a>.</p>
 
 </div>
 </div>
-<a id="ab410339392ec6b44af55d522f4a4b973"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab410339392ec6b44af55d522f4a4b973">&#9670;&nbsp;</a></span>pile_Empty()</h2>
+<a id="ae56f7502c9ed82161bb18b8ce73749dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae56f7502c9ed82161bb18b8ce73749dd">&#9670;&nbsp;</a></span>pile_Empty()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int pile_Empty </td>
+          <td class="memname"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> pile_Empty </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
@@ -320,14 +277,14 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void pile_FillDeck </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>initialiser le paquet </p>
+<p>Initialise le paquet. </p>
 <p>Remplie la pile deu bon nombre de chaque carte. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>pile </td></tr>
@@ -346,16 +303,16 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a>* pile_GetTop </td>
+          <td class="memname">card_t* pile_GetTop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Renvoie le sommet de la pile. </p>
+<p>Renvoie la carte au sommet de la pile. </p>
 <p>Recupere la carte au sommet de la pile. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>pile </td></tr>
@@ -375,7 +332,7 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a>* pile_Init </td>
+          <td class="memname">pile_t* pile_Init </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -398,16 +355,16 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a>* pile_Pop </td>
+          <td class="memname">card_t* pile_Pop </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Renvoie le premier element de la pile. </p>
+<p>Renvoie le premier élement de la pile. </p>
 <p>Retire une carte du sommet de la pile. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>pile </td></tr>
@@ -429,13 +386,13 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void pile_Push </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="carte_8h.html#a591892512192ec0bf1234fde3817cf1a">card_t</a> *&#160;</td>
+          <td class="paramtype">card_t *&#160;</td>
           <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
@@ -459,16 +416,16 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
-<a id="a53cfd5731f7914026a2a3481a4dc9f9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53cfd5731f7914026a2a3481a4dc9f9d">&#9670;&nbsp;</a></span>pile_Remove()</h2>
+<a id="aca84412d7252a3d80f5898d6ba66e16f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca84412d7252a3d80f5898d6ba66e16f">&#9670;&nbsp;</a></span>pile_Remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int pile_Remove </td>
+          <td class="memname"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> pile_Remove </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>p</em>, </td>
         </tr>
         <tr>
@@ -508,13 +465,13 @@ Fonctions</h2></td></tr>
         <tr>
           <td class="memname">void pile_Shuffle </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>src</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="pile_8h.html#afd9d18de428357be6d7dfff26b288a73">pile_t</a> *&#160;</td>
+          <td class="paramtype">pile_t *&#160;</td>
           <td class="paramname"><em>dst</em>, </td>
         </tr>
         <tr>
@@ -531,7 +488,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Mélange les cartes d'un paquets sources vers un paquets destination. </p>
+<p>Mélange les cartes d'un paquet source vers un paquet destination. </p>
 <p>Déplace et mélange les cartes de la pile source vers la pile destination. Les cartes dont l'indice est inférieur n sont ignorées. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">src</td><td>pile source </td></tr>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['data_5ft_162',['data_t',['../csvloader_8h.html#a1d756f237acef91aa7ef4e6b87f52632',1,'csvloader.h']]],
-  ['dataprinter_163',['dataPrinter',['../csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939',1,'csvloader.h']]]
+  ['string_5ft_171',['string_t',['../util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9',1,'util.h']]],
+  ['stringvalidator_5ft_172',['stringValidator_t',['../util_8h.html#a2bddc030c62f01f788f6456e5e2ed8fd',1,'util.h']]]
 ];

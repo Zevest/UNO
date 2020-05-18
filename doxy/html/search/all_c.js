@@ -1,4 +1,32 @@
 var searchData=
 [
-  ['readme_2emd_75',['README.md',['../_r_e_a_d_m_e_8md.html',1,'']]]
+  ['pile_45',['pile',['../structpile.html',1,'']]],
+  ['pile_2ec_46',['pile.c',['../pile_8c.html',1,'']]],
+  ['pile_2eh_47',['pile.h',['../pile_8h.html',1,'']]],
+  ['pile_5fdelete_48',['pile_Delete',['../pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130',1,'pile_Delete(pile_t *pile):&#160;pile.c'],['../pile_8c.html#a5a460ab6e214f8edafb9932f9f6e4130',1,'pile_Delete(pile_t *pile):&#160;pile.c']]],
+  ['pile_5fdistribute_49',['pile_Distribute',['../pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299',1,'pile_Distribute(int n, pile_t *src, pile_t *dest):&#160;pile.c'],['../pile_8c.html#a8ecd5014963f81073542bd06ec9badff',1,'pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest):&#160;pile.c']]],
+  ['pile_5fempty_50',['pile_Empty',['../pile_8h.html#ae56f7502c9ed82161bb18b8ce73749dd',1,'pile_Empty(pile_t *p):&#160;pile.c'],['../pile_8c.html#ae56f7502c9ed82161bb18b8ce73749dd',1,'pile_Empty(pile_t *p):&#160;pile.c']]],
+  ['pile_5ffilldeck_51',['pile_FillDeck',['../pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6',1,'pile_FillDeck(pile_t *p):&#160;pile.c'],['../pile_8c.html#a5d69180fbbfb3a6ee122da76bf766c5b',1,'pile_FillDeck(pile_t *paquet):&#160;pile.c']]],
+  ['pile_5fgettop_52',['pile_GetTop',['../pile_8h.html#ad3770d800e3e5f480a5b9b1355d615ee',1,'pile_GetTop(pile_t *p):&#160;pile.c'],['../pile_8c.html#ad3770d800e3e5f480a5b9b1355d615ee',1,'pile_GetTop(pile_t *p):&#160;pile.c']]],
+  ['pile_5finit_53',['pile_Init',['../pile_8h.html#abe61ab613129062cf0c1faddb4d0d377',1,'pile_Init(void):&#160;pile.c'],['../pile_8c.html#a437c90a16a1842a143b91acab8280a5a',1,'pile_Init():&#160;pile.c']]],
+  ['pile_5fmax_54',['PILE_MAX',['../pile_8h.html#a348ec1b28d65a5ccf11661aa33b28606',1,'pile.h']]],
+  ['pile_5fpop_55',['pile_Pop',['../pile_8h.html#ae33057110b0e1fbff94f39d263253237',1,'pile_Pop(pile_t *p):&#160;pile.c'],['../pile_8c.html#ae33057110b0e1fbff94f39d263253237',1,'pile_Pop(pile_t *p):&#160;pile.c']]],
+  ['pile_5fpush_56',['pile_Push',['../pile_8h.html#af6e39ffddac1cbaf3a5865a3455c41a0',1,'pile_Push(pile_t *p, card_t *c):&#160;pile.c'],['../pile_8c.html#a32caabc4e78d049b742fa91ab9491d50',1,'pile_Push(pile_t *p, card_t *a):&#160;pile.c']]],
+  ['pile_5fremove_57',['pile_Remove',['../pile_8h.html#aca84412d7252a3d80f5898d6ba66e16f',1,'pile_Remove(pile_t *p, int i):&#160;pile.c'],['../pile_8c.html#aeac75db5125ec662935894e8a96b4ffb',1,'pile_Remove(pile_t *p, int index):&#160;pile.c']]],
+  ['pile_5fshuffle_58',['pile_Shuffle',['../pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650',1,'pile_Shuffle(pile_t *src, pile_t *dst, int n):&#160;pile.c'],['../pile_8c.html#a7176e84ebb2fb40f86987c9265bf27ba',1,'pile_Shuffle(pile_t *package, pile_t *res, int cardToSkip):&#160;pile.c']]],
+  ['pile_5ftest_2ec_59',['pile_test.c',['../pile__test_8c.html',1,'']]],
+  ['play_2ec_60',['play.c',['../play_8c.html',1,'']]],
+  ['play_2eh_61',['play.h',['../play_8h.html',1,'']]],
+  ['play_5fcanplay_62',['play_CanPlay',['../play_8h.html#a9fe8d8e32e53d2979ae3eefc63c76906',1,'play_CanPlay(pile_t *main, card_t *carte):&#160;play.c'],['../play_8c.html#a0dea939ac84c48eb3d73931e9bff7cbc',1,'play_CanPlay(pile_t *playerCards, card_t *lastPlayedCard):&#160;play.c']]],
+  ['play_5fcountpoint_63',['play_CountPoint',['../play_8c.html#a9c81a68719ad36377358e318b182374d',1,'play.c']]],
+  ['play_5fendgame_64',['play_EndGame',['../play_8c.html#a1f9e5a47c0c542ee8a09f32b3c04b0d9',1,'play.c']]],
+  ['play_5fgettour_65',['play_GetTour',['../play_8h.html#ad4e1d2370ab20cf2e17f21a8f0256d0f',1,'play_GetTour():&#160;play.c'],['../play_8c.html#ad4e1d2370ab20cf2e17f21a8f0256d0f',1,'play_GetTour():&#160;play.c']]],
+  ['play_5finverse_66',['play_Inverse',['../play_8h.html#a2e921d21507a7fa5bd6a20a3950e55fe',1,'play_Inverse():&#160;play.c'],['../play_8c.html#a2e921d21507a7fa5bd6a20a3950e55fe',1,'play_Inverse():&#160;play.c']]],
+  ['play_5fiscardplayable_67',['play_IsCardPlayable',['../play_8h.html#a98ba38ee255621c22f92d9c41c719e0b',1,'play_IsCardPlayable(card_t *carte_A, card_t *carte_B):&#160;play.c'],['../play_8c.html#a30dda85a9ea5b90dc2e01160c4d046cc',1,'play_IsCardPlayable(card_t *testedCard, card_t *lastPlayedCard):&#160;play.c']]],
+  ['play_5fnext_68',['play_Next',['../play_8h.html#a288a4602876961ee27a52e6e39ab77b8',1,'play_Next():&#160;play.c'],['../play_8c.html#a288a4602876961ee27a52e6e39ab77b8',1,'play_Next():&#160;play.c']]],
+  ['play_5fplay_69',['play_Play',['../play_8h.html#a05b2a7a539cef7a018c26cba1b67ad01',1,'play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv):&#160;play.c'],['../play_8c.html#a105b4b6d57c61cae70ae19509e3c307b',1,'play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber, int playerCount, csv_t *csv):&#160;play.c']]],
+  ['play_5fsettour_70',['play_SetTour',['../play_8h.html#a8851aa20901a9dc8e9b90e1faa627b84',1,'play_SetTour(int n):&#160;play.c'],['../play_8c.html#a8851aa20901a9dc8e9b90e1faa627b84',1,'play_SetTour(int n):&#160;play.c']]],
+  ['play_5ftest_2ec_71',['play_test.c',['../play__test_8c.html',1,'']]],
+  ['player_72',['player',['../structplayer.html',1,'']]],
+  ['player_5finit_73',['player_Init',['../joueur_8h.html#a5cb54243700f2317069b4771bbc65670',1,'player_Init(int nb, char **noms, pile_t *paquet):&#160;joueur.h'],['../joueur_8c.html#a962115c2104e1a7cb6bd9cfaac0eae19',1,'player_Init(int nb, char *noms[], pile_t *deck):&#160;joueur.c']]]
 ];

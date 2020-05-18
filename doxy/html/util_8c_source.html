@@ -103,40 +103,54 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="util_8c.html#aab8da901e0bd502da64b455f6ef9794e">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8c.html#aab8da901e0bd502da64b455f6ef9794e">util_IsNumeric</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *line, <span class="keywordtype">int</span> l)</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="util_8c.html#aba6d4e453190abf5d9d13acf103de319">   35</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8c.html#aba6d4e453190abf5d9d13acf103de319">util_IsNumeric</a>(<span class="keyword">const</span> <a class="code" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> buffer)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <span class="keywordflow">while</span> (l-- &gt;= 0)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">if</span> (isdigit(line[l - 1]))</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;         <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="util_8c.html#a76eb16e13c7f1ad9ee02fa918d3b73c2">   44</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8c.html#a76eb16e13c7f1ad9ee02fa918d3b73c2">util_IsAlphaWord</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *line, <span class="keywordtype">int</span> l)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keywordflow">while</span> (l-- &gt;= 0)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">if</span> (!isalpha(line[l - 1]))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;   <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="util_8c.html#a68ce209402506a4aa64834d22de9abfc">   53</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="util_8c.html#a68ce209402506a4aa64834d22de9abfc">util_ClearInputBuffer</a>()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <span class="keywordtype">int</span> c;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordflow">while</span> ((c = getchar()) != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; c != EOF)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      ;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="util_8c.html#a44130300b0a342e1d46198cf90b6d9ab">   61</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8c.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordflow">return</span> a &gt; b ? a : b;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <span class="keywordtype">char</span> *ptr = buffer;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;   <span class="keywordflow">while</span> (ptr &amp;&amp; *ptr != <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordflow">if</span> (!isdigit(*ptr++))</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;         <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="util_8c.html#a3a2508284f172a46bb3c22b65b0bd78b">   45</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8c.html#a3a2508284f172a46bb3c22b65b0bd78b">util_IsAlphaWord</a>(<span class="keyword">const</span> <a class="code" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> buffer)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   <span class="keywordtype">char</span> *ptr = buffer;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;   <span class="keywordflow">while</span> (ptr &amp;&amp; *ptr != <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">if</span> (!isalpha(*ptr++))</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;         <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="util_8c.html#a68ce209402506a4aa64834d22de9abfc">   55</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="util_8c.html#a68ce209402506a4aa64834d22de9abfc">util_ClearInputBuffer</a>()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordtype">int</span> c;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordflow">while</span> ((c = getchar()) != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; c != EOF)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      ;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="util_8c.html#a44130300b0a342e1d46198cf90b6d9ab">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="util_8c.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;   <span class="keywordflow">return</span> a &gt; b ? a : b;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="util_8c.html#a1e47d74627582d4d43f46dcd4ca68fbb">   69</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="util_8c.html#a1e47d74627582d4d43f46dcd4ca68fbb">util_Ask</a>(<span class="keyword">const</span> <a class="code" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> message, <a class="code" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> buffer, <a class="code" href="util_8h.html#a2bddc030c62f01f788f6456e5e2ed8fd">stringValidator_t</a> validator)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      printf(message, NULL);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      fgets(buffer, <span class="keyword">sizeof</span>(buffer), stdin);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   } <span class="keywordflow">while</span> (!validator(buffer));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="autil_8c_html_aab8da901e0bd502da64b455f6ef9794e"><div class="ttname"><a href="util_8c.html#aab8da901e0bd502da64b455f6ef9794e">util_IsNumeric</a></div><div class="ttdeci">int util_IsNumeric(const char *line, int l)</div><div class="ttdoc">Vérifie si une chaîne de caratère est un nombre.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00035">util.c:35</a></div></div>
+<div class="ttc" id="autil_8h_html_a2bddc030c62f01f788f6456e5e2ed8fd"><div class="ttname"><a href="util_8h.html#a2bddc030c62f01f788f6456e5e2ed8fd">stringValidator_t</a></div><div class="ttdeci">int(* stringValidator_t)(string_t)</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00009">util.h:9</a></div></div>
+<div class="ttc" id="autil_8c_html_a1e47d74627582d4d43f46dcd4ca68fbb"><div class="ttname"><a href="util_8c.html#a1e47d74627582d4d43f46dcd4ca68fbb">util_Ask</a></div><div class="ttdeci">void util_Ask(const string_t message, string_t buffer, stringValidator_t validator)</div><div class="ttdoc">Affiche un message et attend la saisie d'une donnée conforme à une condition.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00069">util.c:69</a></div></div>
+<div class="ttc" id="autil_8c_html_a3a2508284f172a46bb3c22b65b0bd78b"><div class="ttname"><a href="util_8c.html#a3a2508284f172a46bb3c22b65b0bd78b">util_IsAlphaWord</a></div><div class="ttdeci">int util_IsAlphaWord(const string_t buffer)</div><div class="ttdoc">Vérifie si une chaîne de caratère ne contient que des lettres.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00045">util.c:45</a></div></div>
 <div class="ttc" id="autil_8c_html_aa3c593a68621fa345c3393f98460a09b"><div class="ttname"><a href="util_8c.html#aa3c593a68621fa345c3393f98460a09b">util_CountLine</a></div><div class="ttdeci">int util_CountLine(FILE *f)</div><div class="ttdoc">Compte le nombre de ligne dans un ficher.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00009">util.c:9</a></div></div>
-<div class="ttc" id="autil_8c_html_a68ce209402506a4aa64834d22de9abfc"><div class="ttname"><a href="util_8c.html#a68ce209402506a4aa64834d22de9abfc">util_ClearInputBuffer</a></div><div class="ttdeci">void util_ClearInputBuffer()</div><div class="ttdoc">Vide le buffer stdin.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00053">util.c:53</a></div></div>
-<div class="ttc" id="autil_8c_html_a44130300b0a342e1d46198cf90b6d9ab"><div class="ttname"><a href="util_8c.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a></div><div class="ttdeci">int util_Max(int a, int b)</div><div class="ttdoc">Retroune le max de deux valeurs a et b.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00061">util.c:61</a></div></div>
-<div class="ttc" id="autil_8c_html_a2482ed161b2cb87100d589824d4645c7"><div class="ttname"><a href="util_8c.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a></div><div class="ttdeci">void util_JumpLine(int n)</div><div class="ttdoc">Affiche n fois le caractere de fin de ligne.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00028">util.c:28</a></div></div>
-<div class="ttc" id="autil_8c_html_a76eb16e13c7f1ad9ee02fa918d3b73c2"><div class="ttname"><a href="util_8c.html#a76eb16e13c7f1ad9ee02fa918d3b73c2">util_IsAlphaWord</a></div><div class="ttdeci">int util_IsAlphaWord(const char *line, int l)</div><div class="ttdoc">Vérifie si une chaîne de caratère ne contient que des lettres.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00044">util.c:44</a></div></div>
+<div class="ttc" id="autil_8c_html_a68ce209402506a4aa64834d22de9abfc"><div class="ttname"><a href="util_8c.html#a68ce209402506a4aa64834d22de9abfc">util_ClearInputBuffer</a></div><div class="ttdeci">void util_ClearInputBuffer()</div><div class="ttdoc">Vide le buffer stdin.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00055">util.c:55</a></div></div>
+<div class="ttc" id="autil_8c_html_aba6d4e453190abf5d9d13acf103de319"><div class="ttname"><a href="util_8c.html#aba6d4e453190abf5d9d13acf103de319">util_IsNumeric</a></div><div class="ttdeci">int util_IsNumeric(const string_t buffer)</div><div class="ttdoc">Vérifie si une chaîne de caratère est un nombre.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00035">util.c:35</a></div></div>
+<div class="ttc" id="autil_8c_html_a44130300b0a342e1d46198cf90b6d9ab"><div class="ttname"><a href="util_8c.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a></div><div class="ttdeci">int util_Max(int a, int b)</div><div class="ttdoc">Retroune la valeur maximum entre deux valeurs a et b.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00063">util.c:63</a></div></div>
+<div class="ttc" id="autil_8c_html_a2482ed161b2cb87100d589824d4645c7"><div class="ttname"><a href="util_8c.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a></div><div class="ttdeci">void util_JumpLine(int n)</div><div class="ttdoc">Affiche n fois le caractère de fin de ligne.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00028">util.c:28</a></div></div>
+<div class="ttc" id="autil_8h_html_ab0dcbec9b4b3c60b939b1095f93cb1b9"><div class="ttname"><a href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a></div><div class="ttdeci">char * string_t</div><div class="ttdef"><b>Definition:</b> <a href="util_8h_source.html#l00007">util.h:7</a></div></div>
 <div class="ttc" id="autil_8h_html"><div class="ttname"><a href="util_8h.html">util.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

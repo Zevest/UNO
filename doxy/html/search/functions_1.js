@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['g_5freset_120',['g_Reset',['../main_8c.html#ab336251763359f7fcb437e8d77e74213',1,'main.c']]]
+  ['endround_125',['endRound',['../main_8c.html#a462950d20de27e914698205d67255f19',1,'main.c']]]
 ];
