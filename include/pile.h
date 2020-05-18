@@ -74,8 +74,9 @@ extern void pile_FillDeck(pile_t *p);
  * @param n nombre de carte a déplacer
  * @param src pile source
  * @param dst pile destination
+ * @return 0 si la distribution se déroule sans encombre, 1 sinon
  */
-extern void pile_Distribute(int n, pile_t *src, pile_t *dest);
+extern int pile_Distribute(int n, pile_t *src, pile_t *dest);
 
 /**
  * Déplace et mélange les cartes de la pile source vers la pile destination.
