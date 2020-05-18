@@ -2,8 +2,8 @@
 #define __CSVLOADER_H__
 
 #define __CSV_BUFFER_SIZE__ 256
+#include "util.h"
 
-typedef char *string_t;
 /**
  * Structure d'une lingne de donnée d'un fichier csv.
  * Ici l'index est n'utilisé Le message correspond à l'affichage durant la partie.

@@ -23,7 +23,7 @@ csv_t *csv_InitCSV(FILE *f)
 	return input;
 }
 
-/// Libere la memoire
+/// Libère la memoire
 void csv_DeleteCSV(csv_t *csv)
 {
 	if (csv == NULL)
@@ -77,7 +77,7 @@ void csv_PrintData(data_t *d)
 		printf("%p", d);
 }
 
-/// Affiche les donnée stocker dans l'objet
+/// Affiche les données stockées dans l'objet
 void csv_PrintCSV(csv_t *csv, dataPrinter printer)
 {
 	if (csv == NULL)

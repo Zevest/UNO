@@ -69,14 +69,14 @@ int main(int argc, char **argv)
 		system("clear -x");
 		printf(csv->data[1].message, g_Tour);
 		util_JumpLine(2);
-		printf(csv->data[2].message, g_Tour, joueurs[g_Tour % nb].name);
+		printf(csv->data[2].message, g_Tour % nb, joueurs[g_Tour % nb].name);
 		util_JumpLine(1);
 
 		stop = play_Play(joueurs, paquet, pioche, play_GetTour() % nb, nb, csv);
 		if (stop)
 		{
 			system("clear -x");
-			printf(csv->data[4].message, noms[g_Tour]);
+			printf(csv->data[4].message, noms[g_Tour % nb]);
 			util_JumpLine(1);
 			printf(csv->data[13].message, joueurs[g_Tour % nb].name, stop);
 			util_JumpLine(1);
@@ -102,7 +102,7 @@ int main(int argc, char **argv)
 			util_JumpLine(1);
 			if (stop >= maxPoint)
 			{
-				printf(csv->data[4].message, noms[g_Tour]);
+				printf(csv->data[4].message, noms[g_Tour % nb]);
 				sleep(2);
 			}
 

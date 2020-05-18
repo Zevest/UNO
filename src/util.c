@@ -32,19 +32,21 @@ void util_JumpLine(int n)
 }
 
 /// Vérifie si une chaîne de caratère est un nombre
-int util_IsNumeric(const char *line, int l)
+int util_IsNumeric(const string_t buffer)
 {
-	while (l-- >= 0)
-		if (isdigit(line[l - 1]))
+	char *ptr = buffer;
+	while (ptr && *ptr != '\n')
+		if (!isdigit(*ptr++))
 			return 0;
 	return 1;
 }
 
 /// Vérifie si une chaîne de caratère ne contient que des lettres
-int util_IsAlphaWord(const char *line, int l)
+int util_IsAlphaWord(const string_t buffer)
 {
-	while (l-- >= 0)
-		if (!isalpha(line[l - 1]))
+	char *ptr = buffer;
+	while (ptr && *ptr != '\n')
+		if (!isalpha(*ptr++))
 			return 0;
 	return 1;
 }
@@ -61,4 +63,13 @@ void util_ClearInputBuffer()
 int util_Max(int a, int b)
 {
 	return a > b ? a : b;
+}
+
+void util_Ask(const string_t message, string_t buffer, stringValidator_t validator)
+{
+	do
+	{
+		printf(message, NULL);
+		fgets(buffer, sizeof(buffer), stdin);
+	} while (!validator(buffer));
 }

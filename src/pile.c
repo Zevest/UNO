@@ -13,7 +13,7 @@ extern pile_t *pile_Init()
 	return p;
 }
 
-/// Renvoie le sommet de la pile
+/// Renvoie la carte au sommet de la pile
 extern card_t *pile_GetTop(pile_t *jeu)
 {
 	return jeu->_DATA[jeu->_TOP];
@@ -51,7 +51,7 @@ extern int pile_Remove(pile_t *p, int index)
 	return 0;
 }
 
-/// Renvoie le premier element de la pile
+/// Renvoie le premier élement de la pile
 extern card_t *pile_Pop(pile_t *p)
 {
 	if (!pile_Empty(p))
@@ -59,7 +59,7 @@ extern card_t *pile_Pop(pile_t *p)
 	return 0;
 }
 
-/// Mélange les cartes d'un paquets sources vers un paquets destination
+/// Mélange les cartes d'un paquet source vers un paquet destination
 extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 {
 	int i;
@@ -108,7 +108,7 @@ extern void pile_Shuffle(pile_t *paquet, pile_t *res, int premier)
 }
 
 /*A TESTER*/
-/// distribue n cartes
+/// Distribue n cartes
 extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 {
 	int i;
@@ -123,7 +123,7 @@ extern void pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 	}
 }
 
-/// initialiser le paquet
+/// Initialise le paquet
 extern void pile_FillDeck(pile_t *paquet)
 {
 	int i;
@@ -152,7 +152,7 @@ extern void pile_FillDeck(pile_t *paquet)
 	}
 }
 
-/// libère la mémoire
+/// Libère la mémoire
 extern void pile_Delete(pile_t *pile)
 {
 	if (pile == NULL)

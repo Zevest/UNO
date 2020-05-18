@@ -9,9 +9,9 @@
 8,Quel carte voulez-vous jouer? £
 9,oups votre tour a été passé£
 10,quelle couleur ? (B,J,R,V)£
-11,%s a pioché£
+11,%s à pioché£
 12,point %d£
-13,%s a remporté cet manche, il obtient %d points£
+13,%s à remporté cette manche, il obtient %d points£
 14,%s :::: %d£
 15,		|Scoreboard|	 £
 16, EOF£

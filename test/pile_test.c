@@ -32,7 +32,7 @@ int main()
 	pile_t *paquetDest;
 	card_t before;
 	int i, j;
-
+	printf("\nTest: Distribution (pile.c)\n");
 	for (j = 1; j < 11; ++j)
 	{
 		paquetSrc = pile_Init();

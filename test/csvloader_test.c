@@ -17,6 +17,8 @@ int main(int argc, char **argv)
 		" test avec grand nombre",
 		"test avec \\n retour a la ligne",
 		"test avec argument 5 + 5 = %d !"};
+
+	printf("\nTest: Gestion de fichier csv (csvloader.c)\n");
 	if (argc < 2)
 		stream = fopen("res/test.csv", "r");
 	else

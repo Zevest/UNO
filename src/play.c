@@ -40,205 +40,192 @@ void play_Inverse()
 
 /*A TESTER*/
 /// Verifie si la carte peut être jouer
-int play_IsCardPlayable(card_t *carte_A, card_t *carte_B)
+int play_IsCardPlayable(card_t *testedCard, card_t *lastPlayedCard)
 {
 
-	bool b1 = (carte_B->num == 10);			// +2 sur le jeu
-	bool b2 = (b1 || (carte_B->num == 14)); // +2 ou +4 sur le jeu
-	bool a1 = ((carte_A->num == 10) && b1); // +2 dans la main et +2 sur le jeu
-	bool a2 = ((carte_A->num == 14) && b2); // +2 ou +4 dans la main et +2 ou +4 sur le jeu
+	bool b1 = (lastPlayedCard->num == 10);		   // +2 sur le jeu
+	bool b2 = (b1 || (lastPlayedCard->num == 14)); // +2 ou +4 sur le jeu
+	bool a1 = ((testedCard->num == 10) && b1);	   // +2 dans la main et +2 sur le jeu
+	bool a2 = ((testedCard->num == 14) && b2);	   // +2 ou +4 dans la main et +2 ou +4 sur le jeu
 	bool a = (a1 || a2);
-	bool b = (g_Compte == 0) && (carte_A->num == carte_B->num || carte_A->color == carte_B->color || carte_A->num >= 13);
+	bool b = (g_Compte == 0) && (testedCard->num == lastPlayedCard->num || testedCard->color == lastPlayedCard->color || testedCard->num >= 13);
 
 	return (a ? a : b);
 }
 
 /// Verifie si un joueur peut jouer
-int play_CanPlay(pile_t *main, card_t *carte)
+int play_CanPlay(pile_t *playerCards, card_t *lastPlayedCard)
 {
 	int i;
 
-	for (i = 0; i < main->_TOP + 1; ++i)
+	for (i = 0; i < playerCards->_TOP + 1; ++i)
 	{
-		if (play_IsCardPlayable(main->_DATA[i], carte))
+		if (play_IsCardPlayable(playerCards->_DATA[i], lastPlayedCard))
 			return 1;
 	}
 	return 0;
 }
 
 /// Compte le nombre de points d'un joueur
-int play_CountPoint(player_t *g, int joueur)
+int play_CountPoint(player_t *players, int playerNumber)
 {
 	int i;
-	int s = 0;
+	int score = 0;
 
-	for (i = 0; i < g[joueur].cards->_TOP + 1; i++)
+	for (i = 0; i < players[playerNumber].cards->_TOP + 1; i++)
 	{
-		switch (g[joueur].cards->_DATA[i]->num)
+		switch (players[playerNumber].cards->_DATA[i]->num)
 		{
 		default:
-			s += g[joueur].cards->_DATA[i]->num;
+			score += players[playerNumber].cards->_DATA[i]->num;
 			break;
 		case 10:
 		case 11:
 		case 12:
-			s += 20;
+			score += 20;
 			break;
 		case 13:
 		case 14:
-			s += 50;
+			score += 50;
 			break;
 		}
 	}
-	return s;
+	return score;
 }
 
 /// Additionne les points des perdants pour les atribuer au gagnant
-int play_EndGame(player_t *g, int joueur)
+int play_EndGame(player_t *players, int playerNumber)
 {
-	int i, j = -1, s = 0;
+	int i, j = -1, score = 0;
 
-	for (i = 0; i < joueur; ++i)
+	for (i = 0; i < playerNumber; ++i)
 	{
-		if (pile_Empty(g[i].cards))
+		if (pile_Empty(players[i].cards))
 			j = i;
 	}
 	if (j != -1)
 	{
 
-		for (i = 0; i < joueur; ++i)
+		for (i = 0; i < playerNumber; ++i)
 		{
 			if (j != i)
-				s += play_CountPoint(g, i);
+				score += play_CountPoint(players, i);
 		}
-		g[j].score += s;
+		players[j].score += score;
 	}
-	return g[j].score;
+	return players[j].score;
+}
+
+void gameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *csv)
+{
+	char buf[50];
+	char pickedColor;
+	int i;
+	// Selection de la carte à jouer
+	do
+	{
+		util_JumpLine(2);
+		util_Ask(csv->data[8].message, buf, util_IsNumeric);
+		i = atoi(buf);
+	} while (i > players[playerNumber].cards->_TOP || !(play_IsCardPlayable(players[playerNumber].cards->_DATA[i], pile_GetTop(package))));
+
+	// Pose la carte sur le jeu
+	pile_Push(package, players[playerNumber].cards->_DATA[i]);
+	pile_Remove(players[playerNumber].cards, i);
+
+	// Application des règles du jeu
+	switch (pile_GetTop(package)->num)
+	{
+	default:
+		break;
+	case 10:
+		g_Compte += 2;
+	case 11:
+		play_Inverse();
+		break;
+	case 12:
+		printf(csv->data[9].message, NULL);
+		util_JumpLine(1);
+		play_Next();
+		sleep(1);
+		break;
+	case 14:
+		g_Compte += 4;
+	case 13:
+		printf(csv->data[10].message, NULL);
+		util_JumpLine(1);
+
+		do
+		{
+			pickedColor = '\0';
+			scanf("%c", &pickedColor);
+		} while (!(pickedColor == 'J' || pickedColor == 'R' || pickedColor == 'B' || pickedColor == 'V'));
+
+		util_ClearInputBuffer();
+		pile_GetTop(package)->color = pickedColor;
+		break;
+	}
 }
 
 /// Boucle principale du jeu
-int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numJoueur, int nbj, csv_t *csv)
+int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber, int playerCount, csv_t *csv)
 {
-	int i;
-	char a;
-	char buf[64];
-	int tmp = 0;
+	int i, playableCardCount = 0;
 
 	// Affiche les cartes du joueur
-	for (i = 0; i < joueurs[numJoueur].cards->_TOP + 1; ++i)
+	for (i = 0; i < players[playerNumber].cards->_TOP + 1; ++i)
 	{
-		card_Display(joueurs[numJoueur].cards->_DATA[i]);
+		card_Display(players[playerNumber].cards->_DATA[i]);
 		printf(" ");
 	}
 	util_JumpLine(2);
 	printf(csv->data[5].message, NULL);
-	card_Display(pile_GetTop(paquets));
+	card_Display(pile_GetTop(package));
 	util_JumpLine(2);
 	printf(csv->data[6].message, NULL);
 
 	// Affiche les cartes jouables
-	for (i = 0; i < joueurs[numJoueur].cards->_TOP + 1; ++i)
+	for (i = 0; i < players[playerNumber].cards->_TOP + 1; ++i)
 	{
-		if (play_IsCardPlayable(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets)) == 1)
+		if (play_IsCardPlayable(players[playerNumber].cards->_DATA[i], pile_GetTop(package)) == 1)
 		{
-			tmp++;
+			playableCardCount++;
 			printf("(%d: ", i);
-			card_Display(joueurs[numJoueur].cards->_DATA[i]);
+			card_Display(players[playerNumber].cards->_DATA[i]);
 			printf(") ");
 		}
 	}
 
 	// +2 ou/et +4 et le joueur n'a pas de +2 ni de +4 donc il est obligé de piocher
-	if (g_Compte > 0 && !tmp)
+	if (g_Compte > 0 && !playableCardCount)
 	{
-		//printf("%s pioche %d cartes!!\n", joueurs[numJoueur].name, g_Compte);
-		printf(csv->data[7].message, joueurs[numJoueur].name, g_Compte);
+		printf(csv->data[7].message, players[playerNumber].name, g_Compte);
 		util_JumpLine(1);
-		pile_Distribute(g_Compte, pioches, joueurs[numJoueur].cards);
+		pile_Distribute(g_Compte, deck, players[playerNumber].cards);
 		g_Compte = 0;
+		sleep(1);
 	}
 
 	// +2 ou/et +4 et le joueur possède +2/+4 donc il peut jouer
-	else if (tmp && g_Compte >= 0)
-	{
-		do
-		{
+	else if (playableCardCount && g_Compte >= 0)
+		gameCardRule(players, package, playerNumber, csv);
 
-			util_JumpLine(2);
-			do
-			{
-
-				printf(csv->data[8].message, NULL);
-				fgets(buf, sizeof(buf), stdin);
-			} while (!util_IsNumeric(buf, strlen(buf) - 1));
-			i = atoi(buf);
-
-		} while (i > joueurs[numJoueur].cards->_TOP || !(play_IsCardPlayable(joueurs[numJoueur].cards->_DATA[i], pile_GetTop(paquets))));
-
-		// pose la carte sur le jeu
-		pile_Push(paquets, joueurs[numJoueur].cards->_DATA[i]);
-		pile_Remove(joueurs[numJoueur].cards, i);
-
-		// application des règles du jeu
-		switch (pile_GetTop(paquets)->num)
-		{
-		default:
-			break;
-		case 10:
-			g_Compte += 2;
-		case 11:
-			play_Inverse();
-			break;
-		case 12:
-			printf(csv->data[9].message, NULL);
-			util_JumpLine(1);
-			play_Next();
-			sleep(1);
-			break;
-		case 14:
-			g_Compte += 4;
-			printf(csv->data[10].message, NULL);
-			util_JumpLine(1);
-
-			do
-			{
-				a = '\0';
-				scanf("%c", &a);
-			} while (!(a == 'J' || a == 'R' || a == 'B' || a == 'V'));
-
-			util_ClearInputBuffer();
-			pile_GetTop(paquets)->color = a;
-			break;
-		case 13:
-			printf(csv->data[10].message, NULL);
-			util_JumpLine(1);
-
-			do
-			{
-				a = '\0';
-				scanf("%c", &a);
-			} while (!(a == 'J' || a == 'R' || a == 'B' || a == 'V'));
-
-			util_ClearInputBuffer();
-			pile_GetTop(paquets)->color = a;
-			break;
-		}
-	}
 	// le joueur n'a pas de cartes a joué, il doit piocher
 	else
 	{
-		printf(csv->data[11].message, joueurs[numJoueur].name);
+		printf(csv->data[11].message, players[playerNumber].name);
 		util_JumpLine(1);
-		pile_Distribute(1, pioches, joueurs[numJoueur].cards);
+		pile_Distribute(1, deck, players[playerNumber].cards);
 		sleep(1);
 	}
 
 	// tour suivant
-	if (pile_Empty(joueurs[numJoueur].cards))
+	if (pile_Empty(players[playerNumber].cards))
 	{
-		printf(csv->data[12].message, play_EndGame(joueurs, nbj));
-		util_JumpLine(1);
-		return joueurs[numJoueur].score;
+		int point = play_EndGame(players, playerCount);
+		//printf(csv->data[12].message, point);
+		//util_JumpLine(1);
+		return point;
 	}
 
 	play_Next();
