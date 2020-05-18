@@ -1,4 +1,5 @@
 /app
+/bin/*
 /build/*
 /*.o
 .vscode/settings.json

@@ -114,7 +114,7 @@ extern bool pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)
 	int i;
 	if (paquet_dest == NULL || paquet_src == NULL || n > paquet_src->_TOP)
 	{
-		printf("Il n'y a pas assez de cartes dans le paquet\n");
+		//printf("Il n'y a pas assez de cartes dans le paquet\n");
 		return true;
 	}
 	for (i = 0; i < n; ++i)
