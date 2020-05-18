@@ -1,6 +1,6 @@
 
 # UNO (Jeu)
-
+![C/C++ CI](https://github.com/Zevest/UNO/workflows/C/C++%20CI/badge.svg)
 ### Ce projet est réalisé par :
 
   * Ait el djoudi Karim
