@@ -112,7 +112,7 @@ int play_EndGame(player_t *players, int playerNumber)
 }
 
 /// Fait jouer le joueur et applique les règles associée à la carte qu'il joue
-void gameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *csv)
+void play_GameCardRule(player_t *players, pile_t *package, int playerNumber, csv_t *csv)
 {
 	char buf[50];
 	char pickedColor;
@@ -207,7 +207,7 @@ int play_Play(player_t *players, pile_t *package, pile_t *deck, int playerNumber
 
 	// +2 ou/et +4 et le joueur possède +2/+4 donc il peut jouer
 	else if (playableCardCount && g_Compte >= 0)
-		gameCardRule(players, package, playerNumber, csv);
+		play_GameCardRule(players, package, playerNumber, csv);
 
 	// le joueur n'a pas de cartes à jouer, il doit piocher
 	else

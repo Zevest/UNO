@@ -52,7 +52,7 @@ card_t *card_Init(char num, char color)
 	return NULL;
 }
 
-/// Afficche une carte
+/// Affiche une carte
 void card_Display(card_t *c)
 {
 	switch (c->color)

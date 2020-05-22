@@ -24,7 +24,7 @@ void g_Reset(pile_t *pioche, player_t *players, int nb)
 }
 
 /// Affiche le tour et le noms du joueur
-void showStatus(csv_t *csv, player_t *players, int turn, int realTurn, int playerCount)
+void g_ShowStatus(csv_t *csv, player_t *players, int turn, int realTurn, int playerCount)
 {
 	system("clear -x");
 	printf(csv->data[1].message, realTurn);
@@ -34,7 +34,7 @@ void showStatus(csv_t *csv, player_t *players, int turn, int realTurn, int playe
 }
 
 /// Affiche le score des joueur et réinitialise la partie
-void endRound(int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, string_t names[], csv_t *csv, int score)
+void g_endRound(int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, string_t names[], csv_t *csv, int score)
 {
 	int i = 0;
 	system("clear -x");
@@ -46,6 +46,7 @@ void endRound(int playerCount, int turn, player_t *players, pile_t **package, pi
 	// Affichage du tableau des scores
 	printf(csv->data[15].message, NULL);
 	util_JumpLine(1);
+
 	for (i = 0; i < playerCount; ++i)
 	{
 		printf(csv->data[14].message, players[i].name, players[i].score);
@@ -116,16 +117,17 @@ int main(int argc, char **argv)
 	{
 		turn = play_GetTour();
 		realTurn++;
-		showStatus(csv, players, turn, realTurn, playerCount);
+		g_ShowStatus(csv, players, turn, realTurn, playerCount);
 		stop = play_Play(players, cardPackage, deck, play_GetTour() % playerCount, playerCount, csv);
 		if (stop)
 		{
-			endRound(playerCount, turn, players, &cardPackage, &deck, names, csv, stop);
+			g_endRound(playerCount, turn, players, &cardPackage, &deck, names, csv, stop);
 			realTurn = 0;
 		}
 	}
 	printf(csv->data[16].message, names[turn % playerCount]);
 	util_JumpLine(1);
+
 	// Liberation de la memoire
 	for (i = 0; i < playerCount; ++i)
 		pile_Delete(players[i].cards);
