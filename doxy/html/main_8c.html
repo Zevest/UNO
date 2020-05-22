@@ -89,14 +89,26 @@ $(function() {
 Graphe des dépendances par inclusion de main.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8c__incl.png" border="0" usemap="#_u_n_o_2src_2main_8c" alt=""/></div>
-<!-- MAP 0 -->
+<map name="_u_n_o_2src_2main_8c" id="_u_n_o_2src_2main_8c">
+<area shape="rect" title=" " alt="" coords="364,5,479,32"/>
+<area shape="rect" title=" " alt="" coords="293,379,355,405"/>
+<area shape="rect" title=" " alt="" coords="535,80,599,107"/>
+<area shape="rect" title=" " alt="" coords="623,80,691,107"/>
+<area shape="rect" title=" " alt="" coords="716,80,775,107"/>
+<area shape="rect" href="carte_8h.html" title=" " alt="" coords="263,304,326,331"/>
+<area shape="rect" href="pile_8h.html" title=" " alt="" coords="268,229,321,256"/>
+<area shape="rect" href="util_8h.html" title=" " alt="" coords="125,304,176,331"/>
+<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="290,155,358,181"/>
+<area shape="rect" href="play_8h.html" title=" " alt="" coords="198,80,255,107"/>
+<area shape="rect" href="csvloader_8h.html" title=" " alt="" coords="26,155,113,181"/>
+</map>
 </div>
 </div>
 <p><a href="main_8c_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a7e36dafcf2f87ac272be4ea25631216e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7e36dafcf2f87ac272be4ea25631216e">maxPoint</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memitem:a7e36dafcf2f87ac272be4ea25631216e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a7e36dafcf2f87ac272be4ea25631216e">maxPoint</a>&#160;&#160;&#160;250</td></tr>
 <tr class="separator:a7e36dafcf2f87ac272be4ea25631216e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -105,8 +117,10 @@ Fonctions</h2></td></tr>
 <tr class="memdesc:a81d31ed6231170984d8ef38b67c043ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs.  <a href="main_8c.html#a81d31ed6231170984d8ef38b67c043ba">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a81d31ed6231170984d8ef38b67c043ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6230ce7c182e5da41d41e1acdb637ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af6230ce7c182e5da41d41e1acdb637ac">showStatus</a> (<a class="el" href="structcsv__t.html">csv_t</a> *csv, player_t *players, int turn, int realTurn, int playerCount)</td></tr>
+<tr class="memdesc:af6230ce7c182e5da41d41e1acdb637ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le tour et le noms du joueur.  <a href="main_8c.html#af6230ce7c182e5da41d41e1acdb637ac">Plus de détails...</a><br /></td></tr>
 <tr class="separator:af6230ce7c182e5da41d41e1acdb637ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a462950d20de27e914698205d67255f19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a462950d20de27e914698205d67255f19">endRound</a> (int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, <a class="el" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> names[], <a class="el" href="structcsv__t.html">csv_t</a> *csv, int score)</td></tr>
+<tr class="memdesc:a462950d20de27e914698205d67255f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le score des joueur et réinitialise la partie.  <a href="main_8c.html#a462950d20de27e914698205d67255f19">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a462950d20de27e914698205d67255f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -119,7 +133,7 @@ Fonctions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define maxPoint&#160;&#160;&#160;50</td>
+          <td class="memname">#define maxPoint&#160;&#160;&#160;250</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -190,6 +204,8 @@ Fonctions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Affiche le score des joueur et réinitialise la partie. </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00037">37</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
@@ -306,6 +322,8 @@ Fonctions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Affiche le tour et le noms du joueur. </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="main_8c_source.html#l00027">27</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
 

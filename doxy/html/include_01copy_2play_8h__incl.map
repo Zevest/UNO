@@ -1,0 +1,9 @@
+<map id="include copy/play.h" name="include copy/play.h">
+<area shape="rect" id="node1" title=" " alt="" coords="11,5,145,32"/>
+<area shape="rect" id="node2" href="$include_01copy_2carte_8h.html" title=" " alt="" coords="11,229,73,256"/>
+<area shape="rect" id="node3" href="$include_01copy_2pile_8h.html" title=" " alt="" coords="19,155,73,181"/>
+<area shape="rect" id="node4" href="$include_01copy_2util_8h.html" title=" " alt="" coords="125,229,175,256"/>
+<area shape="rect" id="node6" href="$include_01copy_2joueur_8h.html" title=" " alt="" coords="44,80,112,107"/>
+<area shape="rect" id="node7" href="$include_01copy_2csvloader_8h.html" title=" " alt="" coords="188,155,275,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="119,304,181,331"/>
+</map>

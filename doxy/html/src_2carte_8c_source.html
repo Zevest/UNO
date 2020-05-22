@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de src/carte.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.4</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">carte.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="src_2carte_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;carte.h&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> *SYMBOL[] = {<span class="stringliteral">&quot;0&quot;</span>, <span class="stringliteral">&quot;1&quot;</span>, <span class="stringliteral">&quot;2&quot;</span>, <span class="stringliteral">&quot;3&quot;</span>, <span class="stringliteral">&quot;4&quot;</span>, <span class="stringliteral">&quot;5&quot;</span>, <span class="stringliteral">&quot;6&quot;</span>, <span class="stringliteral">&quot;7&quot;</span>, <span class="stringliteral">&quot;8&quot;</span>, <span class="stringliteral">&quot;9&quot;</span>, <span class="stringliteral">&quot;+2&quot;</span>, <span class="stringliteral">&quot;inverse&quot;</span>, <span class="stringliteral">&quot;passe&quot;</span>, <span class="stringliteral">&quot;joker&quot;</span>, <span class="stringliteral">&quot;+4&quot;</span>};</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> red() { printf(<span class="stringliteral">&quot;\033[0;31m&quot;</span>); }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> boldRed() { printf(<span class="stringliteral">&quot;\033[1;31m&quot;</span>); }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> green() { printf(<span class="stringliteral">&quot;\033[0;32m&quot;</span>); }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> boldGreen() { printf(<span class="stringliteral">&quot;\033[1;32m&quot;</span>); }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> blue() { printf(<span class="stringliteral">&quot;\033[0;34m&quot;</span>); }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> boldBlue() { printf(<span class="stringliteral">&quot;\033[1;34m&quot;</span>); }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> yellow() { printf(<span class="stringliteral">&quot;\033[0;33m&quot;</span>); }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> boldYellow() { printf(<span class="stringliteral">&quot;\033[1;33m&quot;</span>); }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> resetColor() { printf(<span class="stringliteral">&quot;\033[0m&quot;</span>); }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> bold() { printf(<span class="stringliteral">&quot;\033[1;0m&quot;</span>); }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="src_2carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">   39</a></span>&#160;card_t *<a class="code" href="src_2carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">card_Init</a>(<span class="keywordtype">char</span> num, <span class="keywordtype">char</span> color)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   <span class="keywordflow">if</span> (num &gt;= 0 &amp;&amp; num &lt; 15)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;   {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      card_t *c = malloc(<span class="keyword">sizeof</span>(card_t));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      c-&gt;num = num;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      <span class="keywordflow">if</span> (num &gt; 12)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         c-&gt;color = <span class="charliteral">&#39;N&#39;</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;         c-&gt;color = color;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      c-&gt;symbol = *(SYMBOL + num);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">return</span> c;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   <span class="keywordflow">return</span> NULL;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="src_2carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">   56</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="src_2carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">card_Display</a>(card_t *c)</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   <span class="keywordflow">switch</span> (c-&gt;color)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;   {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;   <span class="keywordflow">case</span> <span class="charliteral">&#39;R&#39;</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      boldRed();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   <span class="keywordflow">case</span> <span class="charliteral">&#39;V&#39;</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      boldGreen();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <span class="keywordflow">case</span> <span class="charliteral">&#39;B&#39;</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      boldBlue();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   <span class="keywordflow">case</span> <span class="charliteral">&#39;J&#39;</span>:</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      boldYellow();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;   <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      bold();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   printf(<span class="stringliteral">&quot;[%s %c]&quot;</span>, c-&gt;symbol, c-&gt;color);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;   resetColor();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="asrc_2carte_8c_html_a15d02ef85842a30c272b0f98a82f56b5"><div class="ttname"><a href="src_2carte_8c.html#a15d02ef85842a30c272b0f98a82f56b5">card_Init</a></div><div class="ttdeci">card_t * card_Init(char num, char color)</div><div class="ttdoc">Initialise une carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2carte_8c_source.html#l00039">carte.c:39</a></div></div>
+<div class="ttc" id="asrc_2carte_8c_html_af4d6d1cf5c816dc33c7e0fad86cae945"><div class="ttname"><a href="src_2carte_8c.html#af4d6d1cf5c816dc33c7e0fad86cae945">card_Display</a></div><div class="ttdeci">void card_Display(card_t *c)</div><div class="ttdoc">Affiche une carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2carte_8c_source.html#l00056">carte.c:56</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

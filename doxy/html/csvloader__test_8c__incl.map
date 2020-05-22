@@ -1,8 +1,8 @@
-<map id="UNO/test/csvloader_test.c" name="UNO/test/csvloader_test.c">
-<area shape="rect" id="node1" title=" " alt="" coords="86,5,220,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="90,244,152,271"/>
-<area shape="rect" id="node3" title=" " alt="" coords="26,95,96,121"/>
-<area shape="rect" id="node4" title=" " alt="" coords="120,95,186,121"/>
-<area shape="rect" id="node5" href="$csvloader_8h.html" title=" " alt="" coords="210,95,296,121"/>
-<area shape="rect" id="node6" href="$util_8h.html" title=" " alt="" coords="228,169,278,196"/>
+<map id="test/csvloader_test.c" name="test/csvloader_test.c">
+<area shape="rect" id="node1" title=" " alt="" coords="146,5,289,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,67,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="91,80,160,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="185,80,250,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="274,80,361,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="385,80,436,107"/>
 </map>

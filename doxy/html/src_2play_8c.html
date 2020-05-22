@@ -1,0 +1,511 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO: Référence du fichier C:/dev/C/RealProgramme/UNO/src/play.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.4</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier play.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;pile.h&quot;</code><br />
+<code>#include &quot;joueur.h&quot;</code><br />
+<code>#include &quot;carte.h&quot;</code><br />
+<code>#include &quot;csvloader.h&quot;</code><br />
+<code>#include &quot;play.h&quot;</code><br />
+<code>#include &quot;util.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de play.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="src_2play_8c__incl.png" border="0" usemap="#_c_1_2dev_2_c_2_real_programme_2_u_n_o_2src_2play_8c" alt=""/></div>
+<!-- MAP 0 -->
+</div>
+</div>
+<p><a href="src_2play_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a0240ac851181b84ac374872dc5434ee4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a0240ac851181b84ac374872dc5434ee4">N</a>&#160;&#160;&#160;13</td></tr>
+<tr class="separator:a0240ac851181b84ac374872dc5434ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:a288a4602876961ee27a52e6e39ab77b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a288a4602876961ee27a52e6e39ab77b8">play_Next</a> ()</td></tr>
+<tr class="memdesc:a288a4602876961ee27a52e6e39ab77b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Passe au tour suivant.  <a href="src_2play_8c.html#a288a4602876961ee27a52e6e39ab77b8">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a288a4602876961ee27a52e6e39ab77b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4e1d2370ab20cf2e17f21a8f0256d0f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">play_GetTour</a> ()</td></tr>
+<tr class="memdesc:ad4e1d2370ab20cf2e17f21a8f0256d0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Renvoie la numero du tour.  <a href="src_2play_8c.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ad4e1d2370ab20cf2e17f21a8f0256d0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8851aa20901a9dc8e9b90e1faa627b84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a8851aa20901a9dc8e9b90e1faa627b84">play_SetTour</a> (int n)</td></tr>
+<tr class="memdesc:a8851aa20901a9dc8e9b90e1faa627b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifie la valeur du tour.  <a href="src_2play_8c.html#a8851aa20901a9dc8e9b90e1faa627b84">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a8851aa20901a9dc8e9b90e1faa627b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e921d21507a7fa5bd6a20a3950e55fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a2e921d21507a7fa5bd6a20a3950e55fe">play_Inverse</a> ()</td></tr>
+<tr class="memdesc:a2e921d21507a7fa5bd6a20a3950e55fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change le sens du jeu.  <a href="src_2play_8c.html#a2e921d21507a7fa5bd6a20a3950e55fe">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a2e921d21507a7fa5bd6a20a3950e55fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30dda85a9ea5b90dc2e01160c4d046cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a30dda85a9ea5b90dc2e01160c4d046cc">play_IsCardPlayable</a> (card_t *testedCard, card_t *lastPlayedCard)</td></tr>
+<tr class="memdesc:a30dda85a9ea5b90dc2e01160c4d046cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la carte peut être jouée.  <a href="src_2play_8c.html#a30dda85a9ea5b90dc2e01160c4d046cc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a30dda85a9ea5b90dc2e01160c4d046cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dea939ac84c48eb3d73931e9bff7cbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="include_2util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a0dea939ac84c48eb3d73931e9bff7cbc">play_CanPlay</a> (pile_t *playerCards, card_t *lastPlayedCard)</td></tr>
+<tr class="memdesc:a0dea939ac84c48eb3d73931e9bff7cbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie qu'un joueur puisse jouer.  <a href="src_2play_8c.html#a0dea939ac84c48eb3d73931e9bff7cbc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a0dea939ac84c48eb3d73931e9bff7cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c81a68719ad36377358e318b182374d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a9c81a68719ad36377358e318b182374d">play_CountPoint</a> (player_t *players, int playerNumber)</td></tr>
+<tr class="memdesc:a9c81a68719ad36377358e318b182374d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de points d'un joueur.  <a href="src_2play_8c.html#a9c81a68719ad36377358e318b182374d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a9c81a68719ad36377358e318b182374d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f9e5a47c0c542ee8a09f32b3c04b0d9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a1f9e5a47c0c542ee8a09f32b3c04b0d9">play_EndGame</a> (player_t *players, int playerNumber)</td></tr>
+<tr class="memdesc:a1f9e5a47c0c542ee8a09f32b3c04b0d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additionne les points des perdants pour les attribuer au gagnant.  <a href="src_2play_8c.html#a1f9e5a47c0c542ee8a09f32b3c04b0d9">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1f9e5a47c0c542ee8a09f32b3c04b0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adaaad251a1daff431c95d0b507b9f7b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#adaaad251a1daff431c95d0b507b9f7b7">gameCardRule</a> (player_t *players, pile_t *package, int playerNumber, <a class="el" href="structcsv__t.html">csv_t</a> *csv)</td></tr>
+<tr class="memdesc:adaaad251a1daff431c95d0b507b9f7b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fait jouer le joueur et applique les règles associée à la carte qu'il joue.  <a href="src_2play_8c.html#adaaad251a1daff431c95d0b507b9f7b7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adaaad251a1daff431c95d0b507b9f7b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a105b4b6d57c61cae70ae19509e3c307b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2play_8c.html#a105b4b6d57c61cae70ae19509e3c307b">play_Play</a> (player_t *players, pile_t *package, pile_t *deck, int playerNumber, int playerCount, <a class="el" href="structcsv__t.html">csv_t</a> *csv)</td></tr>
+<tr class="memdesc:a105b4b6d57c61cae70ae19509e3c307b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction Principale du jeu.  <a href="src_2play_8c.html#a105b4b6d57c61cae70ae19509e3c307b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a105b4b6d57c61cae70ae19509e3c307b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a0240ac851181b84ac374872dc5434ee4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0240ac851181b84ac374872dc5434ee4">&#9670;&nbsp;</a></span>N</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define N&#160;&#160;&#160;13</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00013">13</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="adaaad251a1daff431c95d0b507b9f7b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adaaad251a1daff431c95d0b507b9f7b7">&#9670;&nbsp;</a></span>gameCardRule()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void gameCardRule </td>
+          <td>(</td>
+          <td class="paramtype">player_t *&#160;</td>
+          <td class="paramname"><em>players</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pile_t *&#160;</td>
+          <td class="paramname"><em>package</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>playerNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcsv__t.html">csv_t</a> *&#160;</td>
+          <td class="paramname"><em>csv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fait jouer le joueur et applique les règles associée à la carte qu'il joue. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00115">115</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a0dea939ac84c48eb3d73931e9bff7cbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dea939ac84c48eb3d73931e9bff7cbc">&#9670;&nbsp;</a></span>play_CanPlay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> play_CanPlay </td>
+          <td>(</td>
+          <td class="paramtype">pile_t *&#160;</td>
+          <td class="paramname"><em>main</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">card_t *&#160;</td>
+          <td class="paramname"><em>carte</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie qu'un joueur puisse jouer. </p>
+<p>Vérifie si un joueur possède une carte jouable. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">main</td><td>pile des cartes d'un joueur. </td></tr>
+    <tr><td class="paramname">carte_b</td><td>dernière carte posée </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si le joueur peu jouer, 0 sinon. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00057">57</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a9c81a68719ad36377358e318b182374d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c81a68719ad36377358e318b182374d">&#9670;&nbsp;</a></span>play_CountPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int play_CountPoint </td>
+          <td>(</td>
+          <td class="paramtype">player_t *&#160;</td>
+          <td class="paramname"><em>players</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>playerNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compte le nombre de points d'un joueur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00069">69</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a1f9e5a47c0c542ee8a09f32b3c04b0d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f9e5a47c0c542ee8a09f32b3c04b0d9">&#9670;&nbsp;</a></span>play_EndGame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int play_EndGame </td>
+          <td>(</td>
+          <td class="paramtype">player_t *&#160;</td>
+          <td class="paramname"><em>players</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>playerNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Additionne les points des perdants pour les attribuer au gagnant. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00095">95</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="ad4e1d2370ab20cf2e17f21a8f0256d0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4e1d2370ab20cf2e17f21a8f0256d0f">&#9670;&nbsp;</a></span>play_GetTour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int play_GetTour </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Renvoie la numero du tour. </p>
+<p>Recupere la variable global du numero tour. </p><dl class="section return"><dt>Renvoie</dt><dd>numero du tour </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00025">25</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a2e921d21507a7fa5bd6a20a3950e55fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e921d21507a7fa5bd6a20a3950e55fe">&#9670;&nbsp;</a></span>play_Inverse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_Inverse </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change le sens du jeu. </p>
+<p>Inverse la valeur de la variable global d'incrémentation du tour. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00036">36</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a30dda85a9ea5b90dc2e01160c4d046cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30dda85a9ea5b90dc2e01160c4d046cc">&#9670;&nbsp;</a></span>play_IsCardPlayable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="include_2util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> play_IsCardPlayable </td>
+          <td>(</td>
+          <td class="paramtype">card_t *&#160;</td>
+          <td class="paramname"><em>carte_A</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">card_t *&#160;</td>
+          <td class="paramname"><em>carte_B</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si la carte peut être jouée. </p>
+<p>Vérifie si la carte peut être jouée. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">carte_A</td><td>carte a comparer </td></tr>
+    <tr><td class="paramname">carte_b</td><td>dernière carte poser </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si la carte peut être jouer, 0 sinon. </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00043">43</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a288a4602876961ee27a52e6e39ab77b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a288a4602876961ee27a52e6e39ab77b8">&#9670;&nbsp;</a></span>play_Next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_Next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Passe au tour suivant. </p>
+<p>Incrément la variable global comptant le numero du tour. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00019">19</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a105b4b6d57c61cae70ae19509e3c307b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a105b4b6d57c61cae70ae19509e3c307b">&#9670;&nbsp;</a></span>play_Play()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int play_Play </td>
+          <td>(</td>
+          <td class="paramtype">player_t *&#160;</td>
+          <td class="paramname"><em>joueurs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pile_t *&#160;</td>
+          <td class="paramname"><em>paquets</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pile_t *&#160;</td>
+          <td class="paramname"><em>pioches</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>numt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcsv__t.html">csv_t</a> *&#160;</td>
+          <td class="paramname"><em>csv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction Principale du jeu. </p>
+<p>Fonction principlale du jeu Fait jouer un joueur et effectue tous les tests. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">joueurs</td><td>vecteur contenent les joueurs. </td></tr>
+    <tr><td class="paramname">paquets</td><td>pile sur laquelle les joueurs posent leurs cartes. </td></tr>
+    <tr><td class="paramname">pioche</td><td>pile : la pioche </td></tr>
+    <tr><td class="paramname">numt</td><td>indice du joueur </td></tr>
+    <tr><td class="paramname">nbj</td><td>nombre de joueur </td></tr>
+    <tr><td class="paramname">csv</td><td>ensemble des messages à afficher </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le nombre de point remporté ou 0 si la manche n'est pas terminée </dd></dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00168">168</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+<a id="a8851aa20901a9dc8e9b90e1faa627b84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8851aa20901a9dc8e9b90e1faa627b84">&#9670;&nbsp;</a></span>play_SetTour()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void play_SetTour </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modifie la valeur du tour. </p>
+<p>Definie le numero du tour. </p><dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">n</td><td>nouvelle valeur du numero du tour. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2play_8c_source.html#l00031">31</a> du fichier <a class="el" href="src_2play_8c_source.html">play.c</a>.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

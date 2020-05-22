@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO:  Fichier source de UNO/test/play_test.c</title>
+<title>UNO:  Fichier source de test/play_test.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_616bed2a94f3c5f4a792a22f1e0e18ee.html">test</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,26 +75,26 @@ $(function() {
 <a href="play__test_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="carte_8h.html">carte.h</a>&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="play_8h.html">play.h</a>&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pile_8h.html">pile.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;carte.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;play.h&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;pile.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="play__test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">    8</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="play__test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   <span class="comment">// Test de la fonction play_IsCardPlayable avec divers configuration</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   <span class="keywordtype">int</span> i;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   pile_t *deck = <a class="code" href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   card_t *lastCard = <a class="code" href="carte_8h.html#abdfc50891059b8a6395de8c91d29acea">card_Init</a>(0, <span class="charliteral">&#39;R&#39;</span>);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <a class="code" href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a>(deck);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   pile_t *deck = <a class="code" href="include_2pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   card_t *lastCard = <a class="code" href="include_2carte_8h.html#abdfc50891059b8a6395de8c91d29acea">card_Init</a>(0, <span class="charliteral">&#39;R&#39;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <a class="code" href="include_2pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a>(deck);</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   printf(<span class="stringliteral">&quot;\nTest: jouabilité des cartes (play.c)\n&quot;</span>);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;   printf(<span class="stringliteral">&quot;Test jouabilité d&#39;une carte sur une autre identique:\n&quot;</span>);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; deck-&gt;_TOP; ++i)</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      printf(<span class="stringliteral">&quot;playing ::: &quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      printf(<span class="stringliteral">&quot;   on   &quot;</span>);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      assert(<a class="code" href="play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], deck-&gt;_DATA[i]) == 1);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      assert(<a class="code" href="include_2play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], deck-&gt;_DATA[i]) == 1);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      printf(<span class="stringliteral">&quot; :::: Succès\n&quot;</span>);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;   }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;   printf(<span class="stringliteral">&quot;Succès du Test 1\n&quot;</span>);</div>
@@ -106,10 +106,10 @@ $(function() {
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      lastCard-&gt;color = deck-&gt;_DATA[i]-&gt;color;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      printf(<span class="stringliteral">&quot;playing ::: &quot;</span>);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      printf(<span class="stringliteral">&quot;   on   &quot;</span>);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(lastCard);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      assert(<a class="code" href="play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], lastCard) == 1);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(lastCard);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      assert(<a class="code" href="include_2play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], lastCard) == 1);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      printf(<span class="stringliteral">&quot; :::: Succès\n&quot;</span>);</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   }</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;   printf(<span class="stringliteral">&quot;Succès du Test 2\n&quot;</span>);</div>
@@ -121,10 +121,10 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   {</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      lastCard-&gt;num = deck-&gt;_DATA[i]-&gt;num;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      printf(<span class="stringliteral">&quot;playing ::: &quot;</span>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      printf(<span class="stringliteral">&quot;   on   &quot;</span>);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(lastCard);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      assert(<a class="code" href="play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], lastCard) == 1);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(lastCard);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      assert(<a class="code" href="include_2play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], lastCard) == 1);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      printf(<span class="stringliteral">&quot; :::: Succès\n&quot;</span>);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   printf(<span class="stringliteral">&quot;Succès du Test 3\n&quot;</span>);</div>
@@ -139,30 +139,27 @@ $(function() {
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;         printf(<span class="stringliteral">&quot;playing ::: &quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;         <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;         <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(deck-&gt;_DATA[i]);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;         printf(<span class="stringliteral">&quot;   on   &quot;</span>);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         <a class="code" href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(lastCard);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;         assert(<a class="code" href="play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], lastCard) == 1);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;         <a class="code" href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a>(lastCard);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;         assert(<a class="code" href="include_2play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a>(deck-&gt;_DATA[i], lastCard) == 1);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;         printf(<span class="stringliteral">&quot; :::: Succès\n&quot;</span>);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;   printf(<span class="stringliteral">&quot;Succès du Test 4\n&quot;</span>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <a class="code" href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a>(deck);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;   <a class="code" href="include_2pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a>(deck);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   free(lastCard);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="apile_8h_html_a5c94337ba816acd0b0ecffcc952c25a6"><div class="ttname"><a href="pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *p)</div><div class="ttdoc">Initialise le paquet.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00128">pile.c:128</a></div></div>
-<div class="ttc" id="apile_8h_html"><div class="ttname"><a href="pile_8h.html">pile.h</a></div></div>
-<div class="ttc" id="acarte_8h_html_abdfc50891059b8a6395de8c91d29acea"><div class="ttname"><a href="carte_8h.html#abdfc50891059b8a6395de8c91d29acea">card_Init</a></div><div class="ttdeci">card_t * card_Init(char num, char couleur)</div><div class="ttdoc">Initialise une carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00039">carte.c:39</a></div></div>
-<div class="ttc" id="acarte_8h_html"><div class="ttname"><a href="carte_8h.html">carte.h</a></div></div>
-<div class="ttc" id="apile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00009">pile.c:9</a></div></div>
-<div class="ttc" id="aplay_8h_html"><div class="ttname"><a href="play_8h.html">play.h</a></div></div>
-<div class="ttc" id="acarte_8h_html_afb98953fb54b5fcb5e334f1adcfdedd3"><div class="ttname"><a href="carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a></div><div class="ttdeci">void card_Display(card_t *carte)</div><div class="ttdoc">Afficche une carte.</div><div class="ttdef"><b>Definition:</b> <a href="carte_8c_source.html#l00056">carte.c:56</a></div></div>
-<div class="ttc" id="aplay_8h_html_a98ba38ee255621c22f92d9c41c719e0b"><div class="ttname"><a href="play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a></div><div class="ttdeci">bool play_IsCardPlayable(card_t *carte_A, card_t *carte_B)</div><div class="ttdoc">Vérifie si la carte peut être jouée.</div><div class="ttdef"><b>Definition:</b> <a href="play_8c_source.html#l00043">play.c:43</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="include_2pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00009">pile.c:9</a></div></div>
+<div class="ttc" id="ainclude_2play_8h_html_a98ba38ee255621c22f92d9c41c719e0b"><div class="ttname"><a href="include_2play_8h.html#a98ba38ee255621c22f92d9c41c719e0b">play_IsCardPlayable</a></div><div class="ttdeci">bool play_IsCardPlayable(card_t *carte_A, card_t *carte_B)</div><div class="ttdoc">Vérifie si la carte peut être jouée.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00043">play.c:43</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_a5a460ab6e214f8edafb9932f9f6e4130"><div class="ttname"><a href="include_2pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a></div><div class="ttdeci">void pile_Delete(pile_t *pile)</div><div class="ttdoc">Libère la mémoire.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00157">pile.c:157</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_a5c94337ba816acd0b0ecffcc952c25a6"><div class="ttname"><a href="include_2pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *p)</div><div class="ttdoc">Initialise le paquet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00128">pile.c:128</a></div></div>
+<div class="ttc" id="ainclude_2carte_8h_html_afb98953fb54b5fcb5e334f1adcfdedd3"><div class="ttname"><a href="include_2carte_8h.html#afb98953fb54b5fcb5e334f1adcfdedd3">card_Display</a></div><div class="ttdeci">void card_Display(card_t *carte)</div><div class="ttdoc">Affiche une carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2carte_8c_source.html#l00056">carte.c:56</a></div></div>
 <div class="ttc" id="aplay__test_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="play__test_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="play__test_8c_source.html#l00008">play_test.c:8</a></div></div>
-<div class="ttc" id="apile_8h_html_a5a460ab6e214f8edafb9932f9f6e4130"><div class="ttname"><a href="pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a></div><div class="ttdeci">void pile_Delete(pile_t *pile)</div><div class="ttdoc">Libère la mémoire.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00157">pile.c:157</a></div></div>
+<div class="ttc" id="ainclude_2carte_8h_html_abdfc50891059b8a6395de8c91d29acea"><div class="ttname"><a href="include_2carte_8h.html#abdfc50891059b8a6395de8c91d29acea">card_Init</a></div><div class="ttdeci">card_t * card_Init(char num, char couleur)</div><div class="ttdoc">Initialise une carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2carte_8c_source.html#l00039">carte.c:39</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

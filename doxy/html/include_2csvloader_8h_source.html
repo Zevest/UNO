@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de include/csvloader.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.4</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">csvloader.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="include_2csvloader_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __CSVLOADER_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __CSVLOADER_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define __CSV_BUFFER_SIZE__ 256</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="include_2csvloader_8h.html#a602f7bfcf05dc7274e17a7aaae300df7">    5</a></span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_01copy_2util_8h.html">util.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structdata__t.html">   11</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>data</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structdata__t.html#a750b5d744c39a06bfb13e6eb010e35d0">   13</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="structdata__t.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">   14</a></span>&#160;   <span class="keywordtype">char</span> message[<a class="code" href="include_2csvloader_8h.html#a602f7bfcf05dc7274e17a7aaae300df7">__CSV_BUFFER_SIZE__</a>];</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;} <a class="code" href="structdata__t.html">data_t</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structcsv__t.html">   21</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>csv</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structcsv__t.html#a9f59b34b1f25fe00023291b678246bcc">   23</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="structcsv__t.html#a9f59b34b1f25fe00023291b678246bcc">length</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">   24</a></span>&#160;   <a class="code" href="structdata__t.html">data_t</a> *<a class="code" href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">data</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;} <a class="code" href="structcsv__t.html">csv_t</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="include_2csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939">   27</a></span>&#160;<span class="keyword">typedef</span> void (*<a class="code" href="include_2csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939">dataPrinter</a>)(<a class="code" href="structdata__t.html">data_t</a> *);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<a class="code" href="structcsv__t.html">csv_t</a> *<a class="code" href="include_2csvloader_8h.html#adf4d5f1df4445bf80f83cb3b52354365">csv_ParseCSV</a>(<a class="code" href="include_2util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> filename, <a class="code" href="structcsv__t.html">csv_t</a> *input);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<a class="code" href="structcsv__t.html">csv_t</a> *<a class="code" href="include_2csvloader_8h.html#ae849754774ea98752b166c6dca917f4f">csv_InitCSV</a>(FILE *f);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keywordtype">void</span> <a class="code" href="include_2csvloader_8h.html#a267fd7e70ed4226bbd76684d8988cb33">csv_DeleteCSV</a>(<a class="code" href="structcsv__t.html">csv_t</a> *csv);</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="include_2csvloader_8h.html#a8fa03da72c76c5472f15853a63da4d6f">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="include_2csvloader_8h.html#a8fa03da72c76c5472f15853a63da4d6f">csv_DeleteData</a>(<a class="code" href="structdata__t.html">data_t</a> *data);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keywordtype">void</span> <a class="code" href="include_2csvloader_8h.html#a56a66168ef23b4287fae2c9d4171d5f8">csv_PrintData</a>(<a class="code" href="structdata__t.html">data_t</a> *d);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="include_2csvloader_8h.html#aa1038d4abb0aa17d0875d9177d4a734b">csv_PrintCSV</a>(<a class="code" href="structcsv__t.html">csv_t</a> *csv, <a class="code" href="include_2csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939">dataPrinter</a> printer);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif // __CSVLOADER_H__</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructcsv__t_html_a104d0dc6639ddf356b87c088ef30f937"><div class="ttname"><a href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">csv_t::data</a></div><div class="ttdeci">data_t * data</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00024">csvloader.h:24</a></div></div>
+<div class="ttc" id="ainclude_2util_8h_html_ab0dcbec9b4b3c60b939b1095f93cb1b9"><div class="ttname"><a href="include_2util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a></div><div class="ttdeci">char * string_t</div><div class="ttdef"><b>Definition:</b> <a href="include_2util_8h_source.html#l00007">util.h:7</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_aa1038d4abb0aa17d0875d9177d4a734b"><div class="ttname"><a href="include_2csvloader_8h.html#aa1038d4abb0aa17d0875d9177d4a734b">csv_PrintCSV</a></div><div class="ttdeci">void csv_PrintCSV(csv_t *csv, dataPrinter printer)</div><div class="ttdoc">Affiche les données stockées dans l'objet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00081">csvloader.c:81</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_adf4d5f1df4445bf80f83cb3b52354365"><div class="ttname"><a href="include_2csvloader_8h.html#adf4d5f1df4445bf80f83cb3b52354365">csv_ParseCSV</a></div><div class="ttdeci">csv_t * csv_ParseCSV(string_t filename, csv_t *input)</div><div class="ttdoc">Sépare les données du fichier et les stocke dans un objet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00039">csvloader.c:39</a></div></div>
+<div class="ttc" id="ainclude_01copy_2util_8h_html"><div class="ttname"><a href="include_01copy_2util_8h.html">util.h</a></div></div>
+<div class="ttc" id="astructdata__t_html_a750b5d744c39a06bfb13e6eb010e35d0"><div class="ttname"><a href="structdata__t.html#a750b5d744c39a06bfb13e6eb010e35d0">data_t::index</a></div><div class="ttdeci">int index</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00013">csvloader.h:13</a></div></div>
+<div class="ttc" id="astructdata__t_html"><div class="ttname"><a href="structdata__t.html">data_t</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00011">csvloader.h:12</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_a8fa03da72c76c5472f15853a63da4d6f"><div class="ttname"><a href="include_2csvloader_8h.html#a8fa03da72c76c5472f15853a63da4d6f">csv_DeleteData</a></div><div class="ttdeci">void csv_DeleteData(data_t *data)</div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_a5b5162b52ba16f011cf010ccf6163939"><div class="ttname"><a href="include_2csvloader_8h.html#a5b5162b52ba16f011cf010ccf6163939">dataPrinter</a></div><div class="ttdeci">void(* dataPrinter)(data_t *)</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00027">csvloader.h:27</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_a56a66168ef23b4287fae2c9d4171d5f8"><div class="ttname"><a href="include_2csvloader_8h.html#a56a66168ef23b4287fae2c9d4171d5f8">csv_PrintData</a></div><div class="ttdeci">void csv_PrintData(data_t *d)</div><div class="ttdoc">Affiche le contenu d'une donnée (ligne d'un fichier csv)</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00072">csvloader.c:72</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_a602f7bfcf05dc7274e17a7aaae300df7"><div class="ttname"><a href="include_2csvloader_8h.html#a602f7bfcf05dc7274e17a7aaae300df7">__CSV_BUFFER_SIZE__</a></div><div class="ttdeci">#define __CSV_BUFFER_SIZE__</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00005">csvloader.h:4</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_ae849754774ea98752b166c6dca917f4f"><div class="ttname"><a href="include_2csvloader_8h.html#ae849754774ea98752b166c6dca917f4f">csv_InitCSV</a></div><div class="ttdeci">csv_t * csv_InitCSV(FILE *f)</div><div class="ttdoc">Charge un fichier csv.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00010">csvloader.c:10</a></div></div>
+<div class="ttc" id="astructcsv__t_html"><div class="ttname"><a href="structcsv__t.html">csv_t</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00021">csvloader.h:22</a></div></div>
+<div class="ttc" id="astructcsv__t_html_a9f59b34b1f25fe00023291b678246bcc"><div class="ttname"><a href="structcsv__t.html#a9f59b34b1f25fe00023291b678246bcc">csv_t::length</a></div><div class="ttdeci">int length</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00023">csvloader.h:23</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_a267fd7e70ed4226bbd76684d8988cb33"><div class="ttname"><a href="include_2csvloader_8h.html#a267fd7e70ed4226bbd76684d8988cb33">csv_DeleteCSV</a></div><div class="ttdeci">void csv_DeleteCSV(csv_t *csv)</div><div class="ttdoc">Libère la memoire.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00027">csvloader.c:27</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

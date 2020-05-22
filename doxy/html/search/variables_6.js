@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['name_166',['name',['../structplayer.html#a5ac083a645d964373f022d03df4849c8',1,'player']]],
-  ['num_167',['num',['../structcard.html#a9edb1673a8f057dce79fd491a9c98c1d',1,'card']]]
+  ['name_172',['name',['../structplayer.html#ad547fb8186b526cb1b588daad4334fbe',1,'player']]],
+  ['num_173',['num',['../structcard.html#a9edb1673a8f057dce79fd491a9c98c1d',1,'card']]]
 ];

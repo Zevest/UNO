@@ -1,0 +1,6 @@
+<map id="include/carte.h" name="include/carte.h">
+<area shape="rect" id="node1" title=" " alt="" coords="110,5,217,32"/>
+<area shape="rect" id="node2" href="$include_2pile_8h.html" title=" " alt="" coords="71,80,170,107"/>
+<area shape="rect" id="node4" href="$include_2play_8h.html" title=" " alt="" coords="105,229,208,256"/>
+<area shape="rect" id="node3" href="$include_2joueur_8h.html" title=" " alt="" coords="5,155,119,181"/>
+</map>

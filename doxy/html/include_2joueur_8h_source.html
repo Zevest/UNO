@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de include/joueur.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.4</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">joueur.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="include_2joueur_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="include_01copy_2pile_8h.html">pile.h</a>&quot;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef __JOUEUR_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define __JOUEUR_H__</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="include_2joueur_8h.html#a489920547e13e7589118e7584f6c125d">    4</a></span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structplayer.html">    9</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structplayer.html">player</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="structplayer.html#aef160b7437d94056f1dc59646cd5b87d">   11</a></span>&#160;   <span class="keywordtype">int</span> <a class="code" href="structplayer.html#aef160b7437d94056f1dc59646cd5b87d">score</a>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structplayer.html#ad547fb8186b526cb1b588daad4334fbe">   12</a></span>&#160;   <span class="keywordtype">char</span> *<a class="code" href="structplayer.html#ad547fb8186b526cb1b588daad4334fbe">name</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="structplayer.html#abafc999b38567faf1c4a9f56513556cf">   13</a></span>&#160;   pile_t *<a class="code" href="structplayer.html#abafc999b38567faf1c4a9f56513556cf">cards</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <span class="comment">//int gagner;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structplayer.html">player</a> player_t;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="include_2joueur_8h.html#a5cb54243700f2317069b4771bbc65670">   25</a></span>&#160;player_t *<a class="code" href="include_2joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a>(<span class="keywordtype">int</span> nb, <span class="keywordtype">char</span> **noms, pile_t *paquet);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="astructplayer_html"><div class="ttname"><a href="structplayer.html">player</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2joueur_8h_source.html#l00009">joueur.h:10</a></div></div>
+<div class="ttc" id="ainclude_01copy_2pile_8h_html"><div class="ttname"><a href="include_01copy_2pile_8h.html">pile.h</a></div></div>
+<div class="ttc" id="ainclude_2joueur_8h_html_a5cb54243700f2317069b4771bbc65670"><div class="ttname"><a href="include_2joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a></div><div class="ttdeci">player_t * player_Init(int nb, char **noms, pile_t *paquet)</div></div>
+<div class="ttc" id="astructplayer_html_abafc999b38567faf1c4a9f56513556cf"><div class="ttname"><a href="structplayer.html#abafc999b38567faf1c4a9f56513556cf">player::cards</a></div><div class="ttdeci">pile_t * cards</div><div class="ttdef"><b>Definition:</b> <a href="include_2joueur_8h_source.html#l00013">joueur.h:13</a></div></div>
+<div class="ttc" id="astructplayer_html_ad547fb8186b526cb1b588daad4334fbe"><div class="ttname"><a href="structplayer.html#ad547fb8186b526cb1b588daad4334fbe">player::name</a></div><div class="ttdeci">char * name</div><div class="ttdef"><b>Definition:</b> <a href="include_2joueur_8h_source.html#l00012">joueur.h:12</a></div></div>
+<div class="ttc" id="astructplayer_html_aef160b7437d94056f1dc59646cd5b87d"><div class="ttname"><a href="structplayer.html#aef160b7437d94056f1dc59646cd5b87d">player::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> <a href="include_2joueur_8h_source.html#l00011">joueur.h:11</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

@@ -70,6 +70,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#enum-members">Énumérations</a> &#124;
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier util.h</div>  </div>
@@ -89,7 +90,22 @@ Graphe des dépendances par inclusion de util.h:</div>
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
 <div class="dyncontent">
 <div class="center"><img src="util_8h__dep__incl.png" border="0" usemap="#_u_n_o_2include_2util_8hdep" alt=""/></div>
-<!-- MAP 0 -->
+<map name="_u_n_o_2include_2util_8hdep" id="_u_n_o_2include_2util_8hdep">
+<area shape="rect" title=" " alt="" coords="508,5,635,32"/>
+<area shape="rect" href="csvloader_8h.html" title=" " alt="" coords="203,80,367,107"/>
+<area shape="rect" href="play_8h.html" title=" " alt="" coords="488,244,623,271"/>
+<area shape="rect" href="main_8c.html" title=" " alt="" coords="342,319,457,345"/>
+<area shape="rect" href="play_8c.html" title=" " alt="" coords="656,319,767,345"/>
+<area shape="rect" href="csvloader_8c.html" title=" " alt="" coords="30,162,171,189"/>
+<area shape="rect" href="csvloader__test_8c.html" title=" " alt="" coords="348,155,483,196"/>
+<area shape="rect" href="pile_8h.html" title=" " alt="" coords="778,80,909,107"/>
+<area shape="rect" href="pile_8c.html" title=" " alt="" coords="1147,162,1254,189"/>
+<area shape="rect" href="util_8c.html" title=" " alt="" coords="1329,80,1433,107"/>
+<area shape="rect" href="play__test_8c.html" title=" " alt="" coords="914,319,1058,345"/>
+<area shape="rect" href="joueur_8h.html" title=" " alt="" coords="660,162,805,189"/>
+<area shape="rect" href="joueur_8c.html" title=" " alt="" coords="749,244,871,271"/>
+<area shape="rect" href="pile__test_8c.html" title=" " alt="" coords="932,162,1072,189"/>
+</map>
 </div>
 </div>
 <p><a href="util_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -101,13 +117,20 @@ Définitions de type</h2></td></tr>
 <tr class="memitem:a2bddc030c62f01f788f6456e5e2ed8fd"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a2bddc030c62f01f788f6456e5e2ed8fd">stringValidator_t</a>) (<a class="el" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a>)</td></tr>
 <tr class="separator:a2bddc030c62f01f788f6456e5e2ed8fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr class="memitem:af6a258d8f3ee5206d682d799316314b1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a> { <a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c">false</a>, 
+<a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b">true</a>
+ }</td></tr>
+<tr class="separator:af6a258d8f3ee5206d682d799316314b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
 <tr class="memitem:aa3c593a68621fa345c3393f98460a09b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#aa3c593a68621fa345c3393f98460a09b">util_CountLine</a> (FILE *f)</td></tr>
 <tr class="memdesc:aa3c593a68621fa345c3393f98460a09b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compte le nombre de ligne dans un ficher.  <a href="util_8h.html#aa3c593a68621fa345c3393f98460a09b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa3c593a68621fa345c3393f98460a09b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2482ed161b2cb87100d589824d4645c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a> (int n)</td></tr>
-<tr class="memdesc:a2482ed161b2cb87100d589824d4645c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche n fois le caractere de fin de ligne.  <a href="util_8h.html#a2482ed161b2cb87100d589824d4645c7">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a2482ed161b2cb87100d589824d4645c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche n fois le caractère de fin de ligne.  <a href="util_8h.html#a2482ed161b2cb87100d589824d4645c7">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a2482ed161b2cb87100d589824d4645c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba6d4e453190abf5d9d13acf103de319"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#aba6d4e453190abf5d9d13acf103de319">util_IsNumeric</a> (const <a class="el" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> buffer)</td></tr>
 <tr class="memdesc:aba6d4e453190abf5d9d13acf103de319"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si une chaîne de caratère est un nombre.  <a href="util_8h.html#aba6d4e453190abf5d9d13acf103de319">Plus de détails...</a><br /></td></tr>
@@ -119,9 +142,10 @@ Fonctions</h2></td></tr>
 <tr class="memdesc:a68ce209402506a4aa64834d22de9abfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vide le buffer stdin.  <a href="util_8h.html#a68ce209402506a4aa64834d22de9abfc">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a68ce209402506a4aa64834d22de9abfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44130300b0a342e1d46198cf90b6d9ab"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a> (int a, int b)</td></tr>
-<tr class="memdesc:a44130300b0a342e1d46198cf90b6d9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retroune le max de deux valeurs a et b.  <a href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">Plus de détails...</a><br /></td></tr>
+<tr class="memdesc:a44130300b0a342e1d46198cf90b6d9ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retroune la valeur maximum entre deux valeurs a et b.  <a href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a44130300b0a342e1d46198cf90b6d9ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e47d74627582d4d43f46dcd4ca68fbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="util_8h.html#a1e47d74627582d4d43f46dcd4ca68fbb">util_Ask</a> (const <a class="el" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> message, <a class="el" href="util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> buffer, <a class="el" href="util_8h.html#a2bddc030c62f01f788f6456e5e2ed8fd">stringValidator_t</a> validator)</td></tr>
+<tr class="memdesc:a1e47d74627582d4d43f46dcd4ca68fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche un message et attend la saisie d'une donnée conforme à une condition.  <a href="util_8h.html#a1e47d74627582d4d43f46dcd4ca68fbb">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1e47d74627582d4d43f46dcd4ca68fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des définitions de type</h2>
@@ -158,6 +182,27 @@ Fonctions</h2></td></tr>
 
 </div>
 </div>
+<h2 class="groupheader">Documentation du type de l'énumération</h2>
+<a id="af6a258d8f3ee5206d682d799316314b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6a258d8f3ee5206d682d799316314b1">&#9670;&nbsp;</a></span>bool</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="util_8h.html#af6a258d8f3ee5206d682d799316314b1">bool</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Valeurs énumérées</th></tr><tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1ae9de385ef6fe9bf3360d1038396b884c"></a>false&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af6a258d8f3ee5206d682d799316314b1a08f175a5505a10b9ed657defeb050e4b"></a>true&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Définition à la ligne <a class="el" href="util_8h_source.html#l00011">11</a> du fichier <a class="el" href="util_8h_source.html">util.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Documentation des fonctions</h2>
 <a id="a1e47d74627582d4d43f46dcd4ca68fbb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e47d74627582d4d43f46dcd4ca68fbb">&#9670;&nbsp;</a></span>util_Ask()</h2>
@@ -190,6 +235,8 @@ Fonctions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Affiche un message et attend la saisie d'une donnée conforme à une condition. </p>
 <p>Affiche un message avant de récuperer la saisie de l'utilisateur tant quelle ne correspoind pas a la valeur demandé </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">message</td><td>le message afficher avant la saisie de donnée </td></tr>
@@ -199,7 +246,7 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00068">68</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00069">69</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
 
 </div>
 </div>
@@ -327,7 +374,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Affiche n fois le caractere de fin de ligne. </p>
+<p>Affiche n fois le caractère de fin de ligne. </p>
 <p>Permet d'afficher n fois le caratère fin de ligne. </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">n</td><td>nombre de répétition </td></tr>
@@ -365,7 +412,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retroune le max de deux valeurs a et b. </p>
+<p>Retroune la valeur maximum entre deux valeurs a et b. </p>
 <p>Cherche le plus grand entier entre les deux valeurs fournies </p><dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
     <tr><td class="paramname">a</td><td>un entier </td></tr>
