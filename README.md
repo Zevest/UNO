@@ -1,6 +1,8 @@
 
 # UNO (Jeu)
+
 ![C/C++ CI](https://github.com/Zevest/UNO/workflows/C/C++%20CI/badge.svg)
+
 ### Ce projet est réalisé par :
 
   * Ait el djoudi Karim
@@ -23,7 +25,7 @@
   * La carte « *Joker* » vaut __50__ points.
   * La carte « *+4* » vaut __50__ points.
 
-  __Pour gagner, il vous faudra marquer 500 points__
+  __Pour gagner, il vous faudra marquer 250 points__
 
 ### Combien de cartes dans le Uno ?
 
