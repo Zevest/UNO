@@ -1,5 +1,5 @@
-<map id="UNO/src/pile.c" name="UNO/src/pile.c">
-<area shape="rect" id="node1" title=" " alt="" coords="74,5,181,32"/>
+<map id="src/pile.c" name="src/pile.c">
+<area shape="rect" id="node1" title=" " alt="" coords="90,5,165,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="67,229,129,256"/>
 <area shape="rect" id="node3" title=" " alt="" coords="26,80,90,107"/>
 <area shape="rect" id="node4" href="$carte_8h.html" title=" " alt="" coords="96,155,159,181"/>

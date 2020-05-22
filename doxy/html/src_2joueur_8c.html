@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO: Référence du fichier C:/dev/C/RealProgramme/UNO/src/joueur.c</title>
+<title>UNO: Référence du fichier src/joueur.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,8 +82,14 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de joueur.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="src_2joueur_8c__incl.png" border="0" usemap="#_c_1_2dev_2_c_2_real_programme_2_u_n_o_2src_2joueur_8c" alt=""/></div>
-<!-- MAP 0 -->
+<div class="center"><img src="src_2joueur_8c__incl.png" border="0" usemap="#src_2joueur_8c" alt=""/></div>
+<map name="src_2joueur_8c" id="src_2joueur_8c">
+<area shape="rect" title=" " alt="" coords="119,5,209,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,67,107"/>
+<area shape="rect" title=" " alt="" coords="91,80,155,107"/>
+<area shape="rect" title=" " alt="" coords="179,80,232,107"/>
+<area shape="rect" title=" " alt="" coords="257,80,325,107"/>
+</map>
 </div>
 </div>
 <p><a href="src_2joueur_8c_source.html">Aller au code source de ce fichier.</a></p>
@@ -152,10 +158,25 @@ Fonctions</h2></td></tr>
 <p>Initialise les joueurs. </p>
 
 <p class="definition">Définition à la ligne <a class="el" href="src_2joueur_8c_source.html#l00009">9</a> du fichier <a class="el" href="src_2joueur_8c_source.html">joueur.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;   <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   player_t *joueurs = malloc(nb * <span class="keyword">sizeof</span> *joueurs);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; nb; ++i)</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      joueurs[i].name = noms[i];</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      joueurs[i].cards = <a class="code" href="include_2pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <a class="code" href="include_2pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a>(<a class="code" href="src_2joueur_8c.html#ae635521b3d495ee68bed46737d5524fd">Nombre_carte</a>, deck, joueurs[i].cards);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;   }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   <span class="keywordflow">return</span> joueurs;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
+<div class="ttc" id="ainclude_2pile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="include_2pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00009">pile.c:9</a></div></div>
+<div class="ttc" id="asrc_2joueur_8c_html_ae635521b3d495ee68bed46737d5524fd"><div class="ttname"><a href="src_2joueur_8c.html#ae635521b3d495ee68bed46737d5524fd">Nombre_carte</a></div><div class="ttdeci">#define Nombre_carte</div><div class="ttdef"><b>Definition:</b> <a href="src_2joueur_8c_source.html#l00007">joueur.c:6</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_a88a50742d0f40c592a23e1c0ab30c299"><div class="ttname"><a href="include_2pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a></div><div class="ttdeci">bool pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">Distribue n cartes.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00112">pile.c:112</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

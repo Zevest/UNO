@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO: Référence du fichier main.c</title>
+<title>UNO: Référence du fichier src/main.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,7 +72,7 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
-<div class="title">Référence du fichier src/main.c</div>  </div>
+<div class="title">Référence du fichier main.c</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
@@ -86,10 +86,22 @@ $(function() {
 <code>#include &quot;csvloader.h&quot;</code><br />
 <code>#include &quot;util.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Graphe des dépendances par inclusion de src/main.c:</div>
+Graphe des dépendances par inclusion de main.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="src_2main_8c__incl.png" border="0" usemap="#main_8c" alt=""/></div>
-<!-- MAP 0 -->
+<div class="center"><img src="src_2main_8c__incl.png" border="0" usemap="#src_2main_8c" alt=""/></div>
+<map name="src_2main_8c" id="src_2main_8c">
+<area shape="rect" title=" " alt="" coords="387,5,469,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,67,107"/>
+<area shape="rect" title=" " alt="" coords="91,80,155,107"/>
+<area shape="rect" title=" " alt="" coords="179,80,247,107"/>
+<area shape="rect" title=" " alt="" coords="272,80,331,107"/>
+<area shape="rect" title=" " alt="" coords="355,80,418,107"/>
+<area shape="rect" title=" " alt="" coords="443,80,496,107"/>
+<area shape="rect" title=" " alt="" coords="521,80,589,107"/>
+<area shape="rect" title=" " alt="" coords="613,80,670,107"/>
+<area shape="rect" title=" " alt="" coords="694,80,781,107"/>
+<area shape="rect" title=" " alt="" coords="805,80,856,107"/>
+</map>
 </div>
 </div>
 <p><a href="src_2main_8c_source.html">Aller au code source de ce fichier.</a></p>
@@ -104,12 +116,12 @@ Fonctions</h2></td></tr>
 <tr class="memitem:a81d31ed6231170984d8ef38b67c043ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8c.html#a81d31ed6231170984d8ef38b67c043ba">g_Reset</a> (pile_t *pioche, player_t *players, int nb)</td></tr>
 <tr class="memdesc:a81d31ed6231170984d8ef38b67c043ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs.  <a href="src_2main_8c.html#a81d31ed6231170984d8ef38b67c043ba">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a81d31ed6231170984d8ef38b67c043ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6230ce7c182e5da41d41e1acdb637ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8c.html#af6230ce7c182e5da41d41e1acdb637ac">showStatus</a> (<a class="el" href="structcsv__t.html">csv_t</a> *csv, player_t *players, int turn, int realTurn, int playerCount)</td></tr>
-<tr class="memdesc:af6230ce7c182e5da41d41e1acdb637ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le tour et le noms du joueur.  <a href="src_2main_8c.html#af6230ce7c182e5da41d41e1acdb637ac">Plus de détails...</a><br /></td></tr>
-<tr class="separator:af6230ce7c182e5da41d41e1acdb637ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a462950d20de27e914698205d67255f19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8c.html#a462950d20de27e914698205d67255f19">endRound</a> (int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, <a class="el" href="include_2util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> names[], <a class="el" href="structcsv__t.html">csv_t</a> *csv, int score)</td></tr>
-<tr class="memdesc:a462950d20de27e914698205d67255f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le score des joueur et réinitialise la partie.  <a href="src_2main_8c.html#a462950d20de27e914698205d67255f19">Plus de détails...</a><br /></td></tr>
-<tr class="separator:a462950d20de27e914698205d67255f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9f5edcdbcf607ae8e1bfe96c915f748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8c.html#aa9f5edcdbcf607ae8e1bfe96c915f748">g_ShowStatus</a> (<a class="el" href="structcsv__t.html">csv_t</a> *csv, player_t *players, int turn, int realTurn, int playerCount)</td></tr>
+<tr class="memdesc:aa9f5edcdbcf607ae8e1bfe96c915f748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le tour et le noms du joueur.  <a href="src_2main_8c.html#aa9f5edcdbcf607ae8e1bfe96c915f748">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa9f5edcdbcf607ae8e1bfe96c915f748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a979680e8e56f85a9992ad43bbe29b89e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8c.html#a979680e8e56f85a9992ad43bbe29b89e">g_endRound</a> (int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, <a class="el" href="include_2util_8h.html#ab0dcbec9b4b3c60b939b1095f93cb1b9">string_t</a> names[], <a class="el" href="structcsv__t.html">csv_t</a> *csv, int score)</td></tr>
+<tr class="memdesc:a979680e8e56f85a9992ad43bbe29b89e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche le score des joueur et réinitialise la partie.  <a href="src_2main_8c.html#a979680e8e56f85a9992ad43bbe29b89e">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a979680e8e56f85a9992ad43bbe29b89e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -126,19 +138,19 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00013">13</a> du fichier <a class="el" href="src_2main_8c_source.html">src/main.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00013">13</a> du fichier <a class="el" href="src_2main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a id="a462950d20de27e914698205d67255f19"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a462950d20de27e914698205d67255f19">&#9670;&nbsp;</a></span>endRound()</h2>
+<a id="a979680e8e56f85a9992ad43bbe29b89e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a979680e8e56f85a9992ad43bbe29b89e">&#9670;&nbsp;</a></span>g_endRound()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void endRound </td>
+          <td class="memname">void g_endRound </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>playerCount</em>, </td>
@@ -195,7 +207,7 @@ Fonctions</h2></td></tr>
 
 <p>Affiche le score des joueur et réinitialise la partie. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00037">37</a> du fichier <a class="el" href="src_2main_8c_source.html">src/main.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00037">37</a> du fichier <a class="el" href="src_2main_8c_source.html">main.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;   <span class="keywordtype">int</span> i = 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   system(<span class="stringliteral">&quot;clear -x&quot;</span>);</div>
@@ -271,7 +283,7 @@ Fonctions</h2></td></tr>
 
 <p>Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs. </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00015">15</a> du fichier <a class="el" href="src_2main_8c_source.html">src/main.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00015">15</a> du fichier <a class="el" href="src_2main_8c_source.html">main.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;   <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;   <a class="code" href="include_2play_8h.html#a8851aa20901a9dc8e9b90e1faa627b84">play_SetTour</a>(0);</div>
@@ -281,6 +293,63 @@ Fonctions</h2></td></tr>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <a class="code" href="include_2pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a>(7, pioche, players[i].cards);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa9f5edcdbcf607ae8e1bfe96c915f748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9f5edcdbcf607ae8e1bfe96c915f748">&#9670;&nbsp;</a></span>g_ShowStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void g_ShowStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcsv__t.html">csv_t</a> *&#160;</td>
+          <td class="paramname"><em>csv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">player_t *&#160;</td>
+          <td class="paramname"><em>players</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>turn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>realTurn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>playerCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Affiche le tour et le noms du joueur. </p>
+
+<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00027">27</a> du fichier <a class="el" href="src_2main_8c_source.html">main.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   system(<span class="stringliteral">&quot;clear -x&quot;</span>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   printf(csv-&gt;<a class="code" href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">data</a>[1].<a class="code" href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">message</a>, realTurn);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <a class="code" href="include_2util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a>(2);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   printf(csv-&gt;<a class="code" href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">data</a>[2].<a class="code" href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">message</a>, (turn % playerCount) + 1, players[turn % playerCount].name);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <a class="code" href="include_2util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a>(1);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -310,7 +379,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00077">77</a> du fichier <a class="el" href="src_2main_8c_source.html">src/main.c</a>.</p>
+<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00077">77</a> du fichier <a class="el" href="src_2main_8c_source.html">main.c</a>.</p>
 <div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;   <span class="keywordtype">int</span> i, stop = 0, playerCount = 0, turn, realTurn = 0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;   <span class="keywordtype">char</span> *names[] = {<span class="stringliteral">&quot;Amstrong&quot;</span>, <span class="stringliteral">&quot;Buzz&quot;</span>, <span class="stringliteral">&quot;Boomer&quot;</span>, <span class="stringliteral">&quot;Fury&quot;</span>, <span class="stringliteral">&quot;Jester&quot;</span>, <span class="stringliteral">&quot;Merlin&quot;</span>, <span class="stringliteral">&quot;Casper&quot;</span>, <span class="stringliteral">&quot;Mountain&quot;</span>, <span class="stringliteral">&quot;Saltie&quot;</span>, <span class="stringliteral">&quot;Samara&quot;</span>};</div>
@@ -353,11 +422,11 @@ Fonctions</h2></td></tr>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;   {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      turn = <a class="code" href="include_2play_8h.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">play_GetTour</a>();</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      realTurn++;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <a class="code" href="src_2main_8c.html#af6230ce7c182e5da41d41e1acdb637ac">showStatus</a>(csv, players, turn, realTurn, playerCount);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <a class="code" href="src_2main_8c.html#aa9f5edcdbcf607ae8e1bfe96c915f748">g_ShowStatus</a>(csv, players, turn, realTurn, playerCount);</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      stop = <a class="code" href="include_2play_8h.html#a05b2a7a539cef7a018c26cba1b67ad01">play_Play</a>(players, cardPackage, deck, <a class="code" href="include_2play_8h.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">play_GetTour</a>() % playerCount, playerCount, csv);</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">if</span> (stop)</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;         <a class="code" href="src_2main_8c.html#a462950d20de27e914698205d67255f19">endRound</a>(playerCount, turn, players, &amp;cardPackage, &amp;deck, names, csv, stop);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;         <a class="code" href="src_2main_8c.html#a979680e8e56f85a9992ad43bbe29b89e">g_endRound</a>(playerCount, turn, players, &amp;cardPackage, &amp;deck, names, csv, stop);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;         realTurn = 0;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;   }</div>
@@ -376,85 +445,28 @@ Fonctions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="af6230ce7c182e5da41d41e1acdb637ac"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6230ce7c182e5da41d41e1acdb637ac">&#9670;&nbsp;</a></span>showStatus()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void showStatus </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structcsv__t.html">csv_t</a> *&#160;</td>
-          <td class="paramname"><em>csv</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">player_t *&#160;</td>
-          <td class="paramname"><em>players</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>turn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>realTurn</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>playerCount</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Affiche le tour et le noms du joueur. </p>
-
-<p class="definition">Définition à la ligne <a class="el" href="src_2main_8c_source.html#l00027">27</a> du fichier <a class="el" href="src_2main_8c_source.html">src/main.c</a>.</p>
-<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   system(<span class="stringliteral">&quot;clear -x&quot;</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   printf(csv-&gt;<a class="code" href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">data</a>[1].<a class="code" href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">message</a>, realTurn);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   <a class="code" href="include_2util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a>(2);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   printf(csv-&gt;<a class="code" href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">data</a>[2].<a class="code" href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">message</a>, (turn % playerCount) + 1, players[turn % playerCount].name);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   <a class="code" href="include_2util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a>(1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
-</div><!-- fragment -->
-</div>
-</div>
 </div><!-- contents -->
-<div class="ttc" id="astructcsv__t_html_a104d0dc6639ddf356b87c088ef30f937"><div class="ttname"><a href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">csv_t::data</a></div><div class="ttdeci">data_t * data</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00024">include/csvloader.h:24</a></div></div>
-<div class="ttc" id="ainclude_2pile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="include_2pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00009">src/pile.c:9</a></div></div>
-<div class="ttc" id="ainclude_2csvloader_8h_html_adf4d5f1df4445bf80f83cb3b52354365"><div class="ttname"><a href="include_2csvloader_8h.html#adf4d5f1df4445bf80f83cb3b52354365">csv_ParseCSV</a></div><div class="ttdeci">csv_t * csv_ParseCSV(string_t filename, csv_t *input)</div><div class="ttdoc">Sépare les données du fichier et les stocke dans un objet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00039">src/csvloader.c:39</a></div></div>
-<div class="ttc" id="asrc_2main_8c_html_af6230ce7c182e5da41d41e1acdb637ac"><div class="ttname"><a href="src_2main_8c.html#af6230ce7c182e5da41d41e1acdb637ac">showStatus</a></div><div class="ttdeci">void showStatus(csv_t *csv, player_t *players, int turn, int realTurn, int playerCount)</div><div class="ttdoc">Affiche le tour et le noms du joueur.</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00027">src/main.c:27</a></div></div>
-<div class="ttc" id="ainclude_2util_8h_html_a1e47d74627582d4d43f46dcd4ca68fbb"><div class="ttname"><a href="include_2util_8h.html#a1e47d74627582d4d43f46dcd4ca68fbb">util_Ask</a></div><div class="ttdeci">void util_Ask(const string_t message, string_t buffer, stringValidator_t validator)</div><div class="ttdoc">Affiche un message et attend la saisie d'une donnée conforme à une condition.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_8c_source.html#l00068">src/util.c:68</a></div></div>
-<div class="ttc" id="ainclude_2util_8h_html_aba6d4e453190abf5d9d13acf103de319"><div class="ttname"><a href="include_2util_8h.html#aba6d4e453190abf5d9d13acf103de319">util_IsNumeric</a></div><div class="ttdeci">int util_IsNumeric(const string_t buffer)</div><div class="ttdoc">Vérifie si une chaîne de caratère est un nombre.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_8c_source.html#l00034">src/util.c:34</a></div></div>
-<div class="ttc" id="ainclude_2play_8h_html_ad4e1d2370ab20cf2e17f21a8f0256d0f"><div class="ttname"><a href="include_2play_8h.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">play_GetTour</a></div><div class="ttdeci">int play_GetTour()</div><div class="ttdoc">Renvoie la numero du tour.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00025">src/play.c:25</a></div></div>
-<div class="ttc" id="ainclude_2pile_8h_html_a5a460ab6e214f8edafb9932f9f6e4130"><div class="ttname"><a href="include_2pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a></div><div class="ttdeci">void pile_Delete(pile_t *pile)</div><div class="ttdoc">Libère la mémoire.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00157">src/pile.c:157</a></div></div>
-<div class="ttc" id="asrc_2main_8c_html_a462950d20de27e914698205d67255f19"><div class="ttname"><a href="src_2main_8c.html#a462950d20de27e914698205d67255f19">endRound</a></div><div class="ttdeci">void endRound(int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, string_t names[], csv_t *csv, int score)</div><div class="ttdoc">Affiche le score des joueur et réinitialise la partie.</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00037">src/main.c:37</a></div></div>
-<div class="ttc" id="ainclude_2pile_8h_html_a88a50742d0f40c592a23e1c0ab30c299"><div class="ttname"><a href="include_2pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a></div><div class="ttdeci">bool pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">Distribue n cartes.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00112">src/pile.c:112</a></div></div>
-<div class="ttc" id="ainclude_2pile_8h_html_ace34f2b7089ae33b1877a76c9ec65650"><div class="ttname"><a href="include_2pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a></div><div class="ttdeci">void pile_Shuffle(pile_t *src, pile_t *dst, int n)</div><div class="ttdoc">Mélange les cartes d'un paquet source vers un paquet destination.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00063">src/pile.c:63</a></div></div>
-<div class="ttc" id="ainclude_2util_8h_html_a2482ed161b2cb87100d589824d4645c7"><div class="ttname"><a href="include_2util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a></div><div class="ttdeci">void util_JumpLine(int n)</div><div class="ttdoc">Affiche n fois le caractère de fin de ligne.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_8c_source.html#l00027">src/util.c:27</a></div></div>
-<div class="ttc" id="ainclude_2pile_8h_html_a5c94337ba816acd0b0ecffcc952c25a6"><div class="ttname"><a href="include_2pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *p)</div><div class="ttdoc">Initialise le paquet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00128">src/pile.c:128</a></div></div>
-<div class="ttc" id="asrc_2main_8c_html_a7e36dafcf2f87ac272be4ea25631216e"><div class="ttname"><a href="src_2main_8c.html#a7e36dafcf2f87ac272be4ea25631216e">maxPoint</a></div><div class="ttdeci">#define maxPoint</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00013">src/main.c:12</a></div></div>
-<div class="ttc" id="asrc_2main_8c_html_a81d31ed6231170984d8ef38b67c043ba"><div class="ttname"><a href="src_2main_8c.html#a81d31ed6231170984d8ef38b67c043ba">g_Reset</a></div><div class="ttdeci">void g_Reset(pile_t *pioche, player_t *players, int nb)</div><div class="ttdoc">Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs.</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00015">src/main.c:15</a></div></div>
-<div class="ttc" id="astructcsv__t_html"><div class="ttname"><a href="structcsv__t.html">csv_t</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00021">include/csvloader.h:22</a></div></div>
+<div class="ttc" id="astructcsv__t_html_a104d0dc6639ddf356b87c088ef30f937"><div class="ttname"><a href="structcsv__t.html#a104d0dc6639ddf356b87c088ef30f937">csv_t::data</a></div><div class="ttdeci">data_t * data</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00024">csvloader.h:24</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="include_2pile_8h.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00009">pile.c:9</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_adf4d5f1df4445bf80f83cb3b52354365"><div class="ttname"><a href="include_2csvloader_8h.html#adf4d5f1df4445bf80f83cb3b52354365">csv_ParseCSV</a></div><div class="ttdeci">csv_t * csv_ParseCSV(string_t filename, csv_t *input)</div><div class="ttdoc">Sépare les données du fichier et les stocke dans un objet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00039">csvloader.c:39</a></div></div>
+<div class="ttc" id="ainclude_2util_8h_html_a1e47d74627582d4d43f46dcd4ca68fbb"><div class="ttname"><a href="include_2util_8h.html#a1e47d74627582d4d43f46dcd4ca68fbb">util_Ask</a></div><div class="ttdeci">void util_Ask(const string_t message, string_t buffer, stringValidator_t validator)</div><div class="ttdoc">Affiche un message et attend la saisie d'une donnée conforme à une condition.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_8c_source.html#l00068">util.c:68</a></div></div>
+<div class="ttc" id="asrc_2main_8c_html_aa9f5edcdbcf607ae8e1bfe96c915f748"><div class="ttname"><a href="src_2main_8c.html#aa9f5edcdbcf607ae8e1bfe96c915f748">g_ShowStatus</a></div><div class="ttdeci">void g_ShowStatus(csv_t *csv, player_t *players, int turn, int realTurn, int playerCount)</div><div class="ttdoc">Affiche le tour et le noms du joueur.</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00027">main.c:27</a></div></div>
+<div class="ttc" id="ainclude_2util_8h_html_aba6d4e453190abf5d9d13acf103de319"><div class="ttname"><a href="include_2util_8h.html#aba6d4e453190abf5d9d13acf103de319">util_IsNumeric</a></div><div class="ttdeci">int util_IsNumeric(const string_t buffer)</div><div class="ttdoc">Vérifie si une chaîne de caratère est un nombre.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_8c_source.html#l00034">util.c:34</a></div></div>
+<div class="ttc" id="ainclude_2play_8h_html_ad4e1d2370ab20cf2e17f21a8f0256d0f"><div class="ttname"><a href="include_2play_8h.html#ad4e1d2370ab20cf2e17f21a8f0256d0f">play_GetTour</a></div><div class="ttdeci">int play_GetTour()</div><div class="ttdoc">Renvoie la numero du tour.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00025">play.c:25</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_a5a460ab6e214f8edafb9932f9f6e4130"><div class="ttname"><a href="include_2pile_8h.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a></div><div class="ttdeci">void pile_Delete(pile_t *pile)</div><div class="ttdoc">Libère la mémoire.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00157">pile.c:157</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_a88a50742d0f40c592a23e1c0ab30c299"><div class="ttname"><a href="include_2pile_8h.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a></div><div class="ttdeci">bool pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">Distribue n cartes.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00112">pile.c:112</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_ace34f2b7089ae33b1877a76c9ec65650"><div class="ttname"><a href="include_2pile_8h.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a></div><div class="ttdeci">void pile_Shuffle(pile_t *src, pile_t *dst, int n)</div><div class="ttdoc">Mélange les cartes d'un paquet source vers un paquet destination.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00063">pile.c:63</a></div></div>
+<div class="ttc" id="ainclude_2util_8h_html_a2482ed161b2cb87100d589824d4645c7"><div class="ttname"><a href="include_2util_8h.html#a2482ed161b2cb87100d589824d4645c7">util_JumpLine</a></div><div class="ttdeci">void util_JumpLine(int n)</div><div class="ttdoc">Affiche n fois le caractère de fin de ligne.</div><div class="ttdef"><b>Definition:</b> <a href="src_2util_8c_source.html#l00027">util.c:27</a></div></div>
+<div class="ttc" id="ainclude_2pile_8h_html_a5c94337ba816acd0b0ecffcc952c25a6"><div class="ttname"><a href="include_2pile_8h.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *p)</div><div class="ttdoc">Initialise le paquet.</div><div class="ttdef"><b>Definition:</b> <a href="src_2pile_8c_source.html#l00128">pile.c:128</a></div></div>
+<div class="ttc" id="asrc_2main_8c_html_a7e36dafcf2f87ac272be4ea25631216e"><div class="ttname"><a href="src_2main_8c.html#a7e36dafcf2f87ac272be4ea25631216e">maxPoint</a></div><div class="ttdeci">#define maxPoint</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00013">main.c:12</a></div></div>
+<div class="ttc" id="asrc_2main_8c_html_a81d31ed6231170984d8ef38b67c043ba"><div class="ttname"><a href="src_2main_8c.html#a81d31ed6231170984d8ef38b67c043ba">g_Reset</a></div><div class="ttdeci">void g_Reset(pile_t *pioche, player_t *players, int nb)</div><div class="ttdoc">Réinitialise les cartes des joueurs et distribue de nouvelle cartes aux joueurs.</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00015">main.c:15</a></div></div>
+<div class="ttc" id="astructcsv__t_html"><div class="ttname"><a href="structcsv__t.html">csv_t</a></div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00021">csvloader.h:22</a></div></div>
+<div class="ttc" id="asrc_2main_8c_html_a979680e8e56f85a9992ad43bbe29b89e"><div class="ttname"><a href="src_2main_8c.html#a979680e8e56f85a9992ad43bbe29b89e">g_endRound</a></div><div class="ttdeci">void g_endRound(int playerCount, int turn, player_t *players, pile_t **package, pile_t **deck, string_t names[], csv_t *csv, int score)</div><div class="ttdoc">Affiche le score des joueur et réinitialise la partie.</div><div class="ttdef"><b>Definition:</b> <a href="src_2main_8c_source.html#l00037">main.c:37</a></div></div>
 <div class="ttc" id="ainclude_2joueur_8h_html_a5cb54243700f2317069b4771bbc65670"><div class="ttname"><a href="include_2joueur_8h.html#a5cb54243700f2317069b4771bbc65670">player_Init</a></div><div class="ttdeci">player_t * player_Init(int nb, char **noms, pile_t *paquet)</div></div>
-<div class="ttc" id="astructdata__t_html_a3dcf5af7dec887e9f1e8de3273df769d"><div class="ttname"><a href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">data_t::message</a></div><div class="ttdeci">char message[__CSV_BUFFER_SIZE__]</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00014">include/csvloader.h:14</a></div></div>
-<div class="ttc" id="ainclude_2play_8h_html_a05b2a7a539cef7a018c26cba1b67ad01"><div class="ttname"><a href="include_2play_8h.html#a05b2a7a539cef7a018c26cba1b67ad01">play_Play</a></div><div class="ttdeci">int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv)</div><div class="ttdoc">Fonction Principale du jeu.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00168">src/play.c:168</a></div></div>
-<div class="ttc" id="ainclude_2csvloader_8h_html_a267fd7e70ed4226bbd76684d8988cb33"><div class="ttname"><a href="include_2csvloader_8h.html#a267fd7e70ed4226bbd76684d8988cb33">csv_DeleteCSV</a></div><div class="ttdeci">void csv_DeleteCSV(csv_t *csv)</div><div class="ttdoc">Libère la memoire.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00027">src/csvloader.c:27</a></div></div>
-<div class="ttc" id="ainclude_2play_8h_html_a8851aa20901a9dc8e9b90e1faa627b84"><div class="ttname"><a href="include_2play_8h.html#a8851aa20901a9dc8e9b90e1faa627b84">play_SetTour</a></div><div class="ttdeci">void play_SetTour(int n)</div><div class="ttdoc">Modifie la valeur du tour.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00031">src/play.c:31</a></div></div>
+<div class="ttc" id="astructdata__t_html_a3dcf5af7dec887e9f1e8de3273df769d"><div class="ttname"><a href="structdata__t.html#a3dcf5af7dec887e9f1e8de3273df769d">data_t::message</a></div><div class="ttdeci">char message[__CSV_BUFFER_SIZE__]</div><div class="ttdef"><b>Definition:</b> <a href="include_2csvloader_8h_source.html#l00014">csvloader.h:14</a></div></div>
+<div class="ttc" id="ainclude_2play_8h_html_a05b2a7a539cef7a018c26cba1b67ad01"><div class="ttname"><a href="include_2play_8h.html#a05b2a7a539cef7a018c26cba1b67ad01">play_Play</a></div><div class="ttdeci">int play_Play(player_t *joueurs, pile_t *paquets, pile_t *pioches, int numt, int nbj, csv_t *csv)</div><div class="ttdoc">Fonction Principale du jeu.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00168">play.c:168</a></div></div>
+<div class="ttc" id="ainclude_2csvloader_8h_html_a267fd7e70ed4226bbd76684d8988cb33"><div class="ttname"><a href="include_2csvloader_8h.html#a267fd7e70ed4226bbd76684d8988cb33">csv_DeleteCSV</a></div><div class="ttdeci">void csv_DeleteCSV(csv_t *csv)</div><div class="ttdoc">Libère la memoire.</div><div class="ttdef"><b>Definition:</b> <a href="src_2csvloader_8c_source.html#l00027">csvloader.c:27</a></div></div>
+<div class="ttc" id="ainclude_2play_8h_html_a8851aa20901a9dc8e9b90e1faa627b84"><div class="ttname"><a href="include_2play_8h.html#a8851aa20901a9dc8e9b90e1faa627b84">play_SetTour</a></div><div class="ttdeci">void play_SetTour(int n)</div><div class="ttdoc">Modifie la valeur du tour.</div><div class="ttdef"><b>Definition:</b> <a href="src_2play_8c_source.html#l00031">play.c:31</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Généré par &#160;<a href="http://www.doxygen.org/index.html">

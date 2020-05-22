@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO:  Fichier source de UNO/src/pile.c</title>
+<title>UNO:  Fichier source de src/pile.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_36a9b41c2ee7562e737ca2ad0da697cc.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -180,7 +180,7 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;   <span class="keywordtype">int</span> i;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;   <span class="keywordflow">if</span> (paquet_dest == NULL || paquet_src == NULL || n &gt; paquet_src-&gt;_TOP)</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;   {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      printf(<span class="stringliteral">&quot;Il n&#39;y a pas assez de cartes dans le paquet\n&quot;</span>);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="comment">//printf(&quot;Il n&#39;y a pas assez de cartes dans le paquet\n&quot;);</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;   }</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;   <span class="keywordflow">for</span> (i = 0; i &lt; n; ++i)</div>
@@ -236,7 +236,7 @@ $(function() {
 <div class="ttc" id="apile_8c_html_a437c90a16a1842a143b91acab8280a5a"><div class="ttname"><a href="pile_8c.html#a437c90a16a1842a143b91acab8280a5a">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init()</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00009">pile.c:9</a></div></div>
 <div class="ttc" id="acarte_8h_html"><div class="ttname"><a href="carte_8h.html">carte.h</a></div></div>
 <div class="ttc" id="apile_8c_html_a8ecd5014963f81073542bd06ec9badff"><div class="ttname"><a href="pile_8c.html#a8ecd5014963f81073542bd06ec9badff">pile_Distribute</a></div><div class="ttdeci">bool pile_Distribute(int n, pile_t *paquet_src, pile_t *paquet_dest)</div><div class="ttdoc">Distribue n cartes.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00112">pile.c:112</a></div></div>
-<div class="ttc" id="autil_8h_html_a44130300b0a342e1d46198cf90b6d9ab"><div class="ttname"><a href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a></div><div class="ttdeci">int util_Max(int a, int b)</div><div class="ttdoc">Retroune la valeur maximum entre deux valeurs a et b.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00063">util.c:63</a></div></div>
+<div class="ttc" id="autil_8h_html_a44130300b0a342e1d46198cf90b6d9ab"><div class="ttname"><a href="util_8h.html#a44130300b0a342e1d46198cf90b6d9ab">util_Max</a></div><div class="ttdeci">int util_Max(int a, int b)</div><div class="ttdoc">Retroune la valeur maximum entre deux valeurs a et b.</div><div class="ttdef"><b>Definition:</b> <a href="util_8c_source.html#l00062">util.c:62</a></div></div>
 <div class="ttc" id="apile_8c_html_a5d69180fbbfb3a6ee122da76bf766c5b"><div class="ttname"><a href="pile_8c.html#a5d69180fbbfb3a6ee122da76bf766c5b">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *paquet)</div><div class="ttdoc">Initialise le paquet.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00128">pile.c:128</a></div></div>
 <div class="ttc" id="astructpile_html"><div class="ttname"><a href="structpile.html">pile</a></div><div class="ttdef"><b>Definition:</b> <a href="pile_8h_source.html#l00013">pile.h:14</a></div></div>
 <div class="ttc" id="apile_8c_html_a5a460ab6e214f8edafb9932f9f6e4130"><div class="ttname"><a href="pile_8c.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a></div><div class="ttdeci">void pile_Delete(pile_t *pile)</div><div class="ttdoc">Libère la mémoire.</div><div class="ttdef"><b>Definition:</b> <a href="pile_8c_source.html#l00157">pile.c:157</a></div></div>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.18"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>UNO:  Fichier source de test/pile_test.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="UNO_Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">UNO
+   &#160;<span id="projectnumber">1.4</span>
+   </div>
+   <div id="projectbrief">UNO dans un terminal</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.18 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pile_test.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="a01646.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01601.html">carte.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="a01610.html">pile.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="a01646.html#a7fea595e973896381d194f9c2275bcff">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="a01646.html#a7fea595e973896381d194f9c2275bcff">card_Copy</a>(card_t *dest, card_t *src)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   <span class="keywordflow">if</span> (dest == NULL || src == NULL)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   dest-&gt;num = src-&gt;num;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   dest-&gt;color = src-&gt;color;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   dest-&gt;symbol = src-&gt;symbol;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="a01646.html#a4bcdc97c69431f0b933f12526b2aa590">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="a01646.html#a4bcdc97c69431f0b933f12526b2aa590">card_Comp</a>(card_t *cardA, card_t *cardB)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;   <span class="keywordflow">if</span> (cardA == NULL || cardB == NULL)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   <span class="keywordflow">return</span> (cardA-&gt;num == cardB-&gt;num &amp;&amp;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;         cardA-&gt;color == cardB-&gt;color &amp;&amp;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;         cardA-&gt;symbol == cardB-&gt;symbol);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="a01646.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   27</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="a01646.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <span class="comment">// Initialisation d&#39;un paquet</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;   <span class="comment">// Initialisation de distribution de 1 carte;</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;   pile_t *paquetSrc;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;   pile_t *paquetDest;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;   card_t before;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;   <span class="keywordtype">int</span> i, j;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;   printf(<span class="stringliteral">&quot;\nTest: Distribution (pile.c)\n&quot;</span>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keywordflow">for</span> (j = 1; j &lt; 11; ++j)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      paquetSrc = <a class="code" href="a01610.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      paquetDest = <a class="code" href="a01610.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="a01610.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a>(paquetSrc);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      printf(<span class="stringliteral">&quot;Test de distribution de %d carte(s): &quot;</span>, j);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <span class="keywordflow">for</span> (i = 0; i &lt; 10; ++i)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;         <a class="code" href="a01646.html#a7fea595e973896381d194f9c2275bcff">card_Copy</a>(&amp;before, paquetSrc-&gt;_DATA[paquetSrc-&gt;_TOP - (j - 1)]);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;         <a class="code" href="a01610.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a>(j, paquetSrc, paquetDest);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;         assert(<a class="code" href="a01646.html#a4bcdc97c69431f0b933f12526b2aa590">card_Comp</a>(&amp;before, <a class="code" href="a01610.html#ad3770d800e3e5f480a5b9b1355d615ee">pile_GetTop</a>(paquetDest)));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      printf(<span class="stringliteral">&quot;Succès\n&quot;</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="a01610.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a>(paquetDest);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="a01610.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a>(paquetSrc);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;   }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;   printf(<span class="stringliteral">&quot;\nTest: Distribution losque qu&#39;il n&#39;y a plus de carte: &quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;   paquetSrc = <a class="code" href="a01610.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;   paquetDest = <a class="code" href="a01610.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;   <a class="code" href="a01610.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a>(paquetDest);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordflow">if</span> (<a class="code" href="a01610.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a>(1, paquetSrc, paquetDest))</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;   {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <a class="code" href="a01610.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a>(paquetDest, paquetSrc, 0);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <a class="code" href="a01610.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a>(1, paquetSrc, paquetDest);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;   }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;   assert(paquetDest-&gt;_TOP == 1);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;   assert(paquetSrc-&gt;_TOP == 105);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   printf(<span class="stringliteral">&quot;Succès\n&quot;</span>);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;   <a class="code" href="a01610.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a>(paquetDest);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;   <a class="code" href="a01610.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a>(paquetSrc);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;   <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aa01610_html_ace34f2b7089ae33b1877a76c9ec65650"><div class="ttname"><a href="a01610.html#ace34f2b7089ae33b1877a76c9ec65650">pile_Shuffle</a></div><div class="ttdeci">void pile_Shuffle(pile_t *src, pile_t *dst, int n)</div><div class="ttdoc">Mélange les cartes d'un paquet source vers un paquet destination.</div><div class="ttdef"><b>Definition:</b> <a href="a01634_source.html#l00063">pile.c:63</a></div></div>
+<div class="ttc" id="aa01610_html_a5a460ab6e214f8edafb9932f9f6e4130"><div class="ttname"><a href="a01610.html#a5a460ab6e214f8edafb9932f9f6e4130">pile_Delete</a></div><div class="ttdeci">void pile_Delete(pile_t *pile)</div><div class="ttdoc">Libère la mémoire.</div><div class="ttdef"><b>Definition:</b> <a href="a01634_source.html#l00157">pile.c:157</a></div></div>
+<div class="ttc" id="aa01610_html_ad3770d800e3e5f480a5b9b1355d615ee"><div class="ttname"><a href="a01610.html#ad3770d800e3e5f480a5b9b1355d615ee">pile_GetTop</a></div><div class="ttdeci">card_t * pile_GetTop(pile_t *p)</div><div class="ttdoc">Renvoie la carte au sommet de la pile.</div><div class="ttdef"><b>Definition:</b> <a href="a01634_source.html#l00017">pile.c:17</a></div></div>
+<div class="ttc" id="aa01601_html"><div class="ttname"><a href="a01601.html">carte.h</a></div></div>
+<div class="ttc" id="aa01610_html"><div class="ttname"><a href="a01610.html">pile.h</a></div></div>
+<div class="ttc" id="aa01610_html_a88a50742d0f40c592a23e1c0ab30c299"><div class="ttname"><a href="a01610.html#a88a50742d0f40c592a23e1c0ab30c299">pile_Distribute</a></div><div class="ttdeci">bool pile_Distribute(int n, pile_t *src, pile_t *dest)</div><div class="ttdoc">Distribue n cartes.</div><div class="ttdef"><b>Definition:</b> <a href="a01634_source.html#l00112">pile.c:112</a></div></div>
+<div class="ttc" id="aa01610_html_a5c94337ba816acd0b0ecffcc952c25a6"><div class="ttname"><a href="a01610.html#a5c94337ba816acd0b0ecffcc952c25a6">pile_FillDeck</a></div><div class="ttdeci">void pile_FillDeck(pile_t *p)</div><div class="ttdoc">Initialise le paquet.</div><div class="ttdef"><b>Definition:</b> <a href="a01634_source.html#l00128">pile.c:128</a></div></div>
+<div class="ttc" id="aa01610_html_abe61ab613129062cf0c1faddb4d0d377"><div class="ttname"><a href="a01610.html#abe61ab613129062cf0c1faddb4d0d377">pile_Init</a></div><div class="ttdeci">pile_t * pile_Init(void)</div><div class="ttdoc">Initialise la pile de carte.</div><div class="ttdef"><b>Definition:</b> <a href="a01634_source.html#l00009">pile.c:9</a></div></div>
+<div class="ttc" id="aa01646_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="a01646.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="a01646_source.html#l00027">pile_test.c:27</a></div></div>
+<div class="ttc" id="aa01646_html_a4bcdc97c69431f0b933f12526b2aa590"><div class="ttname"><a href="a01646.html#a4bcdc97c69431f0b933f12526b2aa590">card_Comp</a></div><div class="ttdeci">int card_Comp(card_t *cardA, card_t *cardB)</div><div class="ttdoc">Compare deux cartes.</div><div class="ttdef"><b>Definition:</b> <a href="a01646_source.html#l00018">pile_test.c:18</a></div></div>
+<div class="ttc" id="aa01646_html_a7fea595e973896381d194f9c2275bcff"><div class="ttname"><a href="a01646.html#a7fea595e973896381d194f9c2275bcff">card_Copy</a></div><div class="ttdeci">void card_Copy(card_t *dest, card_t *src)</div><div class="ttdoc">Copie une carte.</div><div class="ttdef"><b>Definition:</b> <a href="a01646_source.html#l00008">pile_test.c:8</a></div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.18
+</small></address>
+</body>
+</html>

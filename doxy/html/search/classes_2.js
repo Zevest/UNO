@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['pile_98',['pile',['../structpile.html',1,'']]],
-  ['player_99',['player',['../structplayer.html',1,'']]]
+  ['pile_95',['pile',['../a01674.html',1,'']]],
+  ['player_96',['player',['../a01670.html',1,'']]]
 ];

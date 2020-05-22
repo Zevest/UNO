@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UNO: Référence du fichier UNO/src/util.c</title>
+<title>UNO: Référence du fichier src/util.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0301c05902a9335618bf545072ee7008.html">UNO</a></li><li class="navelem"><a class="el" href="dir_36a9b41c2ee7562e737ca2ad0da697cc.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,22 +74,20 @@ $(function() {
 <div class="title">Référence du fichier util.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;ctype.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="util_8h_source.html">util.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de util.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="util_8c__incl.png" border="0" usemap="#_u_n_o_2src_2util_8c" alt=""/></div>
-<map name="_u_n_o_2src_2util_8c" id="_u_n_o_2src_2util_8c">
-<area shape="rect" title=" " alt="" coords="145,5,249,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,69,107"/>
-<area shape="rect" title=" " alt="" coords="94,80,159,107"/>
-<area shape="rect" title=" " alt="" coords="243,155,304,181"/>
-<area shape="rect" title=" " alt="" coords="235,80,301,107"/>
-<area shape="rect" href="util_8h.html" title=" " alt="" coords="325,80,376,107"/>
+<div class="center"><img src="util_8c__incl.png" border="0" usemap="#src_2util_8c" alt=""/></div>
+<map name="src_2util_8c" id="src_2util_8c">
+<area shape="rect" title=" " alt="" coords="107,5,179,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,71,107"/>
+<area shape="rect" title=" " alt="" coords="154,155,215,181"/>
+<area shape="rect" title=" " alt="" coords="147,80,212,107"/>
+<area shape="rect" href="util_8h.html" title=" " alt="" coords="237,80,287,107"/>
 </map>
 </div>
 </div>
@@ -162,8 +160,15 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00069">69</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00068">68</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;   <span class="keywordflow">do</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;   {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      printf(message, NULL);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      fgets(buffer, <span class="keyword">sizeof</span>(buffer), stdin);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   } <span class="keywordflow">while</span> (!validator(buffer));</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a68ce209402506a4aa64834d22de9abfc"></a>
@@ -184,8 +189,13 @@ Fonctions</h2></td></tr>
 <p>Vide le buffer stdin. </p>
 <p>Vide le buffer stdin jusqu'à la fin de la ligne ou du buffer </p>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00055">55</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00054">54</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;   <span class="keywordtype">int</span> c;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;   <span class="keywordflow">while</span> ((c = getchar()) != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; c != EOF)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      ;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aa3c593a68621fa345c3393f98460a09b"></a>
@@ -212,8 +222,24 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00009">9</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00008">8</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;   <span class="keywordflow">if</span> (f == NULL)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;   <span class="keywordtype">int</span> lines = 0;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;   <span class="keywordtype">char</span> c;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;   <span class="keywordflow">while</span> (!feof(f))</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;   {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      c = fgetc(f);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keywordflow">if</span> (c == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;         ++lines;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;   }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;   rewind(f);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;   <span class="keywordflow">return</span> lines;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a3a2508284f172a46bb3c22b65b0bd78b"></a>
@@ -241,8 +267,15 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 si elle ne contient que des chiffres sinon 0 </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00045">45</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00044">44</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;   <span class="keywordtype">char</span> *ptr = buffer;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;   <span class="keywordflow">while</span> (ptr &amp;&amp; *ptr != <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">if</span> (!isalpha(*ptr++))</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;         <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;   <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="aba6d4e453190abf5d9d13acf103de319"></a>
@@ -270,8 +303,15 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>1 si elle ne contient que des chiffres sinon 0 </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00035">35</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00034">34</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;   <span class="keywordtype">char</span> *ptr = buffer;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;   <span class="keywordflow">while</span> (ptr &amp;&amp; *ptr != <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <span class="keywordflow">if</span> (!isdigit(*ptr++))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;         <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;   <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a2482ed161b2cb87100d589824d4645c7"></a>
@@ -298,8 +338,12 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00028">28</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00027">27</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;   <span class="keywordflow">while</span> (n-- &gt; 0)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a44130300b0a342e1d46198cf90b6d9ab"></a>
@@ -338,8 +382,11 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>la valeur la plus grande </dd></dl>
 
-<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00063">63</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
-
+<p class="definition">Définition à la ligne <a class="el" href="util_8c_source.html#l00062">62</a> du fichier <a class="el" href="util_8c_source.html">util.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;   <span class="keywordflow">return</span> a &gt; b ? a : b;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
