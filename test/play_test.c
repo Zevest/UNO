@@ -17,7 +17,7 @@ int main()
 	for (i = 0; i < deck->_TOP; ++i)
 	{
 		printf("playing ::: ");
-		printf("Plaçage de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, deck->_DATA[i]->symbol, deck->_DATA[i]->color);
+		printf("Placement de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, deck->_DATA[i]->symbol, deck->_DATA[i]->color);
 		assert(play_IsCardPlayable(deck->_DATA[i], deck->_DATA[i]) == 1);
 		printf("Succès\n");
 	}
@@ -29,7 +29,7 @@ int main()
 	{
 
 		lastCard->color = deck->_DATA[i]->color;
-		printf("Plaçage de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, lastCard->symbol, lastCard->color);
+		printf("Placement de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, lastCard->symbol, lastCard->color);
 		assert(play_IsCardPlayable(deck->_DATA[i], lastCard) == 1);
 		printf("Succès\n");
 	}
@@ -41,7 +41,7 @@ int main()
 	for (i = 0; i < deck->_TOP; ++i)
 	{
 		lastCard->num = deck->_DATA[i]->num;
-		printf("Plaçage de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, lastCard->symbol, lastCard->color);
+		printf("Placement de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, lastCard->symbol, lastCard->color);
 		assert(play_IsCardPlayable(deck->_DATA[i], lastCard) == 1);
 		printf("Succès\n");
 	}
@@ -56,7 +56,7 @@ int main()
 			lastCard->color = deck->_DATA[i]->color;
 		else
 		{
-			printf("Plaçage de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, lastCard->symbol, lastCard->color);
+			printf("Placement de la carte [%s %c] sur [%s %c] : ", deck->_DATA[i]->symbol, deck->_DATA[i]->color, lastCard->symbol, lastCard->color);
 			assert(play_IsCardPlayable(deck->_DATA[i], lastCard) == 1);
 			printf("Succès\n");
 		}
